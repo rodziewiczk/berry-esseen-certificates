@@ -1,0 +1,9 @@
+services:
+  berry-esseen-verify:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - VERIFY_MODE=${VERIFY_MODE:-fast}

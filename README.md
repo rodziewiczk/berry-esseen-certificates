@@ -29,14 +29,22 @@ All **13 mathematical roles** covering $1 \le n \le 48$ and the infinite tail $n
 
 See [mathematics/FULL-PASS-PROOF-AUDIT.md](mathematics/FULL-PASS-PROOF-AUDIT.md) for the complete audit report.
 
-## Start here
+## Start here (One-Command Reproducible Docker Run)
 
-Use Python 3.12. Verify the complete `full_pass` status and run the exact checks directly:
+Clone the repository and run a single command to build the pinned Linux environment (`python:3.12-bookworm`, `g++`, `libboost-dev`, `numpy 1.26.4`, `scipy 1.13.1`) and execute the verification suite across all available CPU cores:
 
 ```sh
+git clone https://github.com/rodziewiczk/berry-esseen-certificates.git
+cd berry-esseen-certificates
+docker compose up --build --abort-on-container-exit
+```
+
+Or run the multi-core orchestrator directly with Python 3.12:
+
+```sh
+python -I -B run_all_docker.py
 python -I -B be.py status
 python -I -B be.py verify
-python -I -B be.py verify --n1
 ```
 
 Both `be.py status` and `be.py verify` return `"full_pass": "ESTABLISHED"`, `"public_verification": "FULL_PASS_VERIFIED"`, `"remaining_full_verification_obligations": []`, and exit with code `0`.
