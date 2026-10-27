@@ -1,0 +1,85 @@
+"""Experimental outward fixed-denominator intervals, not output-equivalent.
+
+Every operation encloses the exact real interval operation. This requires a
+new mathematical/runtime review and fresh count replay before use in a proof.
+"""
+from fractions import Fraction as F
+S=10**18
+
+def need(x,w):
+ if not x:raise ValueError(w)
+def ceildiv(a,b):return -((-a)//b)
+def floor_scaled(x):return x.numerator*S//x.denominator
+def ceil_scaled(x):return ceildiv(x.numerator*S,x.denominator)
+class I:
+ __slots__=('L','H','_l','_h')
+ def __init__(self,a,b=None):
+  a=F(a);b=a if b is None else F(b);need(a<=b,'interval order')
+  self.L=floor_scaled(a);self.H=ceil_scaled(b);self._l=self._h=None
+ @classmethod
+ def integers(cls,l,h):
+  need(type(l)is int and type(h)is int and l<=h,'ordered scaled integer interval')
+  z=object.__new__(cls);z.L=l;z.H=h;z._l=z._h=None;return z
+ @property
+ def l(self):
+  if self._l is None:self._l=F(self.L,S)
+  return self._l
+ @property
+ def h(self):
+  if self._h is None:self._h=F(self.H,S)
+  return self._h
+ def __add__(self,b):
+  if isinstance(b,I):return I.integers(self.L+b.L,self.H+b.H)
+  b=F(b);return I.integers(self.L+floor_scaled(b),self.H+ceil_scaled(b))
+ __radd__=__add__
+ def __neg__(self):return I.integers(-self.H,-self.L)
+ def __sub__(self,b):return self+(-b if isinstance(b,I)else -F(b))
+ def __rsub__(self,b):return (-self)+b
+ def __mul__(self,b):
+  if isinstance(b,I):
+   v=(self.L*b.L,self.L*b.H,self.H*b.L,self.H*b.H)
+   return I.integers(min(v)//S,ceildiv(max(v),S))
+  b=F(b);a,c=(self.L,self.H)if b>=0 else(self.H,self.L)
+  return I.integers(a*b.numerator//b.denominator,ceildiv(c*b.numerator,b.denominator))
+ __rmul__=__mul__
+ def __truediv__(self,b):
+  if not isinstance(b,I):
+   b=F(b);need(b>0,'positive scalar denominator');return self*(1/b)
+  need(b.L>0,'positive interval denominator')
+  # All four real endpoint quotients are considered; no reciprocal rounding.
+  values=((self.L,b.L),(self.L,b.H),(self.H,b.L),(self.H,b.H))
+  return I.integers(min(a*S//d for a,d in values),max(ceildiv(a*S,d)for a,d in values))
+ def __pow__(self,n):
+  need(type(n)is int and n>=0,'integer power')
+  if n==0:return I.integers(S,S)
+  a,b=self.L**n,self.H**n
+  if n%2==0:a,b=(0 if self.L<=0<=self.H else min(a,b)),max(a,b)
+  den=S**(n-1)
+  return I.integers(a//den,ceildiv(b,den))
+
+def vector(co,lo,hi,upper):
+ import bernstein_fast as b
+ need(len(co)==5 and all(isinstance(c,I)for c in co),'fixed quartic interval coefficients')
+ rnd=ceildiv if upper else lambda x,y:x//y
+ partial=[]
+ for i,row in enumerate(b.weights(lo,hi)):
+  value=0
+  for j,w in enumerate(row,i):
+   endpoint=co[j].H if (w>=0)==upper else co[j].L
+   value+=rnd(endpoint*w.numerator,w.denominator)
+  partial.append(value)
+ return [F(sum(rnd(partial[j]*w.numerator,w.denominator)for j,w in enumerate(row)),S)for row in b.ELEVATE]
+
+def install():
+ import sys,exact_count_core_v5 as base,bernstein_fast
+ old=base.I
+ names=['exact_count_core_v5','exact35_core','baseline_core','joint_cubic','joint_cubic_defect','joint_cubic_normalized','joint_cubic_normalized_fast','bernstein_fast','interval_scalar_fast','optimized_arithmetic']
+ changed=[]
+ for name in names:
+  m=sys.modules.get(name)
+  if m is None:continue
+  if hasattr(m,'I'):
+   need(m.I is old,'one original interval class before installation '+name)
+   m.I=I;changed.append(name)
+ bernstein_fast.vector=vector
+ return changed

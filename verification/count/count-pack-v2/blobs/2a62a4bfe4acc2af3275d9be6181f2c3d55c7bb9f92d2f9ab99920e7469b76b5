@@ -1,0 +1,19 @@
+Common-cubic refinement of the unchanged two local branch1 guard profiles.
+Mathematical scope: conditional sharp31 score comparisons; resource acquisition remains separate.
+This kernel retains every old cell upper bound. If those do not close the cell,
+it intersects the two centered conditional cubic-moment intervals with the exact
+same-law absolute-third-moment strip and the before-cubic defect lower inequality.
+An empty polygon is a necessary-condition contradiction. A nonempty polygon
+enters the retained strict quartic event minorant: its expectation is affine in
+the two cubic moments for each fixed variance and phase. Evaluate each polygon
+vertex with exact outward Bernstein bounds on the entire phase interval.
+Finally rho is bounded below by the maximum of its already proved positive
+floor and an affine function of these same moments, divided by a fixed positive
+upper bound on h^3. Clip the polygon by the switch line. On each piece an affine
+numerator divided by this positive affine denominator is a weighted average of
+its vertex ratios. Use max(numerator,0) for valid lower-denominator substitution.
+Independent detailed derivations: ../../local/RHO_CUBIC_POLYTOPE_REVIEW.tex and
+../../audit/CUBIC_DENOMINATOR_COUPLING.txt (copied with fixed hashes below).
+Early returns only use already valid strict old bounds. rho_lower>rho_law_upper
+is a necessary empty intersection; no new range or target is introduced.
+The ordinary retained count kernel and MGF have p<1/2; these two panels meet it.

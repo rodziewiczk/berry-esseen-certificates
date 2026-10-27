@@ -1,0 +1,14 @@
+# Numerical finite/tail adapter handoff
+
+Entry: `python -I -B replay.py MODE ...`. Fixed API: `TASKS.json`. Source pins: `SOURCE-MANIFEST.json`. Publish only `PUBLICATION.json` and its listed files; exclude `demo-*`.
+
+Implemented and source-complete:
+
+* **183 finite numerical tasks:**31 original complete native acceptors and152 fresh LOW producers. `finite-all` runs both original full family binders with `--replay` after constructing all new canonical row/index bytes. Each original complete typed output is checked by the unchanged `finite61_batch` reader, with immutable source/input and actual read-trace checks. No historical capture or HMAC is used as runtime authority.
+* **55 tail execution declarations:**10 new programs,3 mappings,41 retained components and their umbrella. `tail-full` invokes the original whole14+41 driver and the original complete output reader under its explicit Linux BASIC guard. It requires actual fresh completion of every55 invocation; a quick subset cannot pass. Individual retained tasks use the original selected-job facility and original isolated-writer protocol.
+
+Actual bounded tests: `61.native.43.scalar01` completed EXIT0, its full original `PASS_EXACT_CUTOFF43_COMPOSITION` object and3 negative controls matched exactly. `tail.new.composition49` completed EXIT0 under the unchanged full1401-file source manifest. No183/55 full computation was launched during implementation. One initial scalar invocation occurred before source packaging finished and rejected the absent task catalog; it was rerun successfully after packaging. That invocation error is not a mathematical result.
+
+Exact remaining join boundary: **two finite collectors**, `61.collect.cutoff44` and `61.collect.cutoff43`. Their original code is included in the source CAS, hashes respectively `9ac3c0f9268e428080b00f983403761a531743537adb03ffb1e1e83b18a73fb9` and `34411408c7fa9c6d38d0212edd80c85e497b436c04f6af8a2d90bbd0a076b7ea`. They need the current31-action + shared12-parent capture/source-epoch adaptation, retaining their entire original scalar/probability/phase/dominance checks and controls. The original source API explicitly blocks these collectors. This adapter keeps them non-runnable; it does not cast old collector JSON into a new result. Their exact original source members and adaptation requirements are in `TASKS.json`. Thus completed183 numerical parents still do not alone create a current all-law finite43--48 witness.
+
+Tail BASIC completion is an actual numerical computation, with full source/capture validation; it is not a native/cgroup authorization. Fresh host/runtime qualification and the final analytical/global binder remain separate. Every public result retains `full_pass=false`, `all_law_theorem_verified=false`. The package reads no authority keys and operates no cloud resources.

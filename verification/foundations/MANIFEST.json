@@ -1,0 +1,24 @@
+{
+  "full_pass": false,
+  "historical_HMAC_required": false,
+  "packages": {
+    "root4": {
+      "bytes": 563676,
+      "file": "sources/root4-native.zip",
+      "members": 99,
+      "sha256": "edc8c644b22440b6a575a3417df39ae286f2ed9120892f9a29de3ff6d050bfe2"
+    },
+    "small": {
+      "bytes": 146423,
+      "file": "sources/small-native.zip",
+      "members": 190,
+      "sha256": "2ede8ff4831ba28c07b552df81999b4f2e044a9821306ee56c8b17c652511c41"
+    }
+  },
+  "private_keys_required": false,
+  "schema": "public-foundations-source-pack/1",
+  "validator_origins": {
+    "root4_stage_worker.py": "2456072e6f5707719b003e0cc0dc01541589903896774e02dc520657ddbb2b86",
+    "small_indices_worker.py": "368670d36d323154e57863ae361a174d3cce7231473612045936571f38122b6d"
+  }
+}

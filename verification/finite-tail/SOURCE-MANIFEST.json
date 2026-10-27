@@ -1,0 +1,10 @@
+{
+  "schema": "public-finite-tail-sources/1",
+  "backend_sha256": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+  "backend_members": 843,
+  "finite61_original_manifest_sha256": "c8d6228d6a1abd0b25a2f69ed35ae78f1e719a58e27e4fedf5af28e942469cdf",
+  "tail_archive_sha256": "ecdb9acca0db29efc9fe2bf496c0bcc61b4881aecdcbc91a4eb6ad49b920c72e",
+  "tail_archive_bytes": 16660566,
+  "private_keys_required": false,
+  "full_pass": false
+}

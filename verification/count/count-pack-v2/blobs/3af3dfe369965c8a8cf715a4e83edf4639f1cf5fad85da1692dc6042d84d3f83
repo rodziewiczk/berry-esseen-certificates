@@ -1,0 +1,58 @@
+{
+  "status": "FIXED_CONDITIONAL_UNIFORM_RESOURCE_ROWS",
+  "resource_composition": "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/bridge_b12_resources/UNIFORM_B1_RESOURCES_CHECKED.json",
+  "resource_sha256": "c4a23b32b61b99faaceff8e53f95847ad52bc01c0898a4a5a6b671edc7f7536f",
+  "actual_n": 34,
+  "floor_n": 31,
+  "rho_interval": [
+    "11/10",
+    "6/5"
+  ],
+  "selected_source_rows": [
+    {
+      "index": 30,
+      "source_kind": "exact"
+    },
+    {
+      "index": 31,
+      "source_kind": "exact"
+    },
+    {
+      "index": 32,
+      "source_kind": "exact"
+    },
+    {
+      "index": 33,
+      "source_kind": "exact"
+    },
+    {
+      "index": 34,
+      "source_kind": "exact"
+    },
+    {
+      "index": 35,
+      "source_kind": "local_patch"
+    },
+    {
+      "index": 36,
+      "source_kind": "local_patch"
+    },
+    {
+      "index": 37,
+      "source_kind": "exact"
+    },
+    {
+      "index": 38,
+      "source_kind": "exact"
+    },
+    {
+      "index": 39,
+      "source_kind": "exact"
+    },
+    {
+      "index": 40,
+      "source_kind": "exact"
+    }
+  ],
+  "setup_sha256": "96afd0d3ad2dbfacf1573e2a0d693e84eae8e2a5604bc3ea5087093ec31bcb8e"
+}

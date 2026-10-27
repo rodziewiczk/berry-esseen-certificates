@@ -1,0 +1,687 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,xcolor,fancyhdr,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small The iid Berry--Esseen constant}
+\fancyhead[R]{\small Computer-assisted argument}
+\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\title{The iid Berry--Esseen constant\\
+\large A computer-assisted argument with exact certificates}
+\author{Working preprint}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We assemble an argument for the optimal iid Berry--Esseen constant from
+ordinary analytical reductions and finite exact certificates. The proof
+selects an unrestricted extremal law, preserves that law through contact,
+resource and conditional-count estimates, and covers all positive integers
+by thirteen compatible contributions. The infinite tail has its own
+three-loss base and least-failure argument. We give the classical lower
+approximation separately, prove the binomial normalization extension across
+one half, and provide a companion source supplement with the longer
+analytical derivations and their logical dependencies.
+\end{abstract}
+
+\section{Scope and target}
+Let \(\mathcal P\) be the real probability laws with mean zero, variance one,
+and finite third absolute moment \(\rho(P)=\E_P|X|^3\). For iid variables
+with law \(P\), let \(S_n=X_1+\cdots+X_n\) and
+\[
+ \Delta_n(P)=\sup_{H\in\R}
+       |\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,\qquad
+ R_n(P)=\frac{\sqrt n\,\Delta_n(P)}{\rho(P)}.
+\]
+Set
+\[
+ C_n=\sup_{P\in\mathcal P}R_n(P),\qquad C^*=\sup_{n\ge1}C_n,\qquad
+ \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+\begin{theorem}[Conclusion from the exact certificates]\label{thm:global}
+Assume that the complete source-pinned numerical predicates of the thirteen
+families in Table~\ref{tab:roles} are true at their exact scopes. With the
+published inputs specified below and the ordinary analytical reductions
+proved here and in the precise source supplement~\cite{source},
+\[
+ C_n\le\CE\quad(n\ge1),\qquad C^*=\CE.
+\]
+\end{theorem}
+The thirteen source families have been assembled and the scoped independent
+mathematical review is complete. The main argument below explains how their
+exact numerical conclusions enter ordinary mathematical implications.
+The companion \path{analytic-supplement.txt} contains the longer proofs,
+with original labels and a lemma-to-main-claim index. Verification status is
+summarized once in Section~\ref{sec:open}.
+
+Affine standardization needs no one-summand bound. For a law $Z$ with mean
+$\mu$, variance $\sigma^2>0$ and third central absolute moment $\beta_3$,
+set $X=(Z-\mu)/\sigma$. Then $\rho=\beta_3/\sigma^3$ and
+\[
+ \Pp\!\left(\frac{\sum Z_i-n\mu}{\sigma\sqrt n}\le z\right)
+ =\Pp\!\left(\sum X_i\le\sqrt n\,z\right).
+\]
+The result therefore has its usual arbitrary-mean/positive-variance form.
+
+Throughout, \(H\) is a \emph{raw sum} threshold. Its normalized version is
+\(H/\sqrt n\). All terminating decimals used by a checker mean exact
+rationals. A numerical relaxation may contain nonrealizable moment points:
+soundness requires that it contain every actual law, not that every point
+be a law.
+
+\section{The independent classical lower approximation}
+Set $p=(4-\sqrt{10})/2$, $q=1-p$, and $X=(B-p)/\sqrt{pq}$ for a
+Bernoulli variable $B$. Then $\E X=0$, $\E X^2=1$ and
+$\rho=(p^2+q^2)/\sqrt{pq}$. The fixed-law limit in
+Schulz~\cite[Remark~4.1, printed p.~15]{schulz} gives, in the present normalization,
+$R_n(X)\to\CE$: exact algebra gives $p^2+q^2=10-3\sqrt{10}$ and
+$(3+q-p)/(p^2+q^2)=3+\sqrt{10}$. The threshold substitutions are
+\[
+ H=\sqrt n\,z,\qquad x=np+\sqrt{pq}\,H=np+\sqrt{npq}\,z.
+\]
+Each ranges over the whole real line. For every $b<\CE$, choose
+$\varepsilon=(\CE-b)/2$ and a positive integer $n$ with
+$R_n(X)>\CE-\varepsilon>b$. Thus $C^*\ge\CE$, independently of the upper
+proof and without finite-index attainment. The all-parameter finite-binomial
+upper theorem in~\cite[Theorem~1]{schulz} is a separate input, used on the
+exact zero-noise branch below; neither theorem is proved by a PDF hash.
+
+\section{The unrestricted owner and its contact}
+\begin{lemma}[Fixed-index attainment]\label{lem:attain}
+For each fixed \(n\ge1\), \(0<C_n\le\sqrt n\), and some law \(P\in\mathcal P\)
+and threshold \(H\) attain \(C_n\) as a positive closed discrepancy:
+\[
+ \Pp_P(S_n\le H)-\Phi(H/\sqrt n)=\Delta_n(P),\qquad R_n(P)=C_n.
+\]
+\end{lemma}
+\begin{proof}
+A negative closed discrepancy reflects into a positive strict discrepancy.
+Approaching that strict threshold from below, continuity of \(\Phi\) gives
+the same supremum with positive closed discrepancies. Since \(\rho\ge1\),
+the upper bound is immediate. A symmetric two-point law, evaluated at the
+upper endpoint of its sum, gives positivity.
+
+Take positive scores \(r_j\to C_n\), with \(r_j\ge c>0\). Then
+\(\rho_j\le\sqrt n/c=:M\). Tightness gives a subsequence \(P_j\Rightarrow P\);
+also take \(\rho_j\to b\). The estimates
+\[
+ \int_{|x|>A}x^2\,dP_j\le M/A,\qquad
+ \int_{|x|>A}|x|\,dP_j\le M/A^2
+\]
+preserve the first two moments. Lower semicontinuity gives
+\(1\le\rho(P)\le b<\infty\). Chebyshev's inequality for negative thresholds,
+and the Gaussian upper tail for positive thresholds, imply that the chosen
+raw thresholds satisfy \(|H_j|\le n^{3/4}/\sqrt c\). Pass to \(H_j\to H\).
+For fixed \(n\), weak convergence of products and the continuous sum map
+give \(P_j^{*n}\Rightarrow P^{*n}\). Closed-set Portmanteau at \(H+\varepsilon\),
+followed by \(\varepsilon\downarrow0\), yields
+\[
+ F_{n,P}(H)-\Phi(H/\sqrt n)\ge C_n b/\sqrt n.
+\]
+Consequently \(C_n\ge R_n(P)\ge C_n b/\rho(P)\ge C_n\).
+All inequalities are equalities. In particular \(\rho(P)=b\); third-moment
+convergence is a consequence of extremality, not an assumed uniform
+integrability of third moments. The proof includes \(C_n=\CE\).
+\end{proof}
+
+The law used below is the owner \emph{selected by this lemma}, after
+orientation. We do not begin with an arbitrary law and pretend it remains
+an optimizer after extraction. Once selected, the law and raw threshold
+are fixed through every subsequent support, resource and count statement.
+
+For \(n\ge2\), write \(C=C_n\), \(F=F_{n,P}(H)\),
+\(z=H/\sqrt n\), \(\gamma=\E X^3\), and \(\beta=\E[X|X|]\).
+The exact contact statement used by the proof is
+\begin{align}
+ \rho I(y)={}&n^{3/2}\{F_{n-1,P}(H-y)-F\}
+      +ny\phi(z)+\tfrac12H\phi(z)(y^2-1)\notag\\
+ &+\tfrac32C\rho(y^2-1)
+      -C\{|y|^3-\rho-3y\beta\},                  \label{eq:contact}\\
+ I(y)&\le0\quad(y\in\R),\qquad
+ I(y)=0\quad(y\in\supp P).                     \label{eq:contact-zero}
+\end{align}
+\begin{proof}[Contact calculation]
+Contaminate the raw law by $P_\varepsilon=(1-\varepsilon)P+
+\varepsilon\delta_y$ and standardize. Its mean and variance derivatives
+are $y$ and $y^2-1$. Its centered third-absolute-moment derivative is
+$|y|^3-\rho-3y\beta$, justified by an integrable quadratic derivative bound.
+The raw closed-convolution derivative is
+$n\{F_{n-1,P}(H-y)-F\}$, by the finite mixture expansion; the normal
+argument derivative is $-\sqrt n\,y-H(y^2-1)/(2\sqrt n)$.
+Differentiating the normalized score gives exactly $\rho I(y)$;
+extremality makes it nonpositive. Its expectation is zero. The contact
+majorant is continuous while $F_{n-1,P}(H-y)$ is upper semicontinuous;
+thus strict negativity at a support point would give a negative integral
+on a neighborhood. This proves equality on the whole closed support.
+The cubic leading majorant confines that support before higher moments
+are introduced. See~\cite[lines410--463]{source} for the full atom-safe
+variation and compactness details.
+\end{proof}
+
+\section{The same-law predecessor step}\label{sec:predecessor}
+For a standardized law \(P\), define
+\[
+ q_n(P,C)=n\max\{R_{n-1}(P)-C,0\}.
+\]
+\begin{lemma}[Weak predecessor is sufficient]\label{lem:qzero}
+If \(C_{n-1}\le\CE\), then for every \(P\in\mathcal P\) and every
+\(C\ge\CE\), \(q_n(P,C)=0\).
+\end{lemma}
+\begin{proof}
+The definition of the unrestricted supremum gives
+\(R_{n-1}(P)\le C_{n-1}\le\CE\le C\). The positive part is zero.
+\end{proof}
+For the selected owner, use \(C=R_n(P)=C_n\). Thus every previously proved
+implication using an allowance \(q_n(P,C_n)\le Q\), \(Q\ge0\), remains valid.
+No contact at \(n-1\), strict predecessor, or monotonicity in \(n\) is inferred.
+Own-index score caps and resource bounds are separate premises and are not
+replaced by this lemma.
+
+The source manuscript proves exactly this step at
+\texttt{indcore:lem:replacement}, lines 4777--4789. Some older resource
+descriptions assume the stronger \(C_{n-1}<\CE\). The assembly uses the
+actual weaker allowance hypothesis of their support/resource lemmas, together
+with Lemma~\ref{lem:qzero}; it does not assert that stronger predecessor.
+
+\section{Support and independently licensed Fourier bounds}
+Put \(s=\sqrt{n/(n-1)}\), \(e=n(s-1)-1/2\), and
+\(A=R_{n-1}(P)\). From contact one obtains, at a support point \(t\),
+\[
+ 0\le\mathcal H_n(H,t)
+   +C\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e\}
+   +\rho s\,n(A-C).
+\]
+Here
+\[
+ \mathcal H_n(H,t)=n\sqrt n\{
+ \Phi((H-t)/\sqrt{n-1})-\Phi(H/\sqrt n)\}
+ +\{nt+\tfrac12H(t^2-1)\}\phi(H/\sqrt n).
+\]
+For bounds \(\rho\le r\), \(|\beta|\le b\), \(s\le S\), \(e\le E\),
+\(0<c\le C\), and \(q_n(P,C)\le Q\), define
+\[
+ Q_0(v)=-v^3+\tfrac32rv^2+3bv+rE,\qquad
+ L(v)=\tfrac25(v^2/2+1/2+E)+cQ_0'(v).
+\]
+The direct support lemma in~\cite{source}, lines 492 onward, requires
+\[
+ Q_0(R),Q_0'(R),Q_0''(R),L(R),L'(R)<0,\quad 1/5-3c<0,
+\]
+and, for both signs \(\eta\),
+\[
+ \sup_{H\in\R}\mathcal H_n(H,\eta R)+cQ_0(R)+rSQ<0.
+\]
+Since \(Q_0'''=-6\) and \(L''=2/5-6c<0\), these inequalities propagate
+along both complete closed rays \(v\ge R\). They contradict contact on
+those rays, proving \(\supp P\subset(-R,R)\). Whole-threshold Gaussian
+enclosures, including both infinite threshold tails, are required at the
+endpoint test. Sampling thresholds does not prove that supremum bound.
+
+Fourier bounds serve different roles. An unrestricted auxiliary ceiling
+may license an own-score cap before support is known. A supported Fourier
+ceiling applies only after that same law's support has been acquired.
+Their normalization and endpoint terms must remain exact. In the
+20--24 family the source Prawitz reduction uses the doubled kernel
+\[
+ K(t)=(1-t)+i\{(1-t)\cot(\pi t)+1/\pi\}.
+\]
+The four smoothing terms, the omitted endpoint pieces, and the infinite
+Gaussian tail are part of the certificate. A finite-window integral alone
+is not a Kolmogorov bound. The independent scalar-cosine certificate and
+Prawitz inequality are explicit inputs; numerical authentication cannot
+grant these analytic statements.
+
+The exact iid literature inputs are~\cite{shevtsova2013}
+\[
+ R_n(P)\le\min\{.4690,\ .3322(1+.429/\rho),\ .3031(1+.646/\rho)\}.
+\]
+They apply for every $n\ge1$: the source normalization for $X_i/\sqrt n$
+has $\ell_n=\rho/\sqrt n$ and $\tau_n=1/\sqrt n$.
+The n-generic compiled complement deliberately weakens $.3322$ to $.3328$;
+this also gives a valid bound, decreasing below $.4097$ at $\rho=19/10$.
+The smoothing convention is fixed by~\cite[Lemma~4.1, printed p.~263]{shevtsova2012}.
+The directed inequality $.4097<\CE$ is separate from the coarse
+$.4095<\CE$ used for cap/excess estimates.
+
+\section{One marginal and the conditional-count identity}
+Keep the same \(P\). Set
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_->0,\quad h=v/m.
+\]
+The mean-zero, nondegenerate law has \(0<p<1\). With
+\(I=\mathbf1_{\{X>0\}}\), write
+\[
+ hX=I-p+U,\qquad \E(U\mid I)=0.
+\]
+A zero atom belongs to the nonpositive class. Let \(U_i\) be the two
+conditional laws and \(w_i=\E U_i^2\). Then
+\[
+ s=qw_0+pw_1=h^2-v,\qquad \lambda=ns.
+\]
+In standardized physical units $\theta=s/(v+s)$, since $h^2=v+s$.
+Consequently $\lambda=npq\theta/(1-\theta)$.
+If \(s>0\), let \(\alpha=pw_1/s\); if \(s=0\), both conditional residuals
+are zero and no division by \(s\) is made.
+
+Conditional on \(j\) positive draws, the sum of residuals has law
+\[
+ W_j=U_{0,1}+\cdots+U_{0,n-j}+U_{1,1}+\cdots+U_{1,j},
+\]
+with independent summands. For \(b_j=\binom njp^jq^{n-j}\) and
+\(np+hH=k+u\),
+\begin{align}
+ \Pp(S_n\le H)
+ &=\sum_{j=0}^n b_j\Pp(W_j\le k+u-j)\notag\\
+ &\le F_{\mathrm{Bin}(n,p)}(k)-b_k\Pp(W_k>u)
+       +\sum_{j>k}b_j\Pp(W_j\le u-(j-k)).       \label{eq:count}
+\end{align}
+Indeed \(hS_n=K-np+\sum U_i\); condition on \(K\), retain \(j=k\)
+exactly, and bound \(j<k\) by its full mass. The outgoing event is strict
+because its complement is the closed event \(\{W_k\le u\}\).
+Every incoming event remains closed. This identity works on both
+probability halves without reflecting \(p,\beta,\gamma\).
+
+\subsection*{Joint resources and units}
+Suppose the actual central support gap is \((-A,B)\). The scaled residual
+endpoints are
+\[
+ a_0=p-hA,\quad a_1=q-hB,\qquad
+ U_0\in[-O_0,a_0],\quad U_1\in[-a_1,O_1].
+\]
+The raw inward displacement is
+\[
+ d_{\rm raw}=(m/q-A)+(m/p-B),\qquad a_0+a_1=h\,d_{\rm raw}.
+\]
+Thus raw inward displacement and its scaled COUNT coordinate cannot be
+identified without their factor \(h\). In these scaled coordinates, a
+licensed joint plane has the form
+\[
+ \frac{a_0+a_1}{d_0}+\frac{\lambda}{\Lambda}\le1.
+\]
+A later, smaller marginal cap for \(\lambda\) does not replace the
+intercept \(\Lambda\) in this plane. A zero resource budget has its own
+deterministic conclusion. The physical defect, its affine halfplane and
+the two signed quadratic constraints must all concern this same law.
+Their full proofs are the source labels
+\texttt{rescore:joint-resource}, \texttt{countcore:physicalD} and
+\texttt{countcore:Dhalfplane}; they are distinct ordinary analytical inputs,
+with proofs in that supplement.
+
+\section{What a finite COUNT certificate proves}
+On a complete acquired parameter box, the checker combines valid outgoing
+lower and incoming upper probability bounds in~\eqref{eq:count}, then
+subtracts a lower Gaussian bound at the \emph{same} phase. If \(B_k\),
+\(b_k^-\), \(b_j^+\), \(L_k\), \(A_j\), \(N\) denote those bounds, it
+certifies a whole-box upper for
+\[
+ B_k-b_k^-L_k+\sum_{j>k}b_j^+A_j-N.
+\]
+This combined expression retains phase cancellation. Separate maxima at
+unrelated phases would not be the same proof. The positive error is then
+multiplied by an upper enclosure of \(\sqrt n\) and divided by a positive
+lower enclosure of the same \(\rho\). Every closed normalization piece is
+included. Convex vertex maximization is performed before minimizing over
+a finite menu of strategies; a pointwise minimum is not assumed convex.
+
+If the acquired bounds imply
+\[
+ np_- -h_+H_-\ge-1/2,\qquad np_+ +h_+H_+\le n+1/2,
+\]
+every threshold has a nearest count \(k=0,\ldots,n\) and
+\(u\in[-1/2,1/2]\). Otherwise the remaining thresholds require separate
+proved tail bounds. The count notation does not discard them.
+
+Each of the \(n+1\) original product roots is covered by a finite binary
+tree. A strict interior rational cut retains \emph{both closed children}.
+Every leaf either proves a necessary-condition contradiction or a
+whole-box normalized score upper below a rational \(c<\CE\).
+Induction up the finite tree proves its root statement; union over all
+roots proves the complete comparison, including ties, boundaries and
+zero-noise faces. Missing roots, unsuccessful guards and unfinished
+searches are not exclusion certificates. This is the precise finite
+closed-cover implication of~\cite{source},
+\texttt{countcore:scoretheorem} and \texttt{countcore:forest}.
+
+The entire matching contract and physical resource-to-COUNT implication
+remain mandatory. A local COUNT acceptance does not acquire support,
+an own-index cap, contact, or a new all-law theorem by itself.
+
+\section{The literal 20--24 chain}
+This completed source block makes the assembly concrete.
+The full numerical role set has 186 entries:
+163 ordinary forests, eight INITIAL/resource cores, three Fourier packets,
+one same-law 19/20 feedback packet, one high-support packet, the shared
+scalar certificate, one full actual20 conjunction and eight full band joins.
+Already checked inputs are reused with their existing provenance; this
+list is not a request to repeat their numerical work.
+
+For each \(n=21,\ldots,24\), the closed low-rho bands and initial support
+radii are
+\[
+ \begin{array}{c|c|c}
+ &\rho\text{ interval}&\text{radius}\\ \hline
+ B0&[1,11/10]&23/10\\
+ BN&[11/10,9/8]&12/5 .
+ \end{array}
+\]
+Every own cap \(419/1000\) comes from a separate unrestricted auxiliary
+Fourier bound at the \emph{actual} index. Each core starts without an
+acquired defect seed, runs eight feedback covers and a ninth export,
+and accounts for all 2592 signed cells per cover and all 100 closed
+probability panels. Its quantitative resource meaning is required even
+if a discovery target happened to be reached earlier.
+
+Actual20 uses 49 complete forests, with its original whole-panel
+two/four-piece unions. The eight later bands use 114 forests and 800
+complete probability dispositions. All 1000 panels in this five-index
+block are accounted for by physical contradiction, strict scalar
+contradiction, or the full matching COUNT. Every probability seam is
+closed. The high-rho complement uses supported Fourier on \([9/8,6/5]\),
+support-free Fourier on \([6/5,19/10]\), and the full published infinite
+tail. Radius-3 support for that supported branch is a separate premise.
+
+\begin{proposition}[Conditional five-index composition]
+Suppose the actual all-law \(C_{19}\le\CE\) theorem is supplied, every
+numerical input above passes its complete mathematical interpreter, and
+the exact attainment/contact, Fourier, support, resource, realization and
+cover implications are proved or accepted at their stated scope. Then
+\(C_n\le\CE\) for \(n=20,\ldots,24\).
+\end{proposition}
+\begin{proof}
+At the next literal index assume \(C_n>\CE\), choose the unrestricted owner
+by Lemma~\ref{lem:attain}, and freeze that law and raw threshold.
+Lemma~\ref{lem:qzero} licenses the same-law predecessor allowance.
+The separate actual-index own caps, full rays, INITIAL and resource
+implications place the owner in the complete low/high cover.
+Every part contradicts its score or a necessary physical condition.
+Thus \(C_n\le\CE\). Repeat at the next integer. No desired next bound,
+sample-size monotonicity, or contact at a transferred index is an input.
+\end{proof}
+
+The current candidate supplies the actual whole41 predicate, completed
+cached185 meanings, genuine incoming19 theorem and all12 analytical
+implications. The large numerical computations remain qualified actual
+source-execution premises, rather than a status-field change.
+
+\section{The thirteen roles and the unbounded tail}
+\begin{longtable}{@{}p{.10\linewidth}p{.48\linewidth}p{.34\linewidth}@{}}
+\caption{Exact upper partition. Every finite index1--48 occurs once.}
+\label{tab:roles}\\\toprule Index&Mathematical role&Complete source/numerical meaning\\\midrule
+\endfirsthead\toprule Index&Mathematical role&Complete source/numerical meaning\\\midrule\endhead
+1&$C_1\le2/5<\CE$; Appendix~\ref{app:n1}.&150 closed cubic-dual cells, independent exact checks.\\
+2&$C_2\le2\sqrt2/7<\CE$, full unrestricted tensor reduction.&Two independent complete polynomial checkers.\\
+3&$C_3\le59\sqrt3/250<\CE$, 59-feature null polynomial.&Full scalar, identity and cube predicates.\\
+4&$C_4\le.4097<\CE$ from quantitative G3.&Both ROOT4 whole260-parent passes, HIGH/LOW and reserves.\\
+5&New one-free G3$\to$G4$\to$same-owner $q_5=0$ contradiction.&Whole region/resource/COUNT cover;13 retained rules, no $.3704$ premise.\\
+6--9&Exact source implication with the new proof of the identical weak C5 parent.&Whole original contexts, explicit parent substitution.\\
+10--19&Exact parent substitution from the genuine6--9 theorem.&Whole original resource/COUNT contexts and closed subdomains.\\
+20--24&Increasing weak induction, actual own caps $<.419$.&186 meanings,12 analytical rules,163 COUNTs,1000 panels.\\
+25&New low-only $[1,6/5]$ cover and independent unrestricted high-rho branch.&Six original calls,52 complete COUNT interfaces, zero noise.\\
+26--39&New low-only weak induction; actual support35 and separate positive39 cap.&300 COUNTs, whole7 partitions,35 support predicates, physical interfaces.\\
+40--42&New floor40 theorem for actual $n\in\{40,41,42\}$.&CORE304+2/9/INITIAL2; honest original8+new2 acquisition conjunction.\\
+43--48&Independent positive ceilings and finite least failure, no sharp42 premise.&Original183 complete parents; distinct floor42 LOW family.\\
+$n\ge49$&Independent positive ceilings, strong46, uniform local exclusion.&14 top-level plus41 retained execution predicates; full closed cover and rays.\\\bottomrule
+\end{longtable}
+The principal finite dependency is G3$\to$G4$\to$C5$\to$C6--9$\to$C10--19
+$\to$C20--24$\to$C25$\to$C26--39$\to$C40--42. N1 and G2 are independent.
+The unrestricted high-rho25--48 theorem is independent. The43--48 and49-tail
+roles have their own positive/coarse prerequisites: no sharp42$\to$43 edge
+and no sharp1--48 premise in the tail are used. Proof-parent substitution
+requires an identical statement and retains the complete numerical context.
+
+\subsection*{Weighted floors and signed corrections}
+A floor row $N$ is applied only with $nD_{\rm actual}\le Nd$ and both
+the defect ceiling and noise price scaled by $N/n$; see Appendix~\ref{app:resource}.
+All signed moment, support, probability and threshold fields must still match.
+For real $I$ and $40\le n\le42$,
+$I/n\le\max(I/40,I/42)$. For a signed bracket $B$ and multiplier in
+$[a,b]$, its lower product is $\min(aB,bB)$. These are affine endpoint
+inequalities, requiring no positive sign for $I$ or $B$.
+The paired portfolio retains $M<3$, $g^2<2$, $R>2g$ and its positive
+damping gates. Negative skewness uses the upper density endpoint, or its
+explicit equivalent correction, before completing squares. Both raw and
+barrier-subtracted curvatures are corrected. The ordinary active-override
+proof, licenses this reuse.
+
+\subsection*{Three losses at49 and the least later failure}
+The independent auxiliary branch gives
+\[
+ C_j\le\CE+\frac{.7}{j}\ (45\le j\le50),\qquad
+ C_{46}<\CE+\frac{.54}{46}.
+\]
+Write $d_n=n(C_{n-1}-C_n)_+$. Its uniform local theorem excludes a positive contrary owner for every
+actual $n\ge47$ with excess at most $.7/n$ and $d_n\le.19$, current cap $C_n<.4247$, and deleted caps
+$C_{n-1},C_{n-2}<.4253$. The entry theorem acquires the same-law support,
+probability, moment and resource hypotheses independently of sharpness.
+Conditional-count, signed-deletion, confinement, marked-crossing and
+scaled-small-noise arguments prove $\rho_B(C-C_B)<-\lambda/1000$ for
+every $\lambda>0$. At $\lambda=0$, centering gives $U=0$ almost surely
+and Schulz's separate finite-binomial theorem gives $C_B<\CE$.
+The full ordinary proofs are~\cite[lines7647--8064 and8217--8887]{source};
+their complete numerical predicates, signed gates and closed seams are
+required, not inferred from a PASS or finite sampling.
+
+If $C_{49}>\CE$, the rational caps license the local theorem successively
+at49,48,47. Each failure forces $C_{n-1}>C_n+.19/n$. Hence
+\[
+ C_{46}>\CE+\frac{19}{100}\left(\frac1{47}+\frac1{48}+\frac1{49}\right)
+ >\CE+\frac{27}{50\cdot46},
+\]
+since the excess difference is exactly $35419/254251200>0$.
+This proves weak sharpness at49 without sharp1--48. Each application may
+choose its own owner; its internal same-law premises never change.
+
+For the least later violation $n\ge50$, the previous weak sharp theorem
+gives zero same-law decrement. The support-free smoothing bound is
+\[
+ C_n\le\sqrt{\frac n{n-1}}C_{n-1}
+ +\frac{\sqrt n}{15(n-1)^{3/2}}+\frac2{25}\frac{\sqrt n}{(n-1)^2}.
+\]
+It follows by conditioning on one summand and using third-absolute-moment
+Gaussian Taylor and variance heat remainders before either supremum
+\cite[lines7463--7506]{source}; no support or higher moment is assumed.
+For $n\ge50$, $\CE<409733/10^6$ and $\sqrt{n/(n-1)}<1011/1000$ give
+\[
+ n(C_n-\CE)<\frac{409733}{10^6}\frac{25}{49}
+ +\frac{50}{49}\frac{1011}{15000}
+ +\frac2{25}\frac{50}{49}\frac{1011}{7000}<.29.
+\]
+Thus the local theorem applies again. At $n=50$ its second predecessor48
+uses the independent coarse bound $C_{48}\le\CE+.7/48<.4253$; thereafter
+both deleted indices are earlier sharp ones. Contradiction proves the
+entire unbounded tail. The thirteen-part cover and the separate lower
+approximation prove Theorem~\ref{thm:global} under its stated predicates.
+
+\section{Verification status}\label{sec:open}
+The original source computations, global mathematical composition and scoped
+independent analytical/checker-source review are complete. The numerical
+hypotheses in Theorem~\ref{thm:global} are supplied by qualified complete
+source-bound executions. A full fresh public end-to-end run is still in
+progress; this version does not report it as completed or claim
+\texttt{full\_pass}. Exact arithmetic, whole-domain native acceptance and
+source/runtime/parent bindings are retained in the reproducibility package.
+
+The accompanying ordinary proofs establish the analytical implications;
+execution records identify the numerical computations. Complete Lean
+formalization of the analysis and checker semantics remains future work;
+the existing assembly/limit bridges verify conditional implications.
+AI assistance was used in development, source review and preparation of
+this working preprint.
+
+\appendix
+\section{The one-summand dual proof}\label{app:n1}
+For each rational cell $[a,b]$ of a closed cover of $[-2,1]$, the finite
+input supplies $u,v,L_a\in\mathbb Q$, $L_a\le\Phi(a)$, with
+\[
+ L_a-v+ux+vx^2+\tfrac25|x|^3-\mathbf1_{\{x\le b\}}\ge0\quad(x\in\R).
+\]
+Whole-line polynomial/Sturm checks include both infinite rays.
+Expectation cancels $-v+v\E X^2$ and $u\E X$, giving
+$F_X(b)-L_a\le(2/5)\rho$. Monotonicity gives the same upper bound for
+$F_X(t)-\Phi(t)$ on $[a,b]$. At $t\le-2$, Cantelli gives $F_X(t)\le1/5$;
+at $t\ge1$, $1-\Phi(1)<2/5$ (for example $\phi(0)>3/8$ and
+$e^{-s^2/2}\ge1-s^2/2$ give $\Phi(1)>13/16$). Since $\rho\ge1$,
+these suffice. Finally
+$\Phi(t)-F_X(t)\le F_{-X}(-t)-\Phi(-t)$, since
+$F_{-X}(-t)=1-F_X(t-)$, so reflection includes atoms.
+The150-cell certificate and independent exact checks are finite inputs;
+this ordinary implication needs no general-law $.3704$ claim.
+
+\section{Physical defect and weighted units}\label{app:resource}
+Put $\sigma=\sqrt{10}$, $\tau(t)=\E[X\mathbf1_{\{X\ge t\}}]$ for the
+bounded owner. Then $\tau\ge0$, $\int\tau=1$ and $2\int|t|\tau(t)dt=\rho$.
+For complementary gaps $(a,b)$ of its closed support let $\tau_{a,b}$ be
+the constant interior value, and put
+\[
+ J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,\qquad D=(3+\sigma)\rho-\gamma-3J.
+\]
+The sums converge by Tonelli and bounded support. If zero is in the support,
+$(b-a)^2\le2\int_a^b|t|dt$ gives $J\le\rho$ and $D\ge0$. Otherwise let
+$(-A,B)$ be the central gap, $m=\E X_+=\E X_-$,
+$T_+=\E X_+^3-mB^2$, $T_-=\E X_-^3-mA^2$, $J_o=J-m(A+B)^2$.
+On positive outer gaps use $(b-a)^2\le2\int_a^b(t-B)dt$ and reflect;
+thus $J_o\le T_++T_-$. Direct expansion gives
+\[
+ D=m(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2
+ +(\sigma-1)T_++(\sigma+1)T_-+3(T_++T_--J_o)\ge0.
+\]
+For the actual conditional means $\bar A=m/q$, $\bar B=m/p$, write
+$\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$ and let $\theta_+,\theta_-$
+be the positive/negative conditional centered second moments with class
+weights included; $\theta=\theta_++\theta_-$. Conditional cubic expansion
+and the stronger outer estimates give the simultaneous ordinary budget
+\begin{align*}
+ D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
+ +6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}\\
+ &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-,\qquad p_*=(4-\sigma)/2.
+\end{align*}
+Indeed the positive cubic residual is at least $3B\theta_+$ and its
+reflection handles the other sign. The deterministic remainder is exactly
+the second term, and
+$(\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2$ with
+$m^2=(1-\theta)pq$ proves the binary term. Stronger signed/mean/outer-gap
+refinements retain their full ordinary proofs in~\cite[lines2470--4039]{source};
+$D\ge0$ alone would not establish them.
+
+If $n\ge N>0$, all costs are nonnegative and
+\[
+ (n/N)D_{\rm actual}\le d,\qquad
+ D_{\rm actual}\ge b+gd_s+(N/n)c_\lambda\lambda,
+\]
+then $d\ge(n/N)(b+gd_s)+c_\lambda\lambda\ge b+gd_s+c_\lambda\lambda$.
+This proves the basic weighted transfer. A later smaller marginal noise
+ceiling does not replace the original joint intercept. Negative residuals
+exclude; a zero residual forces nonnegative coordinates to zero.
+
+\section{Normalization across one half}\label{app:norm}
+The original sufficient binomial recipe required a Taylor segment below
+$1/2$. The active recipe permits crossing under the following exact
+extension, independently checked in the final audit.
+
+\begin{lemma}[Symmetric derivative envelopes]
+If $0<a<1/2$, $a<b<1$, $a+b<1$, then for $r\in[a,b]$,
+\[
+ r(1-r)\ge a(1-a),\qquad
+ \frac{|1-2r|}{[r(1-r)]^j}\le\frac{1-2a}{[a(1-a)]^j}\quad(j=1,2).
+\]
+\end{lemma}
+\begin{proof}
+$[a,b]\subset[a,1-a]$. Set $s=\min(r,1-r)\in[a,1/2]$. The expressions
+are symmetric; $s(1-s)$ increases and $1-2s$ decreases nonnegatively.
+Their positive quotients therefore have their maxima at $a$.
+\end{proof}
+Let $n\ge N\ge1$, $p\in[p_-,p_+]\subset(0,1/2)$, $q=1-p$,
+$1\le k\le n-1$, $\delta=k-np$, $r=k/n$, $v=pq$. Suppose the whole
+segment between $p,r$ lies in $[a,b]$ above. If
+\[
+ E\ge\frac{1-2a}{a^2(1-a)^2},\quad L\ge\frac{1-2a}{a(1-a)},
+ \quad R\ge\frac1{12a(1-a)},
+\]
+then the binomial mass $\pi_k$ satisfies
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt v}
+ e^{-\delta^2/(2nv)+\zeta},\qquad
+ n|\zeta|<L|\delta|/2+R+E|\delta|^3/(6N).
+\]
+For proof, relative entropy has $D(p\Vert p)=D'(p\Vert p)=0$,
+$D''(p\Vert p)=1/v$ and
+$D^{(3)}(r\Vert p)=(2r-1)/[r^2(1-r)^2]$.
+Taylor bounds $|nD(r\Vert p)-\delta^2/(2nv)|$ by
+$E|\delta|^3/(6n^2)$; the logarithmic variance prefactor changes by at
+most $L|\delta|/n$. Finite Stirling, $0<s_j<1/(12j)$, gives exactly
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt{r(1-r)}}
+ e^{-nD(r\Vert p)+s_n-s_k-s_{n-k}}.
+\]
+Writing $e=s_n-s_k-s_{n-k}$, use the compatible one-sided estimates
+$e<1/(12n)$ and
+$e>-1/(12k)-1/(12(n-k))=-1/[12nr(1-r)]$.
+Thus $|e|<R/n$, and collecting all three errors proves the claim.
+One must not add three incompatible absolute factorial estimates.
+
+The literal code gates take $a=\texttt{left}$, $b=\texttt{right}$,
+$a<p_- -\Delta/N$, $p_++\Delta/N<b$, $a+b<1$.
+For $|\delta|\le\Delta$ they contain the whole segment. Gates
+$Np_- -\Delta-2>0$ and $N(1-p_+)-\Delta-2>0$ ensure interior/adjacent
+factorial domains. Positive $v_f<a(1-a)$ and upward-rounded
+$(1-2a)/v_f^2$, $(1-2a)/v_f$, $1/(12v_f)$ supply $E,L,R$.
+Mass bounds use $e^{-x}\ge1-x$, $e^x\le1/(1-x)$ only on their stated
+positive domains. The original $p$ band remains below $1/2$ when bounding
+$pq$; monotonicity is not assumed on the enlarged Taylor segment.
+This lemma grants no physical acquisition or numerical exclusion.
+
+\section{Exact source and audit map}
+The ordinary source supplement~\cite{source} has SHA-256
+\begin{center}\footnotesize\ttfamily
+2b5c9419a5fc2363de21e02e200529b735\\c52e492f0d398aca6f42650c65eea1.
+\end{center}
+Exact applicable sections are attainment/contact368--463;
+Fourier/resource1031--4039; physical COUNT4043--4765; small-index4822--6623;
+and smoothing7458--7506 plus confinement/local7647--8887. These are ordinary theorem/proof
+references, not numerical acceptance authorities. The longer calculations are provided in \path{analytic-supplement.txt},
+whose opening index maps their lemmas to the claims used in this paper.
+
+The completed review is
+\path{work/final-audit/INDEPENDENT-MATHEMATICAL-AUDIT-v1.md}, incorporating
+arithmetic continuations v1--v5, the resource-refinement review and the native
+HIGH/support/barrier/confinement review. The actual global upper/lower/equality
+objects have SHA prefixes \texttt{5acc019642ae}, \texttt{018bdf1b6918},
+\texttt{8be2f7c6083d}; the full source/witness manifest supplies their identities.
+Hashes locate objects; the arguments and complete predicates give meaning.
+The companion supplement gives the ordinary proofs and their exact source scopes.
+
+\begin{thebibliography}{9}
+\bibitem{source}
+K.~Rodziewicz and B.~Ko{\l}odziejek,
+\emph{The iid Berry--Esseen constant: Analytic reductions and finite
+verification}, working analytical source manuscript, October2026.
+Selected ordinary proof sections are reproduced in the accompanying
+\path{analytic-supplement.txt}, with their original labels and a dependency index.
+\bibitem{schulz}
+J.~Schulz, \emph{The optimal Berry--Esseen constant in the binomial case},
+Dissertation, Universit\"at Trier,2016. Theorem1 and Remark4.1,
+printed p.~15 (PDF p.~25).
+\bibitem{shevtsova2013}
+I.~Shevtsova, \emph{On the absolute constants in the Berry--Esseen inequality
+and its structural and nonuniform improvements},
+Informatics and Applications7(1) (2013),124--125 (in Russian).
+\bibitem{shevtsova2012}
+I.~Shevtsova, \emph{Moment-type estimates with asymptotically optimal
+structure for the accuracy of the normal approximation},
+Annales Mathematicae et Informaticae39 (2012),241--307;
+Lemma4.1, printed p.~263.
+\end{thebibliography}
+\end{document}

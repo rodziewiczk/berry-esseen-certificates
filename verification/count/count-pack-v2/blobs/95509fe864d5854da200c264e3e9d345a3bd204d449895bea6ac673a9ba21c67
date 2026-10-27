@@ -1,0 +1,20 @@
+"""Exactly equivalent COUNT23 interval arithmetic; fixed sources, no discovery."""
+from exact35_core import *
+import exact35_core as core
+import joint_cubic_normalized_fast as joint_fast
+import bernstein_fast
+import interval_scalar_fast
+bernstein_fast.apply()
+interval_scalar_fast.apply()
+core.bernstein_interval_min = bernstein_fast.bernstein_interval_min
+core.joint = joint_fast
+
+# Reviewed exact-output Taylor evaluation; mathematical bounds unchanged.
+import exact_count_core_v5 as exponential_base
+import integer_exp
+integer_exp.install(exponential_base,core,upper_limit=10)
+
+# Separately reviewed changed outward enclosure; fresh forests required.
+import directed_interval
+_directed_aliases=directed_interval.install()
+need(_directed_aliases==['exact_count_core_v5','exact35_core','joint_cubic','joint_cubic_defect','joint_cubic_normalized','joint_cubic_normalized_fast','bernstein_fast','interval_scalar_fast','optimized_arithmetic'],'complete named directed interval alias closure')

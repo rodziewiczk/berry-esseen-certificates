@@ -1,0 +1,44 @@
+"""Exact-output integer evaluation of the count Taylor exponentials."""
+from fractions import Fraction as F
+from math import factorial
+from functools import lru_cache
+
+SCALE=10**12
+FACT=factorial(48)
+COEFFICIENTS=tuple(FACT//factorial(i) for i in range(49))
+
+def polynomial(x):
+    """Numerator/denominator of sum(x**i/i!,i=0..48), unreduced."""
+    a,b=x.numerator,x.denominator
+    value=1;power=1
+    for i in range(47,-1,-1):
+        power*=b
+        value=value*a+COEFFICIENTS[i]*power
+    return value,FACT*power
+
+def install(base,core,upper_limit=10):
+    base.need(base.F is F and core.F is F and base.SCALE==SCALE,'frozen exact count arithmetic')
+    base.need(type(upper_limit)is int and upper_limit in(10,50),'named original or generalized exponential scope')
+    need=base.need
+    original_upper,original_lower=base.exp_upper,base.exp_lower
+    need(core.exp_upper is original_upper and core.exp_lower is original_lower,'one original exponential pair')
+    @lru_cache(maxsize=65536,typed=True)
+    def upper(x):
+        need(type(x)in(F,int),'exact rational exponential input')
+        x=F(x)
+        need(0<=x<upper_limit,'exp compact range')
+        a,b=x.numerator,x.denominator
+        value,den=polynomial(x)
+        multiplier=49*(50*b-a)
+        numerator=value*multiplier+50*a**49
+        denominator=den*multiplier
+        return F(-((-numerator*SCALE)//denominator),SCALE)
+    @lru_cache(maxsize=65536,typed=True)
+    def lower(x):
+        need(type(x)in(F,int),'exact rational exponential input')
+        x=F(x);need(x>=0,'positive exponential argument')
+        value,den=polynomial(x)
+        return F(value*SCALE//den,SCALE)
+    base.exp_upper=core.exp_upper=upper
+    base.exp_lower=core.exp_lower=lower
+    return original_upper,original_lower

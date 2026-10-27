@@ -1,0 +1,72 @@
+"""Untrusted original n27 alpha4 search; only its 600s clock is extended.
+
+Every original kernel/contract/header/evaluate/children/LIMIT remains unchanged.
+The separate original acceptor, including its10000-node bound, is mandatory.
+"""
+import ast
+import copy
+from hashlib import sha256
+import importlib.util
+import json
+from pathlib import Path
+
+
+def need(ok, message):
+    if not ok: raise ValueError(message)
+
+
+def changed_function(code, seconds):
+    tree = ast.parse(code)
+    functions = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "main"]
+    need(len(functions) == 1 and not functions[0].args.args and not functions[0].args.kwonlyargs,
+         "One original no-argument alpha4 search")
+    original = functions[0]; transformed = copy.deepcopy(original)
+    clocks = [n for n in ast.walk(transformed) if isinstance(n, ast.Compare)
+              and len(n.ops) == len(n.comparators) == 1 and isinstance(n.ops[0], ast.LtE)
+              and isinstance(n.comparators[0], ast.Constant) and type(n.comparators[0].value) is int
+              and n.comparators[0].value == 600 and isinstance(n.left, ast.BinOp)
+              and isinstance(n.left.op, ast.Sub) and isinstance(n.left.right, ast.Name) and n.left.right.id == "started"
+              and isinstance(n.left.left, ast.Call) and not n.left.left.args and not n.left.left.keywords
+              and isinstance(n.left.left.func, ast.Attribute) and n.left.left.func.attr == "time"
+              and isinstance(n.left.left.func.value, ast.Name) and n.left.left.func.value.id == "time"]
+    need(len(clocks) == 1 and type(seconds) is int and 600 <= seconds <= 3600,
+         "One explicit bounded original600s guard")
+    clocks[0].comparators[0].value = seconds
+    reverted = copy.deepcopy(transformed)
+    matches = [n for n in ast.walk(reverted) if isinstance(n, ast.Compare)
+               and ast.dump(n.left, include_attributes=False) == ast.dump(clocks[0].left, include_attributes=False)
+               and len(n.comparators) == 1 and isinstance(n.comparators[0], ast.Constant)
+               and n.comparators[0].value == seconds]
+    need(len(matches) == 1, "Exactly one reversible wall-clock transform")
+    matches[0].comparators[0].value = 600
+    need(ast.dump(reverted, include_attributes=False) == ast.dump(original, include_attributes=False),
+         "Every non-clock AST node remains identical, including LIMIT/depth and all splits")
+    return transformed
+
+
+def main():
+    here = Path(__file__).resolve().parent
+    recipe = json.loads((here / "ORIGINAL-ALPHA4-RECIPE.json").read_bytes())
+    need(recipe["schema"] == "be.n27-original-alpha4-wall-epoch/1" and recipe["historical_candidate_input"] is False,
+         "One fresh source-only original alpha4 recipe")
+    pins = recipe["original_sources"]
+    for name, pin in pins.items():
+        need(Path(name).name == name and sha256((here / name).read_bytes()).hexdigest() == pin, "Every original source before search")
+    source = here / "construct_alpha4.py"
+    need(sha256(source.read_bytes()).hexdigest() == "79d1ef5fdcac838adf156dcef4e7aed60e77dfc7f494c4c3670e51aca1aaef8c",
+         "Exact original alpha4 constructor")
+    function = changed_function(source.read_bytes(), recipe["wall_seconds"])
+    output = here / "COUNT41_FOREST.json"
+    need(not output.exists() and recipe["forest_name"] == output.name, "No previous candidate input")
+    spec = importlib.util.spec_from_file_location("_original_n27_alpha4_discovery", source)
+    original = importlib.util.module_from_spec(spec); spec.loader.exec_module(original)
+    namespace = dict(vars(original))
+    module = ast.fix_missing_locations(ast.Module(body=[function], type_ignores=[]))
+    exec(compile(module, str(source) + "::UNTRUSTED_WALL_ONLY", "exec"), namespace)
+    namespace["main"]()
+    need(output.is_file(), "Only a complete current forest may enter independent native acceptance")
+    for name, pin in pins.items():
+        need(sha256((here / name).read_bytes()).hexdigest() == pin, "Every original source after search")
+
+
+if __name__ == "__main__": main()

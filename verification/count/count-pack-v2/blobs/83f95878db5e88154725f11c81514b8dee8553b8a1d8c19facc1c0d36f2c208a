@@ -1,0 +1,40 @@
+Exact mean-to-variance contraction for the same sign-conditioned law
+==================================================================
+
+Let p=P(X>0), q=1-p, v=pq, and let the conditional centered residual
+variances be summarized in the existing count coordinates by s=lambda/n>=0.
+For the one actual standardized marginal the signed first moment
+m=E X_+=E X_- satisfies m=v/sqrt(v+s)>0. These are physical variables of
+the same marginal, not independent moments from different optimizers.
+
+Suppose an acquired interval gives 0<=ml<=m<=mh<=1/2. With 0<p<1,
+mh=0 is impossible. Solving the identity gives
+
+                  s = v^2/m^2 - v.
+
+For fixed v>0 this expression decreases in m. Thus
+ v^2/mh^2-v <= s,
+and if ml>0 also s <= v^2/ml^2-v.
+Further m^2<=v since s>=0, so v>=ml^2. On a closed actual probability
+interval [pl,pu], v has minimum min(pl(1-pl),pu(1-pu)) and maximum1/4
+when the interval contains1/2, otherwise its larger endpoint value.
+Intersect this variance interval with [ml^2,infinity). An empty intersection
+excludes the actual law. Otherwise the preceding inequalities imply
+
+ lambda >= n min_{v in interval}(v^2/mh^2-v),
+ lambda <= n max_{v in interval}(v^2/ml^2-v)  [if ml>0].
+
+Both quadratics are convex. The lower minimum occurs at an endpoint or
+the stationary point mh^2/2, when present. The upper maximum occurs at an
+endpoint. Every quantity is rational, so there is no radical rounding or
+numeric optimization. Intersect with the incoming closed lambda interval
+and lambda>=0. A strict lower>upper is the only interval-empty test.
+Equal endpoints are retained. The upper inequality is omitted if ml=0.
+The reasoning covers both probability halves, the seam1/2, s=0 and any n>=1.
+
+This is a necessary-condition contraction, not a converse moment-feasibility
+result. It may be applied before other valid contractions in a finite sequence.
+Every subsequent count leaf must still be recomputed on the surviving box;
+the stored forest must reconstruct and cover its original full root boxes.
+The acquired mean premise, and its same-law meaning, remain separate resource
+and analytic obligations. This lemma does not supply either of them.

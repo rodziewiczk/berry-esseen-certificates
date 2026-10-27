@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.runs/
+.be/
+certificates/count/blobs/
+certificates/resources/
+verification-results/
+*.aux
+*.log
+*.out

@@ -1,0 +1,38 @@
+"""Exact adaptive conditional comparison for one fixed conditional n33 K0 resource panel."""
+from optimized_arithmetic import *
+from float_core import cell35 as float_cell
+cell_bridge=cell35
+from profile import N,INDICES
+from pathlib import Path
+from hashlib import sha256
+import json,sys,time
+HERE=Path(__file__).parent
+need(len(sys.argv)==2 and sys.argv[1].isdigit(),'one panel argument');index=int(sys.argv[1]);need(index in INDICES,'fixed selected panel')
+raw=(HERE/'contract.json').read_bytes();o=json.loads(raw);cfg=next(r for r in o['rows']if r['index']==index);need(cfg['index']==index,'row identity');TARGET=CE_LO+F(0)
+start=[[F(x)for x in cfg['p']],[F(0),F(cfg['Lambda'])],[F(0),F(1)],[-F(1,2),F(1,2)],[F(0),F(cfg['d0'])]]
+scales=(F('.001'),F('.006'),F('.15'),F('.02'),F('1'))
+stack=[(k,[x.copy()for x in start],[])for k in range(N,-1,-1)];splits=[];leaves=[];visited=0;maximum=F(0);began=time.monotonic()
+while stack:
+ k,b,path=stack.pop();visited+=1
+ kw=dict(pl=b[0][0],pu=b[0][1],lo=b[1][0],hi=b[1][1],al=b[2][0],ah=b[2][1],k=k,ul=b[3][0],uh=b[3][1],a0l=b[4][0],a0h=b[4][1])
+ try:approx=float_cell(cfg,**{name:value if name=='k'else float(value)for name,value in kw.items()})
+ except(ValueError,ZeroDivisionError,OverflowError):approx=dict(status='FLOAT_DOMAIN_ERROR')
+ may_finish=approx['status'].startswith('EMPTY_')or approx['status']=='PASS'or('score_upper'in approx and float(approx['score_upper'])<float(TARGET))
+ result=dict(status='UNRESOLVED_FLOAT_GUIDED_SPLIT')
+ if may_finish or approx['status']=='FLOAT_DOMAIN_ERROR':result=cell_bridge(cfg,**kw)
+ if result.get('score_upper')is not None and F(result['score_upper'])<TARGET:result['status']='PASS_SHARP33_B0_TARGET'
+ if result['status'].startswith('EMPTY_')or result['status']=='PASS_SHARP33_B0_TARGET':
+  leaves.append(dict(k=k,path=path,status=result['status'],score_upper=result.get('score_upper')))
+  if result['status']=='PASS_SHARP33_B0_TARGET':maximum=max(maximum,F(result['score_upper']))
+ else:
+  need(result['status'].startswith('UNRESOLVED'),'known unresolved status')
+  if visited>=150000 or len(path)>=75 or time.monotonic()-began>3600:
+   print('UNRESOLVED_LIMIT',index,k,[[str(x)for x in z]for z in b],result,flush=True);raise SystemExit(2)
+  scores=[(b[i][1]-b[i][0])/scales[i]for i in range(5)]
+  scores[2]*=max(b[1][1]/F(cfg['Lambda']),F(1,10000))
+  axis=max(range(5),key=lambda i:scores[i]);mid=sum(b[axis])/2;splits.append(dict(k=k,path=path,axis=axis))
+  for side in(1,0):
+   bb=[x.copy()for x in b];bb[axis][1-side]=mid;stack.append((k,bb,path+[side]))
+ if visited%500==0:print('PROGRESS',index,k,visited,len(leaves),len(stack),float(maximum),round(time.monotonic()-began,2),flush=True)
+out=dict(schema='CONDITIONAL_BRIDGE33_B0_K000_OPTIMIZED_V1_COUNT_ROW_V1',status='EXACT_CONSTRUCTION_COMPLETE',contract_sha256=sha256(raw).hexdigest(),index=index,root=[[str(x)for x in z]for z in start],splits=splits,leaves=leaves,visited=visited,maximum_score=str(maximum),target_lower=str(TARGET))
+p=HERE/f'candidate_{index}.json';need(not p.exists(),'fresh candidate');p.write_text(json.dumps(out,separators=(',',':'))+'\n');print('CONDITIONAL_BRIDGE33_B0_K000_OPTIMIZED_V1_ROW_COMPLETE',index,visited,len(leaves),len(splits),float(maximum),round(time.monotonic()-began,2),flush=True)

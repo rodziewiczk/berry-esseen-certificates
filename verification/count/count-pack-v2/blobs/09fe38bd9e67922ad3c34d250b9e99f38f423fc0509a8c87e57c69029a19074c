@@ -1,0 +1,27 @@
+Exact corner bounds for signed moments, 11 October 2026
+
+Use q=1-p, v=pq, 0<p<1/2, s>=0, and 0<=alpha<=1. With u=2alpha-1,
+beta=[v(1-2p)+su]/(v+s). It increases in alpha. For fixed p,alpha it is
+fractional linear in s with positive denominator, hence monotone or constant.
+Its p derivative has numerator (1-2p)s[(1-2p)-u]-2v(v+s).
+On the rectangular box p in[l,h],s in[S,T],alpha in[A,B], its numerator
+is at most (1-2l)T*max(0,1-2l-(2A-1))-2l(1-l)[l(1-l)+S].
+If this upper bound is nonpositive, beta decreases in p throughout the box;
+its extrema are therefore among the eight literal rational corners. Equality
+and s=0 are included. If the gate fails, retain the old interval enclosure.
+
+For s>0, solve the same identity for alpha:
+alpha=(beta+1)/2+v(beta-1+2p)/(2s).
+It increases in beta, and is fractional linear in s. Its p derivative has
+numerator beta-1+(6-2beta)p-6p^2. This numerator increases in beta because
+1-2p>0. Since6-2beta>=4, an interval lower bound is
+beta_lower-1+(6-2beta_lower)*p_lower-6*p_upper^2.
+If nonnegative, alpha increases in p throughout the box, and eight exact
+rational corner evaluations enclose every possible alpha. If the gate fails,
+use the old interval formula. This contraction retains every actual point of
+the original box; no attainment or independence assertion is involved.
+
+Only count-wrapper interval evaluation changes. The stored tree remains a
+cover of the original five-dimensional box. All original count, phase,
+resource, rho, sign and target conditions remain unchanged. The theorem is
+conditional on the exact same contract until resource acquisition is joined.

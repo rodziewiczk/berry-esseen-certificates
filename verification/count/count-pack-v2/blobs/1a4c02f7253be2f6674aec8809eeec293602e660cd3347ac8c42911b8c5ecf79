@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbb E}
+\begin{document}
+\title{A common-rho cubic constraint for a conditional count bound}
+\author{Local independent analytic review}
+\date{8 October 2026}
+\maketitle
+\noindent\textbf{Status.} The implications below are locally derived necessary
+conditions. They do not establish acquisition of any count resources, the
+underlying extremizer reduction, or the sharp $n=31$ bound. The reviewed
+prototype remains diagnostic; no acceptance adoption is asserted here.
+
+\section{One common marginal and conditional moments}
+Write $q=1-p$, $v=pq$, and suppose the centered conditional residuals satisfy
+\[
+ U_0\in[-L_0,R_0]=[-O_0,a_0],\qquad
+ U_1\in[-L_1,R_1]=[-a_1,O_1],\qquad
+ \E U_i=0,
+\]
+with $w_i=\E U_i^2$ and $m_i=\E U_i^3$. Endpoints here may be acquired upper
+caps containing the actual support. Let $s=qw_0+pw_1$ and $h^2=v+s$.
+The actual-law identity supplied by the conditional-coordinate reduction is
+\begin{equation}\label{eq:rho}
+ \rho h^3=C(p,w_0,w_1)-q m_0+p m_1,
+ \qquad C=v(1-2v)+3v(w_0+w_1).
+\end{equation}
+The same $m_0,m_1$ must be used in this identity and the count moment bound.
+All conclusions below assume that identity and the actual-law resource
+intervals have been licensed upstream.
+
+\begin{lemma}[Cubic bounds]\label{lem:cubic}
+If $\E U=0$, $\E U^2=w$, and $-L\le U\le R$ with $L,R>0$, then
+\[
+ \frac{w^2}{L}-Lw\ \le\ \E U^3\ \le\ Rw-\frac{w^2}{R}.
+\]
+If either endpoint is zero, $U=0$ almost surely and both moments vanish.
+\end{lemma}
+\begin{proof}
+The nonnegative polynomial $(R-U)(U+w/R)^2$ has expectation
+$Rw-w^2/R-\E U^3$. Apply the same argument to $-U$ for the lower bound.
+A centered random variable supported on only one side of zero vanishes.
+\end{proof}
+For a variance interval $w\in[b,c]$, the valid enclosing lower cubic endpoint
+is the minimum of $w^2/L-Lw$, attained at
+$\max(b,\min(c,L^2/2))$. The upper endpoint is the maximum of
+$Rw-w^2/R$, attained at $\max(b,\min(c,R^2/2))$.
+Checking only the two interval endpoints is generally invalid.
+Feasibility also gives $w\le LR$; clipping the variance interval to this bound
+is valid. Increasing either support cap only weakens its corresponding
+one-sided cubic bound. Thus the resulting rational rectangle
+$[x_-,x_+]\times[y_-,y_+]$ contains the actual pair $(m_0,m_1)$.
+
+\section{A rational strip retaining the actual rho}
+Let $p\in[p_-,p_+]\subset(0,1/2]$, put
+$p_*=(p_-+p_+)/2$ and $\epsilon=(p_+-p_-)/2$, and suppose
+$\rho\in[r_-,r_+]$. Let $N_-\le\rho h^3\le N_+$ and
+$C_-\le C\le C_+$ be outward bounds over the entire parameter cell. Define
+\[
+ M=\max\{|x_-+y_-|,|x_++y_+|\},\qquad
+ A=-(1-p_*),\quad B=p_*.
+\]
+\begin{lemma}[Common-rho strip]
+Every actual cubic pair belongs to the closed rational polytope
+\[
+ \mathcal P=([x_-,x_+]\times[y_-,y_+])\cap
+ \{(x,y):N_--C_+-\epsilon M\le Ax+By
+                         \le N_+-C_-+\epsilon M\}.
+\]
+\end{lemma}
+\begin{proof}
+Equation~\eqref{eq:rho} gives exactly
+\[
+ A m_0+B m_1=\rho h^3-C-(p-p_*)(m_0+m_1).
+\]
+The rectangle implies $|m_0+m_1|\le M$, proving both strip inequalities.
+\end{proof}
+For example, with $v_-=p_-(1-p_-)$, $v_+=p_+(1-p_+)$ and
+$s\in[s_-,s_+]\subset[0,\infty)$, valid choices are
+\[
+ N_-=r_-\,\underline{\sqrt{(v_-+s_-)^3}},\qquad
+ N_+=r_+\,\overline{\sqrt{(v_++s_+)^3}}.
+\]
+The underlined and overlined quantities are rational outward root bounds.
+Because $v(1-2v)$ increases for $0\le v\le1/4$ and all variances are
+nonnegative, valid bounds for $C$ follow by using all lower or all upper
+endpoints. Dependency loss in these bounds weakens the strip but does not
+invalidate it. Any separately proved local lower or upper rho bound may
+replace the corresponding branch endpoint by intersection.
+
+\section{Quartic expectation and phase}
+Condition on a fixed count $k$ among $n$ iid summands. The conditional
+sum is distributed as a sum $W$ of $N_0=n-k$ independent copies of $U_0$
+and $N_1=k$ independent copies of $U_1$. Its variance is
+$V=N_0w_0+N_1w_1$, its third moment is $N_0m_0+N_1m_1$, and independence gives
+\[
+ \E W^4=3V^2-3(N_0w_0^2+N_1w_1^2)
+              +N_0\E U_0^4+N_1\E U_1^4.
+\]
+The pointwise nonnegative polynomial $U^2(U+L)(R-U)$ gives
+\[
+ \E U^4\le LRw+(R-L)m.
+\]
+This remains valid for any acquired larger support caps, while preserving the
+\emph{same} actual cubic moment $m$. Thus
+\begin{align*}
+ \E W^4\le{}&3V^2-3(N_0w_0^2+N_1w_1^2)\\
+ &+N_0\{O_0a_0w_0+(a_0-O_0)m_0\}
+  +N_1\{a_1O_1w_1+(O_1-a_1)m_1\}.
+\end{align*}
+The cross term has the alternative expression
+\[
+ 3N_0(N_0-1)w_0^2+3N_1(N_1-1)w_1^2+6N_0N_1w_0w_1,
+\]
+which increases in each nonnegative variance. This offers another safe
+interval enclosure; it need not improve every existing coupled variance bound.
+
+For any fixed phase $t$, the resulting upper bound on
+$\E(W-t)^4$ is affine in $(m_0,m_1)$, with coefficients
+\[
+ N_0(a_0-O_0-4t),\qquad N_1(O_1-a_1-4t).
+\]
+For a quartic polynomial with nonnegative leading coefficient, this substitution
+gives an affine upper bound in the same way. A negative leading coefficient
+instead gives a lower bound; a subsequent score calculation must preserve
+that direction. Maximizing an affine upper bound over $\mathcal P$ reduces
+to its vertices. For a whole phase interval,
+each vertex gives a polynomial in $t$ whose coefficients have rational
+outward enclosures. Applying the existing interval Bernstein upper bound to
+\emph{every} vertex polynomial gives a valid uniform upper bound. This does
+not differentiate an actual CDF, exchange a minimizer with a supremum, or
+require a maximizing vertex to be realizable by an iid marginal.
+
+\section{Degeneracies, events, and implementation review}
+\begin{itemize}
+\item A closed rectangle intersected with a strip has vertices among feasible
+rectangle corners and intersections of a rectangle edge with either strip
+boundary. Exact rational edge interpolation covers collapsed rectangles,
+zero-width strips, duplicate vertices, and boundary coincidences. A constant
+edge is covered by its endpoints. An exactly empty polytope excludes the
+entire parameter cell as a necessary-condition contradiction.
+\item Zero variance forces the corresponding cubic moment to zero. A zero
+support endpoint also forces zero actual variance; a variance interval with
+positive lower endpoint is then infeasible. Zero endpoint divisions must be
+handled before evaluating the formulas. Counts $k=0,n$ are allowed.
+\item The stated monotonic bounds for $v$ use $0<p_-\le p_+\le1/2$.
+The endpoint $p_+=1/2$ is included. A reflected probability half-domain must
+transform the residuals and cubic signs consistently; it is not licensed by
+silently reusing an asymmetric formula.
+\item All moment inequalities are non-strict and may be attained. They do
+not resolve the distinction between $\Pr(W<t)$ and $\Pr(W\le t)$ at atoms.
+The outgoing event bound must still be proved pointwise at the event plane
+with the intended strict or closed convention. Final strict score exclusion
+requires a separate strict rational margin; equality in this relaxation
+does not provide one.
+\item The strip must be valid for the whole phase/parameter cell. Shared
+moments cannot be recomputed independently for the normalization and quartic
+cost. Allowing infeasible vertices is safe only in the direction of a larger
+upper bound, never as evidence that an actual iid extremizer exists.
+\end{itemize}
+The reviewed prototype \texttt{joint\_cubic.py}, archived with its caller in
+the local review snapshot, has the correct variance stationary-point clamps,
+strip sign and phase-free
+error, exact degenerate vertex enumeration, and affine cubic coefficients in
+the inherited quartic score polynomial. Its caller clips
+$w_0\le O_0a_0$, $w_1\le a_1O_1$ and has nonnegative variance intervals.
+The caller can further intersect the branch rho upper bound with its already
+proved local \texttt{rho\_law\_upper}. Taking the minimum with the old valid
+envelope is safe. Code review alone is not an accepted continuous-domain
+certificate; malformed-object tests and fresh arithmetic acceptance remain
+separate obligations.
+
+\section{A second half-plane from the actual defect}
+Let $\sigma=\sqrt{10}$, let $D\le D_*$ be the acquired actual defect bound,
+and retain actual inward endpoints $\ell_i\le a_i\le u_i$ satisfying
+$a_0+a_1\le d<1/4$. The before-cubic inequality in the retained conditional
+defect proof is
+\begin{align*}
+ D h^3\ge{}&B+\alpha m_0+\beta m_1,\\
+ B={}&b_0(p)+6v f(a_0,a_1)
+  +q w_0\{3(\sigma+3)p-6a_0\}
+  +p w_1\{3(\sigma+1)q-6a_1\},\\
+ f(a_0,a_1)={}&a_0+a_1-a_0^2-a_1^2-a_0a_1,\\
+ \alpha={}&-(\sigma+1)(1-p),\qquad \beta=(\sigma-1)p,\\
+ b_0(p)={}&v\{(\sigma+1)p^2+(\sigma-1)q^2-6v\}.
+\end{align*}
+This is a lower inequality for $D$, not an identity. Its retained proof uses
+the actual support-gap functional $J$, with central and outer gaps; $J$ must
+not be replaced by a pairwise absolute moment or by a coarse bound as an
+equality. Expanding that proof's conditional $T_\pm,R_\pm$ expressions gives
+exactly the displayed before-cubic expression. Substituting Lemma~1 into it
+recovers the earlier sharp conditional defect bound.
+
+Let $\sigma_-\le\sigma\le\sigma_+$, with $\sigma_->1$, be rational root
+bounds. On the actual simplex, $\partial_0f=1-2a_0-a_1\ge1-2d>0$, and
+similarly for $\partial_1f$. Thus $f(a_0,a_1)\ge f(\ell_0,\ell_1)$;
+the path from the lower corner to an actual point stays inside that simplex.
+Assume the rational coefficients
+\[
+ c_0=3(\sigma_-+3)p_--6u_0\ge0,\qquad
+ c_1=3(\sigma_-+1)(1-p_+)-6u_1\ge0.
+\]
+A valid base lower bound is
+\[
+ B_-=b_-+6v_-f(\ell_0,\ell_1)
+       +(1-p_+)w_{0,-}c_0+p_-w_{1,-}c_1.
+\]
+Here $b_-$ is an outward lower bound for $b_0$ after substituting $\sigma_-$.
+The substitution is valid because $\partial b_0/\partial\sigma
+=v(p^2+q^2)\ge0$. It is also valid to clamp $b_-$ to zero: the exact
+$\sigma=\sqrt{10}$ identity
+\[
+ b_0(p)=v(6+2\sigma)\left(p-\frac{4-\sigma}{2}\right)^2
+\]
+proves nonnegativity independently of the rational enclosure.
+
+Set $\alpha_*=-(\sigma_-+1)(1-p_*)$ and
+$\beta_*=(\sigma_--1)p_*$. With $\Delta\sigma=\sigma_+-\sigma_-$,
+\begin{align*}
+ |\alpha-\alpha_*|&\le\Delta\sigma(1-p_-)+(\sigma_-+1)\epsilon=:e_0,\\
+ |\beta-\beta_*|&\le\Delta\sigma p_++(\sigma_--1)\epsilon=:e_1.
+\end{align*}
+For example,
+$\alpha-\alpha_*=-(\sigma-\sigma_-)(1-p)
+ +(\sigma_-+1)(p-p_*)$, which proves the first bound; the second is analogous.
+Let $M_0=\max(|x_-|,|x_+|)$ and $M_1=\max(|y_-|,|y_+|)$.
+If $D_*\ge0$ and $h^3\le H_+$, every actual cubic pair must satisfy
+\[
+ \boxed{\alpha_*m_0+\beta_*m_1
+ \le D_*H_+-B_-+e_0M_0+e_1M_1.}
+\]
+Indeed, first use the lower defect inequality, then the upper $D_*$,
+then $D_*\ge0$ to replace $h^3$ by $H_+$, and finally the coefficient-error
+bounds. There is no valid reverse inequality from a lower bound on $D$.
+
+Intersect this half-plane with $\mathcal P$. Its vertices can be enumerated
+by exact intersections of every pair of nonparallel boundary lines, retaining
+only points satisfying all seven closed inequalities. The four explicit
+rectangle faces ensure boundedness; every nonempty resulting polygon, segment,
+or point has vertices generated this way. A generic list of half-planes
+without these bounding faces would require a separate boundedness argument.
+The affine phase argument above applies to this smaller polytope unchanged.
+
+The bounded review of \texttt{joint\_cubic\_defect.py} and its caller found
+the stated signs, coefficient error, nonnegative-$D_*$ gate, explicit rectangle,
+and same-law local rho-upper intersection correctly implemented. The actual
+simplex constraint is inherited from the caller's acquired resource; it is not
+deduced from $u_0+u_1$ or merely from the lower corner. The finite-law fixtures
+use the actual support-gap sum for $J$. These observations do not replace
+continuous-domain acceptance or its corruption controls.
+\end{document}

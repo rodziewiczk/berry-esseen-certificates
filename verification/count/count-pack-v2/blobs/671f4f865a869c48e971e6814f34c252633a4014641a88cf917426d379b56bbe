@@ -1,0 +1,21 @@
+{
+  "status": "PASS_EXACT_MEAN_VARIANCE_IDENTITIES_AND_CONTROLS",
+  "fixtures": 1980,
+  "strict_upper_contractions": 1980,
+  "right_half_fixtures": 980,
+  "zero_variance_fixtures": 396,
+  "negative_controls": [
+    "boolean n",
+    "zero p",
+    "reversed mean",
+    "negative lambda",
+    "float endpoint",
+    "incorrect upper-minimum formula refuted"
+  ],
+  "source_sha256": {
+    "mean_variance.py": "c2fe5362f74792879998e23dbb37090cbce6898dad94acbb01b646c1fc7ad50f",
+    "check_mean_variance.py": "3e4891fbce93e8be3b9ec0d55d50f8fb7d6a24211350e4a951969ccd90ba4da1",
+    "MEAN_VARIANCE_PROOF.txt": "83f95878db5e88154725f11c81514b8dee8553b8a1d8c19facc1c0d36f2c208a"
+  },
+  "scope": "Exact algebraic fixtures and malformed-input controls; proof is the accompanying derivation. No actual resource acquisition or full count forest is claimed."
+}

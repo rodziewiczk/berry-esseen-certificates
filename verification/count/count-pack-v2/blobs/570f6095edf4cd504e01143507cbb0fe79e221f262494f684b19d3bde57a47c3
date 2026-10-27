@@ -1,0 +1,18 @@
+{
+  "status": "PASS_EXACT_THETA_VARIANCE_IMPLEMENTATION_FIXTURES",
+  "fixtures": 1980,
+  "negative_controls": [
+    "theta one",
+    "negative theta",
+    "boolean n",
+    "float endpoint",
+    "reversed interval",
+    "incorrect joint-plane replacement refuted"
+  ],
+  "source_sha256": {
+    "theta_variance.py": "d33f4e4aced4a1a3887f16964b25a3d716df00702d5c12d3212403b4644831fd",
+    "THETA_VARIANCE_PROOF.txt": "5092342a816ae4c92173e1112031e19fa450f8abc8eb9041a2b8ba3566e582e8",
+    "check_theta_variance.py": "cd7207ca75fb123264651d23360232326b79b5b6c20049abde45eb4af881ad2b"
+  },
+  "scope": "Conditional scalar lambda-domain contraction only. Old joint Lambda/charges/planes unchanged; actual theta acquisition is a separate obligation."
+}

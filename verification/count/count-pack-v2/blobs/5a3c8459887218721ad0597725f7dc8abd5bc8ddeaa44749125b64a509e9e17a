@@ -1,0 +1,17 @@
+{
+  "status": "PASS_INDEPENDENT_THETA_VARIANCE_DERIVATION_AND_SOURCE_REVIEW",
+  "checks": [
+    "Re-derived theta=s/(pq+s) from one standardized sign-conditioned law and confirmed count lambda=n*s in retained exact kernel.",
+    "Exact implementation uses correct both-half/seam maximum of pq, theta<1, rational inputs and strict emptiness; equality retained.",
+    "Output changes only the working lambda interval hi; original joint-plane Lambda and all prices remain separate immutable contract premises.",
+    "Every application needs independently acquired raw_row.theta<=acquired_theta_upper and full original count-box reconstruction."
+  ],
+  "files_sha256": {
+    "work/cutoff25_20261011/new_root/theta_variance.py": "d33f4e4aced4a1a3887f16964b25a3d716df00702d5c12d3212403b4644831fd",
+    "work/cutoff25_20261011/new_root/THETA_VARIANCE_PROOF.txt": "5092342a816ae4c92173e1112031e19fa450f8abc8eb9041a2b8ba3566e582e8",
+    "work/cutoff25_20261011/new_root/THETA_VARIANCE_CHECKED.json": "570f6095edf4cd504e01143507cbb0fe79e221f262494f684b19d3bde57a47c3",
+    "work/cutoff25_20261011/new_audit/THETA_LAMBDA_INDEPENDENT_DERIVATION.txt": "88bbf3fb664affe7d15d254c63266fe957f740511d840d98151dcc775c8619a7",
+    "work/cutoff25_20261011/new_audit/THETA_LAMBDA_CHECKED.json": "29071f4f2ce4bd749b69c12f68f831d3737d478f7c670381bab1e842a948c5af"
+  },
+  "scope": "Analytic/helper source review only. Future wrapper integration, actual theta acquisition and whole count forest each remain separate obligations."
+}

@@ -1,0 +1,128 @@
+Normalization on a binomial Taylor segment that may cross one half
+=================================================================
+
+Ordinary mathematical proof supplement for the final independent audit.
+No checker, numerical result, accepted statement, or proof identifier changes.
+
+Source alignment
+----------------
+The original source manuscript, subsection "Normalization and the repair,
+once for every witness" (lines8318 onward), states a sufficient recipe with
+r_+ < 1/2. The active normalization.py with whole SHA
+3525584b3cf0e9d98b6d3408705f85648bc644081a682e5b6904cac084181603
+instead permits right>1/2 under the stronger left-end dominance condition
+left+right<1. This supplement proves exactly that extension. The original
+probability band p in[p_-,p_+] remains strictly below1/2 throughout.
+
+Lemma (symmetric derivative envelopes).
+Let0<a<1/2, a<b<1, and a+b<1. For every r in[a,b],
+
+  r(1-r) >= a(1-a),
+  |1-2r|/[r^2(1-r)^2] <= (1-2a)/[a^2(1-a)^2],
+  |1-2r|/[r(1-r)] <= (1-2a)/[a(1-a)],
+  1/[12r(1-r)] <= 1/[12a(1-a)].
+
+Proof. The assumption b<1-a gives[a,b] subset[a,1-a]. For
+s=min(r,1-r) we therefore have a<=s<=1/2. Each displayed expression
+is invariant under r->1-r. On(0,1/2], s(1-s) is increasing, while
+1-2s is nonnegative and decreasing. Consequently the first inequality
+holds, and each nonnegative quotient is at most its value at a: its
+numerator decreases and its positive denominator increases. The final
+inequality follows from the first one. This includes r=1/2 and either
+side of that point. No assumption b<1/2 has been used. QED.
+
+Corollary (the same normalization recipe).
+Let n>=N>=1 be integers, p in[p_-,p_+] subset(0,1/2), q=1-p,
+and let k be an integer with1<=k<=n-1. Set
+
+  delta=k-np, r=k/n, v=pq,
+  D(r||p)=r log(r/p)+(1-r)log((1-r)/q).
+
+Suppose |delta|<=Delta and the complete segment between p and r lies
+inside[a,b], where a,b satisfy the lemma. Let E,L,R be positive numbers
+satisfying
+
+  E >= (1-2a)/[a^2(1-a)^2],
+  L >= (1-2a)/[a(1-a)],
+  R >= 1/[12a(1-a)].
+
+Then the binomial mass pi_k=binomial(n,k)p^k q^(n-k) has the exact form
+
+  sqrt(n) pi_k = phi(0)/sqrt(v) * exp(-delta^2/(2nv)+zeta),
+  n|zeta| < Z(|delta|),
+  Z(t)=Lt/2+R+Et^3/(6N).
+
+Proof. The identities
+
+  D(p||p)=D'(p||p)=0, D''(p||p)=1/v,
+  D'''(u||p)=(2u-1)/[u^2(1-u)^2],
+  (log(u(1-u)))'=(1-2u)/[u(1-u)]
+
+and the lemma give, by Taylor's theorem and the mean value theorem,
+
+  |nD(r||p)-delta^2/(2nv)| <= E|delta|^3/(6n^2),
+  |log(r(1-r))-log(v)| <= L|delta|/n.
+
+Use the finite Stirling formula
+
+  log(j!)=(j+1/2)log(j)-j+log(2pi)/2+s_j,
+  0<s_j<1/(12j), j>=1.
+
+It gives
+
+  sqrt(n) pi_k = phi(0)/sqrt(r(1-r))
+                 *exp(-nD(r||p)+s_n-s_k-s_(n-k)).
+
+The factorial error has the stated bound without adding incompatible
+one-sided estimates: writing e=s_n-s_k-s_(n-k),
+
+  e < s_n < 1/(12n) <= 1/[12nr(1-r)],
+  e > -s_k-s_(n-k) > -1/[12nr(1-r)].
+
+Hence |e|<R/n by the lemma. Collecting this error, the entropy remainder,
+and minus one half the logarithmic prefactor error into zeta gives
+
+  n|zeta| < L|delta|/2+R+E|delta|^3/(6n)
+           <= Z(|delta|),
+
+as required. The strict factorial remainder suffices for the strict
+inequality; the outward-rounded code gates supply additional margins. QED.
+
+Literal application to the active code
+------------------------------------
+The code sets a=left and b=right, and checks
+
+  0<left<1/2, left<right<1, left+right<1,
+  left < p_- - Delta/N,
+  p_+ + Delta/N < right.
+
+For n>=N and |delta|<=Delta these inequalities put p and k/n, and the
+whole segment between them, inside[left,right]. The exact positive gates
+N*p_- - Delta -2>0 and N*(1-p_+) - Delta -2>0 ensure the required interior
+count/factorial domains, with room for the adjacent counts used by the
+other estimates. Thus there is no factorial endpoint case hidden in this
+use of Stirling's formula.
+
+The generated vf is strictly positive and smaller than left*(1-left).
+The upward-rounded bounds
+
+  entropy > (1-2left)/vf^2,
+  logder > (1-2left)/vf,
+  remainder > 1/(12vf)
+
+are therefore valid E,L,R in the corollary. In particular they remain
+valid when right>1/2. Nothing else in the mass derivation depends on
+which side of1/2 the intermediate Taylor point lies.
+
+The lower and upper binomial-mass consequences in the source recipe now
+follow unchanged from this same zeta envelope, their stated positivity
+gates, and exp(-x)>=1-x and exp(x)<=1/(1-x) for0<=x<1. When using the
+factor sqrt(pq), the actual p band remains below1/2, so pq<=p_+(1-p_+)
+is still valid. No such monotonicity is assumed for the larger r segment.
+For an actual binomial mode, |k-np|<=1, so Delta>=1 includes it even if
+its Taylor segment crosses1/2.
+
+The proof extends the exact normalization envelope only. It does not
+grant an incoming sharp bound, same-law resource hypothesis, numerical
+exclusion, or all-law conclusion by itself. All those original inputs
+remain separately mandatory in the current source-mathematical theorem.

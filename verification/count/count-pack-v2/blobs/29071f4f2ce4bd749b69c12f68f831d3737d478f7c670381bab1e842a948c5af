@@ -1,0 +1,23 @@
+{
+  "status": "PASS_EXACT_THETA_LAMBDA_FINITE_LAW_FIXTURES",
+  "laws": 260,
+  "identities_and_caps": 1040,
+  "right_half_laws": 75,
+  "zero_atom_laws": 13,
+  "invalid_joint_plane_counterexample": {
+    "d": "1/2",
+    "lambda_value": "1/2",
+    "old_intercept": "1",
+    "extra_cap": "3/5",
+    "false_new_joint_sum": "4/3"
+  },
+  "files_sha256": {
+    "new_audit/check_theta_lambda.py": "fc514746417425a193e818de588003537b03ebb65f08ee0b2eaed07c457a6be3",
+    "new_audit/THETA_LAMBDA_INDEPENDENT_DERIVATION.txt": "88bbf3fb664affe7d15d254c63266fe957f740511d840d98151dcc775c8619a7",
+    "BE_cutoff35_release_20261007/documents/source_notes/feedback35_proof.tex": "c4efd833fadd5936df47e6e421cc3ad1245e802a47517c40bb52a79b3a9056ba",
+    "BE_cutoff35_release_20261007/documents/source_notes/endpoint_product_bootstrap.tex": "30a0a374d56a1372cd8eabf06ec097193a48c88dcd4406731ccb376597383158",
+    "new_low/resource25_b0_v1/resource25_core.py": "892e8de5d94bcb5dfd26c3c6f61c5916918dbf66b09ddd1c9887789f9480fc7e",
+    "new_low/count41_replay_v1/exact35_core.py": "512c70ead43294a7f1d4e14922c9c3a55d3928c9555f4af1415cacf5ad6657bb"
+  },
+  "scope": "Regression plus an exact counterexample to changing the old joint intercept. The general identity/cap is separately derived in the bound proof note. No new regional count theorem."
+}

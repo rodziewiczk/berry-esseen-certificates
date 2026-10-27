@@ -1,0 +1,48 @@
+{
+  "files": {
+    "INTEGRATION.md": {
+      "bytes": 995,
+      "sha256": "ecdcb9dbe53204aa9e255eaed99ef65f9e30afab9f8683fc5daef526b53312ff"
+    },
+    "README.md": {
+      "bytes": 6912,
+      "sha256": "b4d55b0723171698cb3da78a067b79de0de4f84d1141ee9a31056822786b5e8a"
+    },
+    "SOURCE-MANIFEST.json": {
+      "bytes": 10328,
+      "sha256": "21005346208478384d737650cd96dd97b394d833991303733a8b43ec8d36d08c"
+    },
+    "TASKS.json": {
+      "bytes": 104438,
+      "sha256": "544a31dc8a295adc427a608d7d542248e4629f255beddc4c976273b92f5c8a7b"
+    },
+    "path_abi.py": {
+      "bytes": 953,
+      "sha256": "fc748f8517f2ab3ca47c28346e79c9f040ef535e878a9da8fa304c3cf9644bd3"
+    },
+    "replay.py": {
+      "bytes": 10407,
+      "sha256": "1de034d0aaa86e52809e9dae312103e5772cadceb56a0f3711cb4b22dbc96fb3"
+    },
+    "sources/INITIAL_CAPSULE.zip": {
+      "bytes": 18819891,
+      "sha256": "eb38f833f8e5fc8db30083f049790507160a1c3570e232368f99ab1f3d1226d3"
+    },
+    "sources/current-source-epochs.zip": {
+      "bytes": 36684,
+      "sha256": "a3b63ce148cd1dfb27226dc75c1b0d5f1e27fe8ec07d7fa5b4825fae98a2de85"
+    },
+    "sources/original-source-cache.zip": {
+      "bytes": 8784354,
+      "sha256": "8cc0e316404fbe6ad602564eda7840d9099a71d407a0ed36c4afc00e8d0bbf68"
+    },
+    "sources/runtime.zip": {
+      "bytes": 4293265,
+      "sha256": "5e640235870701b36fb867fb63c6da33ff9d79513f99692394d107f30760e875"
+    }
+  },
+  "final_current_epoch_public_bridge_implemented": false,
+  "full_pass": false,
+  "numerical_scope": "five-contract scalar replay; original full source API exposed",
+  "schema": "public-actual20-41step-api-publication/1"
+}

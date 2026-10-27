@@ -1,0 +1,59 @@
+"""Exact actual-index row interfaces; no assumed probability reflection."""
+from fractions import Fraction as F
+from copy import deepcopy
+from math import isqrt
+from mean_noise import bounds as mean_bounds, margins as root_margins
+BANDS={'B0':('1','11/10'),'BN':('11/10','23/20'),'B2':('23/20','237/200'),'B3':('237/200','6/5')}
+def need(ok,msg):
+    if not ok:raise ValueError(msg)
+def up(x,g=10**6):x=F(x);return F(-((-x.numerator*g)//x.denominator),g)
+def down(x,g=10**6):x=F(x);return F(x.numerator*g//x.denominator,g)
+def polymin(a,b,c,H):
+    vals=[a,a+b*H+c*H*H]
+    if c>0 and 0<-b/(2*c)<H:vals.append(a-b*b/(4*c))
+    return min(vals)
+def base_cfg(row,n,band,index):
+    need(type(n)is int and n==5 and band in BANDS and type(index)is int and 1<=index<=98,'fixed actual family')
+    need(row['index']==index and type(row['index'])is int and row['status']=='RESOURCE_ROW_DIAGNOSTIC' and row['result']['excluded']is False,'conditional actual resource pilot row')
+    r=row['result']['result'];raw=row['result']['raw_row'];s=row['result']['initial'];bandlo,hi=map(F,BANDS[band]);lo=F(r['rho_lo']);need(bandlo<=lo<=hi,'acquired sector floor inside named band');p=[str(F(index,100)),str(F(index+1,100))]
+    need(type(r['N'])is int and r['N']==n and type(r['index'])is int and r['index']==index and r['K']=='0','literal row n/index/K')
+    need([r['pl'],r['pu']]==[raw['pl'],raw['pu']]==[s['pl'],s['pu']]==p and F(r['rho_lo'])==lo and lo<=F(r['rho_hi'])<=hi,'whole literal probability/moment scope')
+    need(F(r['D'])-F(r['charge_b'])==F(r['charge_g'])*F(r['d0'])==F(r['charge_h'])*F(r['lambda_max'])>0,'original exact same-law shared budget')
+    z=dict(n=n,K='0',index=index,p=p,rho_lower=str(lo),rho_upper=str(up(r['rho_hi'])))
+    for a,b in [('D','D'),('d0','d0'),('lambda_max','Lambda'),('H_minus','Hminus'),('H_plus','Hplus'),('radius_minus','radius_minus'),('radius_plus','radius_plus'),('outer0','outer0'),('outer1','outer1')]:z[b]=str(up(r[a]))
+    for a,b in [('charge_b','binary_charge'),('charge_g','gap_charge'),('charge_h','noise_charge')]:z[b]=str(down(r[a]))
+    z['quadratics']=[{k:str((down if k=='Qbudget'else up)(q[k]))for k in ('A','Fplus','Fminus','Qbudget')}for q in r['quadratics']]
+    z['acquired_lambda_upper']=z['Lambda'] # Redundant cap; no scalar overlay imported.
+    z['sign_premise']=dict(schema='ACTUAL_SIGN_CONDITIONED_MARGINAL_V1',resource_status='ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST',conditional_means_zero=True,negative_endpoint_lower=str(down(raw['A'])),positive_endpoint_lower=str(down(raw['B'])))
+    z['acquired_beta']=[str(down(max(F(s['beta_lo']),F(raw['beta_lo'])))),str(min(F(1),up(min(F(s['beta']),F(raw['beta_hi_signed'])))))]
+    z['acquired_mean']=[str(max(F(0),down(s['mean_lo']))),str(min(F(1,2),up(min(F(s['mean_hi']),F(raw['mean_hi'])))))]
+    geometry=mean_bounds(n,*map(F,p),F(z['acquired_mean'][0]),F(z['Lambda']))
+    z['acquired_lambda_upper']=str(min(F(z['Lambda']),up(geometry['lambda_upper'])))
+    z['acquired_scale_upper']=str(up(geometry['scale_upper']))
+    z['acquired_gamma']=[str(down(raw['gamma_lo'])),str(up(raw['gamma_hi']))]
+    need(F(z['acquired_gamma'][0])<=F(raw['gamma_lo'])<=F(raw['gamma_hi'])<=F(z['acquired_gamma'][1]),'outward actual signed third moments')
+    # Physical gap is independent of the affine d0/Lambda intercepts.
+    rl=F(r['rho_lo']);d=F(r['D']);gh=F(raw['gamma_hi']);mu=F(raw['mean_hi']);sl=F(3162277660,10**9)
+    price=max(max((sl-1)*rl,sl*rl-gh)-d,6*F(s['mean_lo'])*F(raw['A'])*F(raw['B']));need(price>0 and mu>0,'positive signed shared gap price')
+    square=max(F(0),2*rl-2*d/(sl-1),2*price/(3*mu));scale=10**12
+    gaproot=F(isqrt(square.numerator*scale*scale//square.denominator),scale)
+    need(gaproot*gaproot<=square<(gaproot+F(1,scale))**2,'outward lower physical gap root')
+    gap=max(F(raw['A'])+F(raw['B']),gaproot);pl,pu=map(F,p);v=min(pl*(1-pl),pu*(1-pu))
+    vlroot=F(isqrt(v.numerator*scale*scale//v.denominator),scale);need(vlroot*vlroot<=v,'lower variance root')
+    z['geometry_gap_lower']=str(gap);z['acquired_inward_upper']=str(up(1-gap*vlroot))
+    need(0<F(z['acquired_inward_upper'])<1,'strict independent physical inward cap')
+    return z
+
+def check_base(row,cfg,n,band,index):
+    expected=base_cfg(row,n,band,index);need(cfg==expected,'entire actual outward contract identity')
+    need(0<=F(cfg['acquired_lambda_upper'])<=F(cfg['Lambda']),'separate acquired noise cap within original affine Lambda')
+    r=row['result']['result'];raw=row['result']['raw_row'];s=row['result']['initial'];margins=[]
+    for sign in ('plus','minus'):
+        for q,t in zip(r['quadratics'],cfg['quadratics']):
+            margin=polymin(F(t['A'])-F(q['A']),F(t['F'+sign])-F(q['F'+sign]),F(q['Qbudget'])-F(t['Qbudget']),F(cfg['H'+sign]));need(margin>=0,'entire signed quadratic H domination');margins.append(str(margin))
+    need(0<F(cfg['sign_premise']['negative_endpoint_lower'])<=F(raw['A']) and 0<F(cfg['sign_premise']['positive_endpoint_lower'])<=F(raw['B']),'both physical sign endpoint floors')
+    need(-1<=F(cfg['acquired_beta'][0])<=max(F(s['beta_lo']),F(raw['beta_lo']))<=min(F(s['beta']),F(raw['beta_hi_signed']))<=F(cfg['acquired_beta'][1])<=1,'same-law signed beta')
+    need(0<=F(cfg['acquired_mean'][0])<=F(s['mean_lo'])<=min(F(s['mean_hi']),F(raw['mean_hi']))<=F(cfg['acquired_mean'][1])<=F(1,2),'same-law physical mean')
+    need(0<F(cfg['d0']) and 0<F(cfg['acquired_inward_upper'])<1 and F(cfg['Lambda'])>0 and all(F(q['Qbudget'])>0 for q in cfg['quadratics']),'positive native resource domain')
+    need(F(1,4)+F(cfg['acquired_lambda_upper'])/n<1 and min(root_margins(n,*map(F,cfg['p']),F(cfg['Hminus']),F(cfg['Hplus']),F(cfg['acquired_scale_upper'])))>0,'complete actual n+1 nearest-count roots from independent mean cap')
+    return margins

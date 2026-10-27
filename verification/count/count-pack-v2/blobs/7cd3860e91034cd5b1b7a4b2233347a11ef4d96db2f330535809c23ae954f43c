@@ -1,0 +1,59 @@
+Independent directed-interval source and integration review
+
+Reviewed directed_interval.py at SHA256 f93752f1b711708cb70a0dbddbd9bfdb0aa96aae4d2d67c1a87ee924de4d6326.
+This is an enclosure substitution, not an exact-output optimization.
+
+All constructors and primitive operations enclose the exact real operation on
+input intervals. For b>0, Python integer floor and -((-a)//b) give the lower
+and upper integral bounds for a/b including negative a. Addition of intervals
+is exact at scale S. Rational scalar addition separately rounds both endpoints
+outwards. Negation reverses endpoints. Products use the four corner extrema;
+scalar multiplication uses its sign. Division requires the stored divisor
+lower endpoint strictly positive and encloses all four endpoint quotients,
+so it is sound for either sign of the numerator. Odd powers are monotone;
+even powers use zero if crossed and the extreme endpoint powers otherwise.
+S**(n-1) is the exact positive rescaling factor. The zero power returns one.
+
+The Bernstein transform is sound: signed translation weights select the
+appropriate input endpoint for each requested direction. Rounding each
+weighted summand outward and adding preserves that direction. All degree-
+elevation weights are nonnegative exact binomial ratios, so the second
+outward rounding preserves a lower/upper bound for every exact transformed
+coefficient. The min/max Bernstein inequalities therefore remain valid.
+The optimized joint cubic code adds exact scalar affine translations to
+these coefficient bounds; widening their interval-only base is conservative.
+
+The inspected bridge32_b3_count integration imports all nine listed interval
+aliases before installation. In a clean process, an import-only inspection
+found no old interval instance in module-scope values (including nested
+ordinary lists/tuples/dictionaries to depth4), and every decorated cache was
+empty. Installation successfully changed all nine aliases. Base cast and
+intersect refer to the mutable base-module I global. Scalar helper patches
+apply to the old class only; the new class provides its own reviewed methods.
+Cached Bernstein weights contain only exact rational scalars. No count cell
+may run before installation, and no runtime may be switched after evaluation.
+
+The inspected core returns EMPTY only via explicit mathematical predicates,
+not by converting failed need/assert/exception gates to an exclusion. A
+widened interval can fail a positivity/domain check; that failure must abort
+or trigger honest subdivision, never pass or EMPTY. The parent benchmark's
+exception capture is only diagnostic and explicitly rejects every error.
+Probability, phase, support and variance intervals are used conservatively
+by the unchanged count formulas. Intersection/cap formulas may round back
+outward; they still contain every allowed actual value. If a numerical box
+no longer meets a formula's explicit domain gate, it cannot be accepted.
+
+The existing basic-operation test receipt reports 21,383 containments and
+4 domain controls. The 40 complete-cell experiment has no errors, identical
+statuses and identical score_upper values, with18 ancillary dictionaries
+differing and a measured1.432x speedup. This is evidence of integration, not
+a substitute for the mathematical enclosure argument or full leaf replay.
+
+Approved mathematical mechanism and the named clean-process integration,
+conditional on retained count lemmas. Future B4 copies must explicitly bind
+their actual modules and installer, check the full alias closure after all
+imports, install before evaluating any cell/cache, propagate failures safely,
+and freshly accept every leaf of the selected forest with the new runtime.
+This review does not certify an old forest from an old receipt, arbitrary
+future imports/module aliases, full B4 source equivalence or a new theorem.
+The scale S is part of the frozen source and must not be mutated.

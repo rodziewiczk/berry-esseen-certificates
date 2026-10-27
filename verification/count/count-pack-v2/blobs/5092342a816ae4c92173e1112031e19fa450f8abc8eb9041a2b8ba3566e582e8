@@ -1,0 +1,36 @@
+Passing the already acquired physical variance into the count domain
+==================================================================
+
+For the same actual standardized marginal, let p=P(X>0), q=1-p, v=pq,
+m=E X_+=E X_->0, and ell=m/v. In the sign-conditioned count decomposition
+X=ell(B+U-p), E(U|B)=0 and s=q E(U0²)+p E(U1²). Variance1 gives
+ell²(v+s)=1. The physical within-sign variance theta equals ell²s. Hence
+
+       theta=s/(v+s),       lambda=n*s=n*v*theta/(1-theta).
+
+If an independently acquired same-law bound gives theta<=T<1, then
+lambda<=n*vmax*T/(1-T), where vmax is the exact maximum of p(1-p) on
+the count's closed probability interval. This maximum is1/4 if the interval
+contains1/2, and otherwise the larger endpoint value. The expression is
+increasing in v>0 and theta in[0,1), so this upper bound is rigorous on both
+probability halves and at theta=0. All operations are rational.
+
+Intersect only the current lambda coordinate interval with this new bound.
+An empty intersection requires a strict incoming lower>new upper; equality
+is retained. No bound or coordinate of the original root box is omitted:
+the finite-tree acceptor must reconstruct that root and rerun this necessary
+contraction at every leaf.
+
+IMPORTANT: the pre-existing contract field Lambda is also the intercept of
+coupled moment/gap inequalities, such as d<=d0(1-lambda/Lambda). It cannot
+be replaced by the new smaller scalar cap. Every original price, d0,
+quadratic, Lambda and coupled plane is retained unchanged. The new contract
+field acquired_theta_upper is a separate physical premise, requiring a
+fresh exact same-law resource interface. No stronger joint inequality is
+asserted. An exact resource's raw_row.theta is the relevant physical bound;
+it is not itself lambda or lambda/n.
+
+The independent source derivation and finite-law checks are in
+new_audit/THETA_LAMBDA_INDEPENDENT_DERIVATION.txt and THETA_LAMBDA_CHECKED.json.
+This lemma is only a conditional domain contraction. It does not establish
+resource acquisition, any entire count forest, or the cutoff25 by itself.

@@ -1,0 +1,57 @@
+{
+  "status": "ACTUAL26_B0_RESOURCE_ROW_ACQUIRED_CONDITIONALLY_ON_SHARP_C25",
+  "conditional_predecessor": "C25<CE; not established globally",
+  "n": 26,
+  "acquisition_sha256": "d9c8dbbb2112e117026f22dc79ec7e3df88c8dfb259ba413e08e2b5da9430c5b",
+  "acquisition_path": "work/cutoff25_20261011/new_audit/ACTUAL26_B0_UNIFORM_ACQUISITION_V1.json",
+  "floor_contract_sha256": "3b7f5af200a18b3313f4a38c5de2ebd67796e6a60003c4c8f35ec6ff6134906e",
+  "rows": [
+    {
+      "n": 26,
+      "K": "0",
+      "index": 52,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "74467/260000",
+      "d0": "3931/1000000",
+      "Lambda": "24817/1000000",
+      "Hminus": "1317063/1000000",
+      "Hplus": "1317063/1000000",
+      "radius_minus": "1900001/1000000",
+      "radius_plus": "1800001/1000000",
+      "outer0": "215069/500000",
+      "outer1": "430131/1000000",
+      "binary_charge": "31453/125000",
+      "gap_charge": "735457/62500",
+      "noise_charge": "143337/80000",
+      "quadratics": [
+        {
+          "A": "124173/250000",
+          "Fplus": "1/1000000",
+          "Fminus": "1/1000000",
+          "Qbudget": "999/1000000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "1031983/1000000",
+        "positive_endpoint_lower": "46647/50000"
+      },
+      "acquired_beta": [
+        "-2471/40000",
+        "-9509/250000"
+      ],
+      "acquired_mean": [
+        "498627/1000000",
+        "499693/1000000"
+      ]
+    }
+  ],
+  "scope": "Same-law actual26 resources supplied by the independently reviewed complete uniform B0 acquisition, conditional on sharp C25 and retained analytic framework. This count remains separately conditional until its forest is accepted and composed."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "CONDITIONAL_GUARDS_ONLY_NOT_ACQUIRED",
+  "origin": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/threshold31_20261008/root/sharp31_ladder/rho31_ladder.json",
+  "origin_sha256": "7eda33dffdb445dd7a5a9eb0996307e01949a5dd1f632cd2c3adf6813218b7d6",
+  "branch": 1,
+  "rounding": "ceil1e-5+1e-4 upper, floor1e-5-1e-4 lower, exact literal rho branch retained",
+  "parent_kernel_sha256": "1dbc365493c99c7dbe59f9ef860c4ec9894a63c0d40b8b83651b58cbc4080010"
+}

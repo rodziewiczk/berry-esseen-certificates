@@ -1,0 +1,286 @@
+{
+  "status": "PASS_BOUNDED_EXPERIMENTAL_DIRECTED_COUNT_CELLS",
+  "cells": 40,
+  "rational_seconds": 4.671557499998016,
+  "directed_seconds": 3.261249625007622,
+  "speedup": 1.4324440129255969,
+  "comparisons": [
+    {
+      "index": 0,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 1,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 2,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 3,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 4,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 5,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 6,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 7,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 8,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 9,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 10,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 11,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 12,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 13,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 14,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 15,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 16,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 17,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 18,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 19,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 20,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 21,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 22,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 23,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 24,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 25,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 26,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 27,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 28,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 29,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 30,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 31,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 32,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 33,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 34,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 35,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "identical": false,
+      "score_change": "0"
+    },
+    {
+      "index": 36,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 37,
+      "old_status": "EMPTY_PHASE",
+      "new_status": "EMPTY_PHASE",
+      "identical": true
+    },
+    {
+      "index": 38,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    },
+    {
+      "index": 39,
+      "old_status": "UNRESOLVED",
+      "new_status": "UNRESOLVED",
+      "identical": true,
+      "score_change": "0"
+    }
+  ],
+  "scope": "No exact-output identity is claimed. No full count forest or analytic source review is established here.",
+  "source_sha256": {
+    "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/directed_count_interval/check_cells.py": "459d5568404f1702818ccea8483a41a642efac76a283999c6db8552d0c59891e",
+    "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/directed_count_interval/directed_interval.py": "f93752f1b711708cb70a0dbddbd9bfdb0aa96aae4d2d67c1a87ee924de4d6326",
+    "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/directed_count_interval/PROOF.txt": "8ce34cda87d0b4c4190aabd5518ec0565d71b2561d126f5a9ba2fc7d41252cc8",
+    "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/count_exp_integer/CELL_FIXTURES.json": "8d9d41d0b9396dbadcfb89be8d52d039752d96cec4acd0745cdf4f938c7e6f26"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "actual_native_calls": 2,
+  "elapsed_seconds": 0.5620000000053551,
+  "full_proof_pass": false,
+  "native_result_sha256": "4987bf61a0a89136fe53fe4ccc6d3d78efed6167ec624dd46fee6f85029a32df",
+  "native_status": "INDEXED40_LITERAL_INITIAL_SUPPORT_COMPLETED_CONDITIONAL",
+  "negative_controls": [
+    "missing_cell",
+    "gap_endpoint",
+    "wrong_last_index",
+    "boolean_index",
+    "wrong_barrier",
+    "wrong_decrement",
+    "wrong_radius",
+    "false_gate"
+  ],
+  "original_entry_sha256": "31124fc2a960a1c37840a2959bf8ee4c46c5261e7cd0ae7e5024652336714804",
+  "original_literal_call": {
+    "K": "0",
+    "N": 40,
+    "R": "96/25",
+    "last": 42,
+    "q": "0"
+  },
+  "schema": "be.public-native-replay-demonstration/1",
+  "source_archive_sha256": "8196a7440c0b37aef9d38e3d16e8c9268b2e351ab2a8ce77daf4a2ef369356ea",
+  "task_id": "indexed40"
+}

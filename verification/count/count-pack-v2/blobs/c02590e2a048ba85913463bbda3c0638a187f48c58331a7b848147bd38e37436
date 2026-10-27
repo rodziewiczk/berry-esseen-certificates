@@ -1,0 +1,87 @@
+{
+  "status": "ACTUAL26_B0_RESOURCE_ROW_ACQUIRED_CONDITIONALLY_ON_SHARP_C25",
+  "conditional_predecessor": "C25<CE; not established globally",
+  "n": 26,
+  "acquisition_sha256": "d9c8dbbb2112e117026f22dc79ec7e3df88c8dfb259ba413e08e2b5da9430c5b",
+  "acquisition_path": "work/cutoff25_20261011/new_audit/ACTUAL26_B0_UNIFORM_ACQUISITION_V1.json",
+  "floor_contract_sha256": "9aa6e013de42168fc768236a68751d88c6e1645cb291df216c58a5ec4823a3d9",
+  "rows": [
+    {
+      "n": 26,
+      "K": "0",
+      "index": 48,
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "149621/520000",
+      "d0": "9227/500000",
+      "Lambda": "107443/1000000",
+      "Hminus": "107297/100000",
+      "Hplus": "1037049/1000000",
+      "radius_minus": "1800001/1000000",
+      "radius_plus": "2000001/1000000",
+      "outer0": "105969/250000",
+      "outer1": "494307/1000000",
+      "binary_charge": "90919/1000000",
+      "gap_charge": "11289299/1000000",
+      "noise_charge": "1938919/1040000",
+      "quadratics": [
+        {
+          "A": "473191/1000000",
+          "Fplus": "66011/500000",
+          "Fminus": "6707/40000",
+          "Qbudget": "567287/1000000"
+        },
+        {
+          "A": "97083/200000",
+          "Fplus": "66011/500000",
+          "Fminus": "6707/40000",
+          "Qbudget": "298617/500000"
+        },
+        {
+          "A": "11831/25000",
+          "Fplus": "26403/200000",
+          "Fminus": "5241/31250",
+          "Qbudget": "70941/125000"
+        },
+        {
+          "A": "485471/1000000",
+          "Fplus": "26403/200000",
+          "Fminus": "5241/31250",
+          "Qbudget": "14937/25000"
+        },
+        {
+          "A": "-6033/200000",
+          "Fplus": "65727/500000",
+          "Fminus": "170839/1000000",
+          "Qbudget": "58783/100000"
+        },
+        {
+          "A": "-1481/50000",
+          "Fplus": "65727/500000",
+          "Fminus": "170839/1000000",
+          "Qbudget": "309137/500000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "114961/125000",
+        "positive_endpoint_lower": "122357/125000"
+      },
+      "acquired_beta": [
+        "10867/1000000",
+        "12149/250000"
+      ],
+      "acquired_mean": [
+        "497357/1000000",
+        "124981/250000"
+      ]
+    }
+  ],
+  "scope": "Same-law actual26 resources supplied by the independently reviewed complete uniform B0 acquisition, conditional on sharp C25 and retained analytic framework. This count remains separately conditional until its forest is accepted and composed."
+}

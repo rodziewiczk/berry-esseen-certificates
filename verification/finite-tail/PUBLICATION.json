@@ -1,0 +1,38 @@
+{
+  "excluded": [
+    "demo-*"
+  ],
+  "files": {
+    "INTEGRATION.md": {
+      "bytes": 2833,
+      "sha256": "3f0bb6574ea2d74981eb3612f70a057a0d0bed2917782065cca868feeec72225"
+    },
+    "README.md": {
+      "bytes": 5587,
+      "sha256": "a59019d84f2ef946776855f76de2bab5744da461deafdc4268d8d79a8b7cc358"
+    },
+    "SOURCE-MANIFEST.json": {
+      "bytes": 461,
+      "sha256": "d086007091cba5e80e4120c4472ca76e159c586466e437a67bfbebd803c4de32"
+    },
+    "TASKS.json": {
+      "bytes": 113541,
+      "sha256": "297e5e44513fa8abda9faa61497721dd5a6fe2bfb3131fd5c99ffe6248ce545e"
+    },
+    "replay.py": {
+      "bytes": 9823,
+      "sha256": "17cef15fc39a7bb2d0d3d68e2ae56027cca1ac97b0a7cf63c9dda52c4850d9cd"
+    },
+    "sources/BE_cutoff49_20260930.zip": {
+      "bytes": 16660566,
+      "sha256": "ecdb9acca0db29efc9fe2bf496c0bcc61b4881aecdcbc91a4eb6ad49b920c72e"
+    },
+    "sources/backend.zip": {
+      "bytes": 6208024,
+      "sha256": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+    }
+  },
+  "full_pass": false,
+  "include_this_manifest": true,
+  "schema": "public-finite-tail-publication/1"
+}

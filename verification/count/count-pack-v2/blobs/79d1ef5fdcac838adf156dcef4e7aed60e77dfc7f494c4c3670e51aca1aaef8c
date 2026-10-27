@@ -1,0 +1,32 @@
+"""Bounded tree discovery with alpha priority4; unchanged fixed leaf acceptor."""
+from fractions import Fraction as F
+from pathlib import Path
+from hashlib import sha256
+import json,time,traceback
+import count_protocol as c
+def main():
+ cfg,bound=c.load();started=time.time();visited=0;last={}
+ scales=[F('.001'),F('.006'),F('.15'),F('.02'),F(1)]
+ def build(k,b,depth):
+  nonlocal visited,last
+  visited+=1;last=dict(k=k,box=c.enc(b),depth=depth)
+  c.need(visited<=c.LIMIT and depth<=128 and time.time()-started<=600,'finite count construction budget')
+  decision,z=c.evaluate(cfg,k,b)
+  if decision is not None:return dict(kind='leaf',box=c.enc(b),decision=decision,result=z)
+  widths=[(b[i][1]-b[i][0])/scales[i]for i in range(5)]
+  widths[2]*=4*max(b[1][1]/F(cfg['Lambda']),F(1,10000))
+  axis=max(range(5),key=lambda i:widths[i]);cut=sum(b[axis])/2;left,right=c.children(b,axis,cut)
+  return dict(kind='split',axis=axis,cut=str(cut),left=build(k,left,depth+1),right=build(k,right,depth+1))
+ out=dict(scope='Conditional bounded discovery only. This constructor changes splitting priority, never leaf decisions or the fixed original-box acceptor.',contract_sha256=c.sha(c.HERE/'contract.json'),fixed_acceptor_sha256=c.sha(c.HERE/'count_protocol.py'),constructor_sha256=c.sha(Path(__file__)))
+ try:
+  roots=[dict(k=k,tree=build(k,c.rootbox(cfg),0))for k in range(28)]
+  c.need(c.load()[1]==bound,'unchanged frozen exact kernel')
+  dest=c.HERE/'COUNT41_FOREST.json';c.need(not dest.exists(),'fresh complete forest only')
+  dest.write_text(json.dumps(dict(**c.header(bound),roots=roots),indent=2)+'\n')
+  out.update(status='STORED_CONDITIONAL_FOREST_CONSTRUCTED_NOT_ACCEPTED',forest_sha256=c.sha(dest))
+ except Exception as error:
+  out.update(status='BOUNDED_CONSTRUCTION_NOT_COMPLETE',error=repr(error),last_open=last)
+  traceback.print_exc()
+ out.update(visited=visited,seconds=time.time()-started)
+ (c.HERE/'CONSTRUCTION_RUN.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2),flush=True)
+if __name__=='__main__':main()

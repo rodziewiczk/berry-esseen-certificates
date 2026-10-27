@@ -1,0 +1,58 @@
+{
+  "status": "ACTUAL29_B0_ACQUIRED_CONDITIONAL_COUNT_SWEEP",
+  "n": 29,
+  "conditional_predecessor": "C28<CE; not established by this capsule",
+  "acquisition_path": "work/cutoff25_continue_20261015/b0_family/FAMILY_PROOF_V2.json",
+  "acquisition_sha256": "f594f4daa19cd5cd9885a883d19ff044ba2094b5285734fbe78f8f128a12b3e4",
+  "acquisition_receipt_sha256": "df0128bca79c90e2e15c9705c7f17e7698e3c12be441c5112ef6894d0db10c47",
+  "source_contract_sha256": "ba94bc34b8f32b3d3cd6aaab84ac246b53d2b7d39bc85f39f30a807f4bb1cb83",
+  "rows": [
+    {
+      "n": 29,
+      "K": "0",
+      "index": 52,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "74467/290000",
+      "d0": "3931/1000000",
+      "Lambda": "24817/1000000",
+      "Hminus": "1317063/1000000",
+      "Hplus": "1317063/1000000",
+      "radius_minus": "1900001/1000000",
+      "radius_plus": "1800001/1000000",
+      "outer0": "215069/500000",
+      "outer1": "430131/1000000",
+      "binary_charge": "31453/125000",
+      "gap_charge": "735457/62500",
+      "noise_charge": "1863381/1160000",
+      "quadratics": [
+        {
+          "A": "124173/250000",
+          "Fplus": "1/1000000",
+          "Fminus": "1/1000000",
+          "Qbudget": "999/1000000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "1031983/1000000",
+        "positive_endpoint_lower": "46647/50000"
+      },
+      "acquired_beta": [
+        "-2471/40000",
+        "-9509/250000"
+      ],
+      "acquired_mean": [
+        "498627/1000000",
+        "499693/1000000"
+      ]
+    }
+  ],
+  "scope": "Verbatim acquired actual-n row. Literal sign orientation; no earlier-n verdict transfer."
+}

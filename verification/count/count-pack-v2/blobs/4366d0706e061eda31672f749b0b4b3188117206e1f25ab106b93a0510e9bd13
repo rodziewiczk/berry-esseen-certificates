@@ -1,0 +1,14 @@
+{
+  "status": "PASS_INDEPENDENT_DERIVATION_AND_SOURCE_REVIEW",
+  "scope": "Monotonicity gates and wrapper integration only. Conditional forest and exact acquisition remain separate.",
+  "files_sha256": {
+    "new_middle/b4_counts/count21_corners/moment_corners.py": "c95f84ade3b01ad498b46d33066257623f06c363ec3cb72764126a999fa44241",
+    "new_middle/b4_counts/count21_corners/MOMENT_CORNERS_PROOF.txt": "09fe38bd9e67922ad3c34d250b9e99f38f423fc0509a8c87e57c69029a19074c",
+    "new_middle/b4_counts/count21_corners/rho_signed_moment_tightener.py": "e6af4dfb8590717e1b3d512eabe29849e47c4e7b4faba559579d78429fda3705",
+    "new_middle/b4_counts/count21_corners/WRAPPER_PORT.diff": "bad1d5aa020ca6d3b462e47b5db44b89fd3e835044d96adf74c4e631f94281b6",
+    "new_middle/b4_counts/count21_corners/KERNEL_COPY_MANIFEST.json": "854cc71fc21db8eb1944cfa9991119e3bda3978cf1f43135d953be130e4a9c8c",
+    "new_middle/b4_counts/count21_corners/count_protocol.py": "81b772d4d6e54a75b85a855bb2cd55d5ef5676a75063016566343938b468eb7f",
+    "new_middle/b4_counts/count21_corners/contract.json": "2c0afc84d80512c555ec7aaf0e3e03f1bc20275079710a9a50053aaea2990787",
+    "new_audit/MOMENT_CORNERS_INDEPENDENT_REVIEW.txt": "6ac4e333241ba86ff1e6bc0f8c678d17625504ad4d792b3ca382c4cd22106331"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ORIGINAL_CONTRACT_FOUR_CLOSED_P_SUBPANELS_V1",
+  "n": 10,
+  "band": "BN",
+  "index": 42,
+  "part": 2,
+  "parts": 4,
+  "original_p": [
+    "21/50",
+    "43/100"
+  ],
+  "cuts": [
+    "21/50",
+    "169/400",
+    "17/40",
+    "171/400",
+    "43/100"
+  ],
+  "p": [
+    "17/40",
+    "171/400"
+  ],
+  "contract_sha256": "2f3143f100858faf4dbf7e7196b085ac43827e7bf159143382056c9da156aba0",
+  "parent_capsule": "work/cutoff10_20261018/root/count10_BN_fine_v1/BN/capsule42",
+  "parent_protocol_sha256": "156c74dd60c1c45a1abd5ca57e9c43ec7fd8ee54c4bf10a5a2df7bd7f982f45b",
+  "parent_constructor_sha256": "0c722ab035322a5516933e4fc4f7b12bc7637128317d473367fd2e1ce64b49a8",
+  "kernel_manifest_sha256": "eb3c378da123e8bb19c01f3b345e4316af91a7f2d083599f624f3e3ddb104bdf",
+  "resource_candidate_sha256": "18298526490e5b90ba59baa50d8b2f27616606b6737ff22708c2f74ba22afe99",
+  "resource_replay_sha256": "09a7ad2fa469c5de07a8c30648d6d2a844311346d7c265098dbd53f19a14048e",
+  "resource_row_sha256": "ad8b9fb191b5729f4aa56b5d2c0421b7339851dc3dfa5851dd7591595471c111"
+}

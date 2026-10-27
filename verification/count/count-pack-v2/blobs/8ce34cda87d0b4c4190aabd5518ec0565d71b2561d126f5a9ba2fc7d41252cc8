@@ -1,0 +1,43 @@
+Experimental directed fixed-denominator count arithmetic.
+
+This changes the interval enclosure and therefore is not an exact-output
+optimization. It cannot reuse any old leaf acceptance. A new count forest
+and fresh acceptance, or complete fresh acceptance of a compatible old
+forest, is mandatory before any theorem claim.
+
+An interval stores integers L,H representing [L/S,H/S], S=10^18. Every
+rational constructor checks order before rounding its lower endpoint down
+and upper endpoint up. Addition, subtraction and negation are exact on
+stored scaled endpoints. For scalar multiplication the sign selects the
+correct ordered endpoints and division by the scalar denominator is rounded
+outwards. For interval multiplication, min/max of all four products are
+rounded outwards after division by S. For a positive interval divisor all
+four endpoint quotients are enclosed directly. The divisor's stored lower
+endpoint must be strictly positive. Nonnegative integer powers use monotonic
+endpoints for odd powers and the zero-crossing/min/max rule for even powers;
+rescaling by S^(n-1) is again outward. Zero and unit powers are explicit.
+
+Thus each operation encloses the exact range over its supplied intervals.
+Substitution into an interval enclosure argument remains valid inductively.
+A widened enclosure may fail a domain gate that the original passes; such a
+failure is not an exclusion, and must stop or subdivide the calculation.
+No gate is relaxed. Empty-intersection conclusions remain sound when taken
+only from proved disjoint enclosures.
+
+The existing optimized Bernstein transform first translates each interval
+coefficient using exact rational weights. Its lower/upper endpoint choice
+is determined by the weight sign. Each product is now rounded outwards to
+the common denominator before summing. Degree-elevation weights are positive,
+so outward multiplication of the resulting lower/upper bounds encloses the
+same exact Bernstein coefficients. The returned Fraction values are the
+outward coefficient bounds. This remains a valid enclosure even though it
+can differ from the exact-rational transform.
+
+The installer substitutes the interval class in every known imported module
+alias, checking a single original class identity, and installs the outward
+Bernstein vector. The ordinary rational count parameters, probability/mass
+formulas, Taylor exponential helpers, directed roots, Gaussian enclosures,
+count predicates and geometric resource formulas remain unchanged. It must
+be installed before any count cell is evaluated so no cached old interval
+object crosses runtimes. Independent review and bounded whole-cell tests
+are pending. It is currently an experiment only.

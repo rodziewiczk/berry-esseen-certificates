@@ -1,0 +1,87 @@
+{
+  "status": "ASSUMED_ACQUIRED_ACTUAL27_B0_SOURCE_PROTOTYPE",
+  "n": 27,
+  "conditional_predecessor": "C26<CE; not supplied by this prototype",
+  "floor_contract_path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/cutoff25_20261011/new_low/count41_global_theta_v1/contract.json",
+  "floor_contract_sha256": "795f5c99b8c53277cf1adf002b25bc23009a86aa7e34c5e68737a6020efb1e39",
+  "rows": [
+    {
+      "n": 27,
+      "K": "0",
+      "index": 41,
+      "p": [
+        "41/100",
+        "21/50"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "601/1125",
+      "d0": "11281/200000",
+      "Lambda": "276951/1000000",
+      "Hminus": "73919/50000",
+      "Hplus": "1405867/1000000",
+      "radius_minus": "1800001/1000000",
+      "radius_plus": "2300001/1000000",
+      "outer0": "49117/100000",
+      "outer1": "285747/500000",
+      "binary_charge": "0",
+      "gap_charge": "10229143/1000000",
+      "noise_charge": "32551/16875",
+      "quadratics": [
+        {
+          "A": "52593/62500",
+          "Fplus": "80683/500000",
+          "Fminus": "102847/250000",
+          "Qbudget": "540533/1000000"
+        },
+        {
+          "A": "889667/1000000",
+          "Fplus": "80683/500000",
+          "Fminus": "102847/250000",
+          "Qbudget": "615303/1000000"
+        },
+        {
+          "A": "21043/25000",
+          "Fplus": "161273/1000000",
+          "Fminus": "8231/20000",
+          "Qbudget": "540783/1000000"
+        },
+        {
+          "A": "889927/1000000",
+          "Fplus": "161273/1000000",
+          "Fminus": "8231/20000",
+          "Qbudget": "615567/1000000"
+        },
+        {
+          "A": "223079/1000000",
+          "Fplus": "151687/1000000",
+          "Fminus": "428223/1000000",
+          "Qbudget": "141621/250000"
+        },
+        {
+          "A": "14779/62500",
+          "Fplus": "151687/1000000",
+          "Fminus": "428223/1000000",
+          "Qbudget": "642777/1000000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "44297/62500",
+        "positive_endpoint_lower": "1045439/1000000"
+      },
+      "acquired_beta": [
+        "63687/500000",
+        "25383/125000"
+      ],
+      "acquired_mean": [
+        "242433/500000",
+        "123751/250000"
+      ],
+      "acquired_theta_upper": "14063/500000"
+    }
+  ],
+  "scope": "Conditional count design only. Actual27 resource acquisition and ordinary fresh count acceptance/composition remain required. No actual26 verdict is transferred."
+}

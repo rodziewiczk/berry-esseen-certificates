@@ -1,0 +1,16 @@
+{
+  "status": "PASS_INDEPENDENT_ALLOCATION_VARIANCE_DERIVATION_AND_SOURCE_REVIEW",
+  "derivation": [
+    "For actual U0 in[-O0,a0],U1[-a1,O1], zero conditional means imply Var(Uj)<=Oj*aj. With s=lambda/n and alpha the weighted side allocation, lambda/n*((1-alpha)/((1-p)*O0)+alpha/(p*O1))<=a0+a1.",
+    "Intersect with the retained original joint plane d<=d0*(1-lambda/Lambda); positive rearrangement gives the independent scalar cap with denominator1/Lambda+f/(n*d0).",
+    "For each p, f is affine in alpha, so rectangular minimum occurs at an alpha endpoint. For fixed endpoint f=A/(1-p)+B/p is convex with derivative sign A*p\u00b2-B*(1-p)\u00b2. The code selects exact endpoint minima or downward-rounded A+B+2sqrt(A*B) when stationary point lies inside.",
+    "All domain divisions are positive; alpha0/1,p-degenerate,lambda0 and exact-bound equality preserved. Contract changes only working hi; no cfg mutation, no newly strengthened joint plane, no added physical premise."
+  ],
+  "files_sha256": {
+    "work/cutoff25_20261011/new_middle/allocation_variance.py": "3d4d42bdc3cbaa1f578a83f1691c32cb33599a417989a274d21ec42e66671973",
+    "work/cutoff25_20261011/new_middle/ALLOCATION_VARIANCE_PROOF_v2.txt": "75d1abced86acf5fd671f6eaa61fa990fa08f45691522052ff41fbcd11eced79",
+    "work/cutoff25_20261011/new_middle/check_allocation_variance_v2.py": "e5cd528e89f78bada796cdd66512ba87e2d305c53179d6d26e5f2c516e84a103",
+    "work/cutoff25_20261011/new_middle/ALLOCATION_VARIANCE_CHECKED_v2.json": "50e86986e16653be9fb7303899bc60263b8cffd8d19acf336c258438a5a426a2"
+  },
+  "scope": "General derivation and exact scalar helper source review only. Future kernel integration and complete fresh forests remain separate; existing original resource premises must still be acquired. V2 proof fixes U0 support orientation; original product inequality and helper unchanged."
+}

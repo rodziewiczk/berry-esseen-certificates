@@ -1,0 +1,21 @@
+"""Necessary lambda cap from the unchanged joint gap plane and sidewise support.
+No resource acquisition and no mutation of the original Lambda intercept.
+"""
+from fractions import Fraction as F
+from math import isqrt
+
+def coefficient_lower(pl,pu,alpha,outer0,outer1):
+    a=(1-alpha)/outer0;b=alpha/outer1
+    if a*pl*pl>=b*(1-pl)**2:return a/(1-pl)+b/pl
+    if a*pu*pu<=b*(1-pu)**2:return a/(1-pu)+b/pu
+    product=a*b;grid=10**12
+    root=F(isqrt(product.numerator*grid*grid//product.denominator),grid)
+    return a+b+2*root
+
+def contract(n,pl,pu,lo,hi,al,ah,d0,Lambda,outer0,outer1):
+    if type(n)is not int or n<1:raise ValueError('positive integer count index')
+    if not all(type(x)is F for x in(pl,pu,lo,hi,al,ah,d0,Lambda,outer0,outer1)):raise ValueError('exact rational input')
+    if not(0<pl<=pu<1 and 0<=lo<=hi<=Lambda and 0<=al<=ah<=1 and d0>0 and Lambda>0 and outer0>0 and outer1>0):raise ValueError('positive physical allocation domain')
+    coefficient=min(coefficient_lower(pl,pu,t,outer0,outer1)for t in(al,ah))
+    cap=1/(1/Lambda+coefficient/(n*d0))
+    return dict(empty=lo>min(hi,cap),lo=lo,hi=min(hi,cap),coefficient_lower=coefficient,derived_lambda_upper=cap)

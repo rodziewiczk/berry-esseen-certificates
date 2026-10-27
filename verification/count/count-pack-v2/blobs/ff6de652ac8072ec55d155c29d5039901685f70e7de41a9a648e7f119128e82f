@@ -1,0 +1,35 @@
+Exact-output integer Taylor evaluation for the count exponential helpers
+======================================================================
+
+The original count code evaluates S48(x)=sum_{i=0}^{48}x^i/i!, then rounds
+down for exp_lower. For exp_upper it adds the same geometric tail
+x^49/49!/(1-x/50) and rounds up. The scale is10^12. No term or bound changes.
+
+For x=a/b>=0, b>0, let c_i=48!/i!, an integer. The polynomial numerator
+N=sum_{i=0}^{48}c_i*a^i*b^(48-i) has denominator D=48!*b^48.
+The code starts from c48=1 and applies integer Horner arithmetic while
+updating the power of b. Induction gives exactly N and D without reducing
+the intermediate fractions. Consequently floor(10^12*N/D)/10^12 is exactly
+the original exp_lower output.
+
+The unchanged tail is50*a^49/[49!*b^48*(50*b-a)]. The exact combined
+numerator and denominator of S48+tail are therefore
+ N*[49*(50*b-a)]+50*a^49,    D*[49*(50*b-a)].
+Their upward integer division at the same scale gives exactly exp_upper.
+The denominator is positive for x<50. The original scope x<10 is retained
+unless the caller explicitly selects the separately reviewed generalized
+x<50 scope. No upper exponential is evaluated at or above50.
+
+The named installer requires Fraction arithmetic, the existing scale, and
+one common original helper pair in the two active count modules. Its typed
+bounded caches affect only evaluation order. Inputs are Fraction or literal
+int; bool/float and arbitrary arithmetic objects are rejected. All current
+exact count calls supply Fractions. Neither helper reads a mutable profile,
+target, support radius, n or moment cap. Their mathematical outputs are
+unchanged, not merely outward relaxations.
+
+Use only in a newly named count package. Bind this source/proof, the copied
+original kernel and whole-cell equivalence results. Active/completed count
+sources must remain frozen; existing receipt hashes cannot be relabeled as
+acceptance under this new runtime. A full count acceptance still freshly
+evaluates every leaf.

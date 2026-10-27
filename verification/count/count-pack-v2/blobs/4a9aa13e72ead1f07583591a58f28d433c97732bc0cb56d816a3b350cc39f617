@@ -1,0 +1,28 @@
+"""Join conditional actual32 branch1 count comparisons, no resource claim."""
+from pathlib import Path
+from hashlib import sha256
+from fractions import Fraction as F
+import json,sys
+import accept_strict as a
+HERE=Path(__file__).resolve().parent
+files={}
+def bind(p):
+ h=sha256(p.read_bytes()).hexdigest();files[p.name]=h;return h
+def main():
+ a.need(__debug__ and not sys.flags.optimize,'ordinary exact runtime')
+ rows=[];total=0;maximum=F(0)
+ for i in a.INDICES:
+  p=HERE/f'candidate_{i}.json';rpath=HERE/f'accepted_strict_{i}.json'
+  proof=a.parse(p.read_bytes());r=a.parse(rpath.read_bytes());contexts=a.structure(proof,i)
+  a.need(r['n']==32 and r['K']=='0' and r['index']==i,'fixed sharp bridge target')
+  a.need(r['status']=='PASS_CONDITIONAL_ON_UNACQUIRED_RESOURCES','conditional count status')
+  a.need(r['candidate_sha256']==bind(p) and r['contract_sha256']==a.CONTRACT_HASH,'fixed count inputs')
+  a.need(r['all_closed_leaves']==len(contexts) and r['negative_controls']==24,'full exact replay and controls')
+  for name,h in r['source_sha256'].items():a.need(bind(HERE/name)==h,'accepted current source '+name)
+  a.need(F(r['maximum_score'])<a.TARGET==F(r['target_lower']),'strict target')
+  bind(rpath);total+=len(contexts);maximum=max(maximum,F(r['maximum_score']))
+  rows.append(dict(index=i,leaves=len(contexts),maximum=r['maximum_score']))
+ out=dict(status='PASS_CONDITIONAL_BRIDGE32_B1_COUNTS_ONLY',n=32,K='0',rho_interval=['11/10', '6/5'],rows=rows,closed_leaves=total,maximum_score=str(maximum),target_lower=str(a.TARGET),scope='Finite count comparison on unacquired actual32 resource guards. The floor31 interpretation, actual32 support/predecessor/own-cap acquisition and all other moment branches remain required.',files_sha256=files)
+ dest=HERE/'BRIDGE32_B1_COUNTS_CONDITIONAL_JOINED.json';a.need(not dest.exists(),'fresh join destination')
+ dest.write_text(json.dumps(out,indent=2)+'\n');print(out['status'],total,str(maximum))
+if __name__=='__main__':main()

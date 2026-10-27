@@ -1,0 +1,12 @@
+{
+  "status": "FIXED_CONDITIONAL_UNIFORM_RESOURCE_ROWS",
+  "resource_composition": "/Users/adam/Desktop/programiki.nosync/kolodziejkowanie/cutoff_project/continuation_20261010/shared/bridge_b0_resources/UNIFORM_B0_RESOURCES_CHECKED.json",
+  "resource_sha256": "29b22ef936b9bfaf60bb82287c57a25d861f92cc4c5be496d16adebb57f0cf58",
+  "actual_n": 34,
+  "floor_n": 31,
+  "rho_interval": [
+    "1",
+    "11/10"
+  ],
+  "setup_sha256": "5f8b61c895593c149581b2407504f3a6da54b481c90836c2c718ed50702d3e04"
+}

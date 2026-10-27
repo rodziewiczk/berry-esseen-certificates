@@ -1,0 +1,16 @@
+"""Extra lambda-domain cap from acquired physical within-sign variance.
+
+The original joint-plane Lambda and all charges MUST remain unchanged.
+"""
+from fractions import Fraction as F
+
+def contract(n,pl,pu,lo,hi,theta_upper):
+    if type(n)is not int or n<1:
+        raise ValueError('positive integer count index')
+    if not all(type(x)is F for x in(pl,pu,lo,hi,theta_upper)):
+        raise ValueError('exact rational input')
+    if not(0<pl<=pu<1 and 0<=lo<=hi and 0<=theta_upper<1):
+        raise ValueError('physical theta and closed interval domain')
+    vmax=F(1,4)if pl<=F(1,2)<=pu else max(pl*(1-pl),pu*(1-pu))
+    cap=n*vmax*theta_upper/(1-theta_upper)
+    return dict(empty=lo>min(hi,cap),lo=lo,hi=min(hi,cap),theta_upper=theta_upper,variance_upper=vmax,derived_lambda_upper=cap)

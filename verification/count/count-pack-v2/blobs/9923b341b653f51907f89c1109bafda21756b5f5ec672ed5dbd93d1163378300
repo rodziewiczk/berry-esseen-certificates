@@ -1,0 +1,62 @@
+Conditional denominator coupling: exact vertex reduction
+
+Status: locally derived analytic lemma; no count implementation adopted and no
+new certificate follows from this note alone. The derivation is independent of
+the proposed constructor. See cubic_denominator_coupling.tex for the full proof.
+
+Let P be a nonempty compact convex polygon of conditional cubic moments
+x=(m0,m1), possibly a segment or a point. Assume, simultaneously for each actual
+law represented by x, that
+ rho >= r0 > 0,
+ 0 < h^3 <= H,
+ N=rho*h^3 >= L(x)=B_lower+cx*m0+cy*m1-error,
+where H>0,r0 and all coefficients are fixed exact bounds on this cell. Then
+ rho >= d(x):=max(r0,L(x)/H).
+If L<=0 this follows from r0; if L>0 use N/h^3>=L/h^3>=L/H.
+In particular, no unjustified division of a negative lower numerator is needed.
+
+For any affine A(x), the purely mathematical optimization
+ max_{x in P} A(x)/d(x)
+is attained at a vertex of one of
+ Pminus=P intersect {L<=H*r0}, Pplus=P intersect {L>=H*r0}.
+These vertices are the original polygon vertices and intersections of polygon
+edges with the switch line L=H*r0 (with lower-dimensional cases retained).
+On either piece the denominator is a positive affine function D. If
+x=sum_i lambda_i*v_i, then
+ A(x)/D(x)=sum_i [lambda_i*D(v_i)/D(x)]*[A(v_i)/D(v_i)].
+The bracketed weights are nonnegative and sum to1. The ratio is thus between
+the vertex ratios, regardless of the sign of A. This proves the vertex rule.
+
+Crucial distinction: replacing an unknown rho by its lower bound in a score
+upper bound S<=A(x)/rho requires A(x)>=0. Without nonnegativity it is false:
+A=-1,rho=2,d=1 gives -1/2 > -1. Safe unconditional upper bound:
+ S <= max(A(x),0)/d(x).
+Its maximum is max(0,max_v A(v)/d(v)) over the same clipped vertices. An extra
+clip at A=0 is unnecessary for maximization. Alternatively a proof that every
+admissible actual score numerator is nonnegative licenses A/d directly.
+
+Hypotheses that a future checker must acquire, not assume:
+* One common cubic point x is used in L and A. Independent extrema would lose
+  the coupling; this lemma cannot repair mismatched actual laws or parameters.
+* L is a uniform lower bound on N throughout the full existing parameter cell.
+  Signed m0/m1 forbid blindly using coefficient lower endpoints. Coefficient
+  uncertainty may instead be absorbed into an exact uniform error bound.
+* H is a fixed positive upper bound on the actual h^3. If H or A depends on x
+  non-affinely, this fractional-linear proof does not apply as stated.
+* P contains every actual cubic pair and is given by exact closed halfplanes.
+  Include both sides of the switch line; preserve collinear, point and endpoint
+  cases. A sampled polygon or optimizer-reported infeasibility is insufficient.
+* The score upper numerator A is affine on each enumerated piece. For several
+  affine envelopes or an existing piecewise-affine representation, refine by
+  all relevant switching lines or apply the lemma to each valid affine upper.
+
+Optional necessary rho-upper cut: if rho<=r1 is also acquired, then
+L(x)<=N=rho*h^3<=r1*H. Thus P may safely be intersected with L<=r1*H.
+
+Counterexamples delimiting the statement:
+1. Negative numerator breaks lower-denominator substitution as above, but not
+   the abstract vertex theorem for a positive affine denominator.
+2. Non-affine numerator: A(x)=1-x^2 on[-1,1],d=1 has interior maximum1 while both
+   endpoint values0. Affineness or an independently valid affine upper is needed.
+3. A denominator that can vanish has no continuous bounded ratio guarantee;
+   the strict fixed floor r0>0 is indispensable to this proof.

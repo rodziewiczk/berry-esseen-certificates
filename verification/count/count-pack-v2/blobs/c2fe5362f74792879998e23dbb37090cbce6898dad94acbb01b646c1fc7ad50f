@@ -1,0 +1,33 @@
+"""Exact necessary lambda interval from acquired actual sign mean.
+
+No resources are acquired here. The inputs are conditional same-law premises.
+"""
+from fractions import Fraction as F
+
+def contract(n,pl,pu,lo,hi,ml,mh):
+    if type(n)is not int or n<1:
+        raise ValueError('positive integer count index')
+    if not all(type(x)is F for x in (pl,pu,lo,hi,ml,mh)):
+        raise ValueError('exact rational interval endpoints')
+    if not (0<pl<=pu<1 and 0<=lo<=hi and 0<=ml<=mh<=F(1,2)):
+        raise ValueError('physical closed mean/variance domain')
+    vl=min(pl*(1-pl),pu*(1-pu))
+    vh=F(1,4)if pl<=F(1,2)<=pu else max(pl*(1-pl),pu*(1-pu))
+    if mh==0:
+        return dict(empty=True,reason='positive actual mean required',lo=lo,hi=hi)
+    # m^2 <= v follows from s>=0; hence this intersection loses no witness.
+    vl=max(vl,ml*ml)
+    if vl>vh:
+        return dict(empty=True,reason='mean exceeds all Bernoulli variances',lo=lo,hi=hi)
+    lower=lambda v:v*v/(mh*mh)-v
+    points=[vl,vh]
+    if vl<=mh*mh/2<=vh:
+        points.append(mh*mh/2)
+    lower_s=min(lower(v)for v in points)
+    newlo=max(lo,F(0),n*lower_s)
+    newhi=hi
+    upper_s=None
+    if ml>0:
+        upper_s=max(vl*vl/(ml*ml)-vl,vh*vh/(ml*ml)-vh)
+        newhi=min(hi,n*upper_s)
+    return dict(empty=newlo>newhi,lo=newlo,hi=newhi,variance_lower=vl,variance_upper=vh,mean_lower=ml,mean_upper=mh,derived_s_lower=lower_s,derived_s_upper=upper_s)

@@ -1,0 +1,15 @@
+Bounded independent review: sharp31 ladder branch0 count acceptor v2
+=================================================================
+Reviewed local/sharp31_ladder_b0/accept_strict_v2.py (SHA25629b3d20ecac39f3028387641cbe7f911b2e6a8052f91c9cf4c260b776debfb22), its complete diff from accept_strict.py, fixed contract checks and endpoint scope. Mathematical status: conditional count interface only; fixed contract resources are explicitly unacquired. Execution status of this review: source review and exact scalar identity check; does not repeat any leaf replay.
+
+The v2 change adds recursive same_typed equality for the entire EXPECTED contract, preserving exact dict/list/scalar types. This closes the bool/int alias in header branch0 and rejects omitted or reordered rows. Three new controls exercise those cases. Receipt schema/name and checker hash are changed to the v2 identity. No target, kernel inequality or tree coverage is weakened.
+
+The exact kernel SHA256fd01418e6dcf78543af12ef99133e4d4fc2d28bf286de1c895e28ca469857ea9 matches the previously reviewed local/exact_boxinvert version. Its actual-box and own-MGF domains both permit pu=1/2. The last closed probability panel therefore includes p=1/2. The inherited baseline own-tail bounds remain available by taking the minimum of complete valid bounds.
+
+For row49 independently evaluated with Fractions:
+ A-D*(997*31/15000)-Q*Hcap^2=0 exactly,
+with the literal contract A,D,Q,Hcap. Thus throughout either signed interval0<=|H|<=Hcap,
+ (15000/(997*31))*(A-Q*H^2)>=D.
+This positive-Q redundant quadratic follows from the scalar defect upper and acquired absolute H cap. It is not an extra phase hypothesis. Its use still requires actual-law acquisition of those scalar resources.
+
+No blocker found in the bounded changes. This is not acceptance of all fourteen count panels and is not a sharp31 theorem. Complete exact leaf replay, all conditional probability panels, branch support/INITIAL/resource acquisition, predecessor C30<CE+.01, and the retained analytic reductions remain distinct obligations.

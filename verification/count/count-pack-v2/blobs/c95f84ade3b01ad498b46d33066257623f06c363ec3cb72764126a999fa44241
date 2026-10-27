@@ -1,0 +1,20 @@
+"""Exact monotonicity-gated signed-beta and alpha enclosures; no new premise."""
+from fractions import Fraction as F
+from itertools import product
+
+def beta_corners(pl,pu,sl,sh,al,ah):
+ if not(0<pl<=pu<F(1,2) and 0<=sl<=sh and 0<=al<=ah<=1):raise ValueError('beta corner domain')
+ vl=pl*(1-pl);tm=1-2*pl;umin=2*al-1
+ # d beta / d p has numerator (1-2p)*s*((1-2p)-u)-2v*(v+s).
+ derivative_upper=tm*sh*max(F(0),tm-umin)-2*vl*(vl+sl)
+ if derivative_upper>0:return None
+ vals=[(p*(1-p)*(1-2*p)+s*(2*a-1))/(p*(1-p)+s)for p,s,a in product((pl,pu),(sl,sh),(al,ah))]
+ return min(vals),max(vals)
+
+def alpha_corners(pl,pu,sl,sh,bl,bh):
+ if not(0<pl<=pu<F(1,2) and 0<sl<=sh and -1<=bl<=bh<=1):raise ValueError('alpha corner domain')
+ # d/dp[v*(beta-1+2p)] = beta-1+(6-2beta)*p-6p^2.
+ derivative_lower=bl-1+(6-2*bl)*pl-6*pu*pu
+ if derivative_lower<0:return None
+ vals=[(b+1)/2+p*(1-p)*(b-1+2*p)/(2*s)for p,s,b in product((pl,pu),(sl,sh),(bl,bh))]
+ return min(vals),max(vals)

@@ -1,0 +1,77 @@
+{
+  "status": "CONDITIONAL_ACTUAL26_FLOOR25_RESOURCES_NOT_YET_COMPOSED",
+  "conditional_predecessor": "Sharp C25<CE, not yet established globally",
+  "floor_index": 25,
+  "actual_index": 26,
+  "owncap": "4213/10000",
+  "contact_allowance": "0",
+  "rows": [
+    {
+      "n": 26,
+      "K": "0",
+      "index": 53,
+      "p": [
+        "53/100",
+        "27/50"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "31241/104000",
+      "d0": "159/250000",
+      "Lambda": "1021/250000",
+      "Hminus": "160397/125000",
+      "Hplus": "160397/125000",
+      "radius_minus": "1900001/1000000",
+      "radius_plus": "1800001/1000000",
+      "outer0": "418439/1000000",
+      "outer1": "219261/500000",
+      "binary_charge": "152433/500000",
+      "gap_charge": "2377667/200000",
+      "noise_charge": "230901/130000",
+      "quadratics": [
+        {
+          "A": "520767/1000000",
+          "Fplus": "1/1000000",
+          "Fminus": "1/1000000",
+          "Qbudget": "999/1000000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "132559/125000",
+        "positive_endpoint_lower": "921539/1000000"
+      },
+      "acquired_beta": [
+        "-80291/1000000",
+        "-11933/200000"
+      ],
+      "acquired_mean": [
+        "498317/1000000",
+        "499283/1000000"
+      ]
+    }
+  ],
+  "source_inputs_sha256": {
+    "new_audit/LOW_B0_COMPLETE_EXACT_JOINED_V3.json": "a2354cd639d8849b141a35e8a062c8685df2b7d1c645e951bf241ad04df7245e",
+    "new_low/B0_SELECTED_PATHS_FINAL.json": "57a3199cfa72839209609315f11d4fb338977d170357e0adcf25421355379e5d",
+    "new_low/count53_global_conditional_v2/contract.json": "7e0e989143328f9ec81fbb1bd4e8778c1865bdfd8c784ae65005e1d66b05b5ce",
+    "new_low/count53_global_conditional_v2/COUNT53_ACCEPTED.json": "fdc95dd9a71de0eedc54bd943db5dbb6532050b642ca0f7bbc785f582553df1b",
+    "new_low/resource25_b0_v1/RESOURCE_B0_GLOBAL_PROOF.json": "eb3d036789dcb343bef2d63df17d59793a707b96dbef9eabfdfa0831bdef7e09",
+    "new_low/resource25_b0_v1/RESOURCE_B0_GLOBAL_ACCEPTED.json": "cfae9e1a45d06924461f4ec1ae2cdba37eecbed9b536a17857670df1c8fb323c",
+    "new_low/initial25_b0_v2/INITIAL25_B0_PROOF.json": "9a9657ded0c047037dd92ca762b9fc59f27d56e54998b146c2d51848f0c9ff61",
+    "new_low/initial25_b0_v2/INITIAL25_B0_ACCEPTED.json": "7486901edfcdd7733ce6ba8cb66b19853acf6ab14740921deada3be22d619b04",
+    "new_audit/bridge_b0_global_support_v1/ACTUAL26_30_SUPPORT_PROOF.json": "6a870de469bb4849e191ebe6cfdffc47867ef1fcf661554f0a54986803c226d2",
+    "new_audit/bridge_b0_global_support_v1/ACTUAL26_30_SUPPORT_ACCEPTED.json": "d82118b962c8a253a30830d89339814d9fc6af3edeff5bd56e6743e58be45799",
+    "new_audit/B0_SUPPORT_PROCEDURAL_SELECTION_CHECKED.json": "06ad94c6c2169be941ac88d1257dcfa867be6bd205f522418f651321a292dd34",
+    "new_audit/BRIDGE26_30_PREFLIGHT_CHECKED.json": "a9c6035d3cec2336d180d0ba2d2b88e51c6eb456462f1d0904ed6d77eb83e5fc",
+    "continuation_20261010/audit35/UNIFORM25_CANTELLI_PRODUCTGAP_REVIEW.txt": "90d28ec8ab410feef9ff73596951fa58ca4f5f25b8619199cfb5e7b8ac0ed65e",
+    "continuation_20261010/audit35/UNIFORM25_CANTELLI_PRODUCTGAP_REVIEW_CHECKED.json": "d41816cc6f922692775391ad76ab39c8d917b9611155fbce39af82debcc49d37",
+    "continuation_20261010/audit35/UNIFORM25_BETA0_SOURCE_AND_COMPOSITION_REVIEW.txt": "6e8afd1029babb152a86688454979f84bd21109a0f3a560eab9b543423caa4fb",
+    "continuation_20261010/audit35/UNIFORM25_BETA0_SOURCE_AND_COMPOSITION_REVIEW.json": "48453e7f51555bc4fa28226bc614f5f47d0cbf43fc49612cce12fcb28f110807",
+    "continuation_20261010/audit35/UNIFORM_DOWNSTREAM_RESOURCE_AUDIT.md": "88da016951a58904d167a27319c5d2d4e741e5cf74d35fe6148aca7ce04433b1",
+    "continuation_20261010/audit35/INITIAL31_UNIFORM_INTERPRETATION.md": "485fcefa8f8ae95f0d60f2d3db5506ca453d2f229602ad91389c15aa156d5b87"
+  },
+  "scope": "Actual26 count conditional on the listed physical resource row. Floor25 saved-sequence interpretation, actual26 support and sharp predecessor are separate dependency obligations. This pilot does not assert acquisition or a regional actual26 theorem."
+}

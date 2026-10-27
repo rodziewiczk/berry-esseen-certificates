@@ -1,0 +1,59 @@
+"""Exact restriction of an unchanged original count contract to four p pieces."""
+from fractions import Fraction as F
+from copy import deepcopy
+
+FIELDS={'schema','n','band','index','part','parts','original_p','cuts','p',
+        'contract_sha256','parent_capsule','parent_protocol_sha256',
+        'parent_constructor_sha256','kernel_manifest_sha256',
+        'resource_candidate_sha256','resource_replay_sha256','resource_row_sha256'}
+def need(ok,message):
+ if not ok:raise ValueError(message)
+def rat(x):
+ need(type(x)is str,'canonical rational text');q=F(x);need(str(q)==x,'canonical rational form');return q
+def validate(z,cfg,contract,parent,part):
+ need(type(z)is dict and set(z)==FIELDS,'exact subdomain schema')
+ need(z['schema']=='ORIGINAL_CONTRACT_FOUR_CLOSED_P_SUBPANELS_V1','named restricted theorem')
+ for key in('n','index','part','parts'):need(type(z[key])is int,'literal integer '+key)
+ need(type(part)is int and 0<=part<4 and z['part']==part and z['parts']==4,'fixed four-piece identity')
+ need(z['n']==cfg['n']==contract['n']==parent['n'] and z['index']==cfg['index']==contract['index']==parent['index'],'original literal index')
+ need(z['band']==contract['band']==parent['band'] and z['band']in('B0','BN'),'original moment band')
+ need(z['original_p']==cfg['p']==parent['original_p'],'unchanged original p interval')
+ need(type(z['cuts'])is list and len(z['cuts'])==5,'five cut points')
+ lo,hi=map(rat,cfg['p']);need(lo<hi,'positive original panel')
+ cuts=[rat(x)for x in z['cuts']]
+ need(cuts==[lo+(hi-lo)*j/4 for j in range(5)],'four equal complete closed pieces')
+ need(type(z['p'])is list and len(z['p'])==2,'closed restricted p interval')
+ need([rat(x)for x in z['p']]==cuts[part:part+2],'literal component endpoints')
+ need(0<F(cfg['d0'])<F(1,2),'original strict inward-half domain')
+ for key in('contract_sha256','parent_capsule','parent_protocol_sha256','parent_constructor_sha256','kernel_manifest_sha256'):
+  need(type(z[key])is str and z[key]==parent[key],'original source lineage '+key)
+ for key in('resource_candidate_sha256','resource_replay_sha256','resource_row_sha256'):
+  need(type(z[key])is str and z[key]==contract[key]==parent[key],'original resource lineage '+key)
+ return z
+
+def controls(z,cfg,contract,parent,part):
+ """Semantic rejection tests, separate from the pinned input-file hash."""
+ changes=[('wrong schema',lambda x:x.update(schema='OTHER')),
+ ('wrong n',lambda x:x.update(n=cfg['n']+1)),('boolean n',lambda x:x.update(n=True)),
+ ('wrong index',lambda x:x.update(index=cfg['index']+1)),('wrong band',lambda x:x.update(band='BN'if z['band']=='B0'else'B0')),
+ ('wrong part',lambda x:x.update(part=(part+1)%4)),('boolean part',lambda x:x.update(part=False)),
+ ('wrong piece count',lambda x:x.update(parts=5)),('boolean piece count',lambda x:x.update(parts=True)),
+ ('wrong original interval',lambda x:x.update(original_p=['0','1'])),
+ ('missing cut',lambda x:x['cuts'].pop()),('reordered cuts',lambda x:x['cuts'].reverse()),
+ ('zero-width piece',lambda x:x['cuts'].__setitem__(1,x['cuts'][0])),
+ ('interior cut moved',lambda x:x['cuts'].__setitem__(2,str((F(x['cuts'][1])+F(x['cuts'][2]))/2))),
+ ('wrong component endpoint',lambda x:x['p'].__setitem__(1,x['p'][0])),
+ ('outside component',lambda x:x.update(p=['0','1'])),
+ ('noncanonical rational',lambda x:x['cuts'].__setitem__(0,str(2*F(x['cuts'][0]).numerator)+'/'+str(2*F(x['cuts'][0]).denominator))),
+ ('changed contract',lambda x:x.update(contract_sha256='0'*64)),
+ ('changed resource',lambda x:x.update(resource_row_sha256='0'*64)),
+ ('changed parent source',lambda x:x.update(parent_protocol_sha256='0'*64)),
+ ('missing interval',lambda x:x.pop('p')),
+ ('noise restriction forbidden',lambda x:x.update(noise=['0','0']))]
+ passed=[]
+ for name,mutate in changes:
+  bad=deepcopy(z);mutate(bad)
+  try:validate(bad,cfg,contract,parent,part)
+  except(ValueError,KeyError,TypeError,ZeroDivisionError):passed.append(name)
+  else:raise ValueError('subdomain negative control passed: '+name)
+ return passed

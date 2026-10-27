@@ -1,0 +1,15 @@
+"""Named outward runtime for the inherited half-probability B0 kernel."""
+from exact35_core import *
+import exact35_core as core
+import exact_count_core_v5 as base
+import baseline_core
+import bernstein_fast,interval_scalar_fast,integer_exp,directed_interval
+bernstein_fast.apply();interval_scalar_fast.apply()
+core.bernstein_interval_min=bernstein_fast.bernstein_interval_min
+baseline_core.bernstein_interval_min=bernstein_fast.bernstein_interval_min
+need(baseline_core.I is base.I,'baseline interval class identity')
+need(baseline_core.exp_upper is base.exp_upper and baseline_core.exp_lower is base.exp_lower,'baseline exponential helper identity')
+integer_exp.install(base,core)
+baseline_core.exp_upper=base.exp_upper;baseline_core.exp_lower=base.exp_lower
+_aliases=directed_interval.install()
+need(_aliases==['exact_count_core_v5','exact35_core','baseline_core','bernstein_fast','interval_scalar_fast','optimized_arithmetic'],'complete B0 interval aliases including baseline')

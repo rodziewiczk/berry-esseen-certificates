@@ -1,0 +1,38 @@
+{
+  "assets": [
+    {
+      "bytes": 94179896,
+      "extract_to": "certificates/count",
+      "name": "count-candidates.zip",
+      "sha256": "5c08ddbd642e5da7eea9d7053df721a89bdce1e91a17c82cc46b2a66c34a84e0"
+    },
+    {
+      "bytes": 14742187,
+      "extract_to": "certificates/resources/mathematical-witnesses-1",
+      "name": "mathematical-witnesses-1.zip",
+      "sha256": "744188e44b0e778fd41bbb2aef5c0bc5391b71f9a3c9e52828bb90374abbb730"
+    },
+    {
+      "bytes": 61251937,
+      "extract_to": "certificates/resources/mathematical-witnesses-2",
+      "name": "mathematical-witnesses-2.zip",
+      "sha256": "b42807092cba00cfdd48f41f2ec3fd50fe32c3e237667aba41944a002202c5c3"
+    },
+    {
+      "bytes": 78872152,
+      "extract_to": "certificates/resources/mathematical-witnesses-4",
+      "name": "mathematical-witnesses-4.zip",
+      "sha256": "9ec73ea395aed56ca4999df9b6238adc7dc957fe191d6b147ed2191a7e65dcd9"
+    },
+    {
+      "bytes": 18819891,
+      "extract_to": "certificates/resources/initial-source-capsule",
+      "name": "INITIAL_CAPSULE.zip",
+      "sha256": "eb38f833f8e5fc8db30083f049790507160a1c3570e232368f99ab1f3d1226d3"
+    }
+  ],
+  "full_pass": false,
+  "repository": "rodziewiczk/berry-esseen-certificates",
+  "schema": "be.public-certificate-release/1",
+  "tag": "v0.1.0"
+}

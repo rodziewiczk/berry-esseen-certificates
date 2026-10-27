@@ -1,0 +1,48 @@
+Exact arithmetic optimization for conditional COUNT23
+====================================================
+The fixed target, simultaneous contract, p panels, admissible boxes, moment
+polygons, count range, quartic choices and acceptance obligations are unchanged.
+This named package only changes evaluation of exact rational expressions.
+Original count23 source and receipts remain preserved in the parent directory.
+
+Independent algebra review:
+1. For the fixed degree-four power-to-Bernstein transform, the change of
+   variable coefficient for power j into power i is
+   choose(j,i)*lo^(j-i)*(hi-lo)^i. Its sign picks exactly the corresponding
+   interval endpoint. The subsequent degree elevation coefficients
+   choose(i,j)/choose(4,j) are nonnegative. Summing the selected endpoints is
+   therefore exactly the inherited interval calculation. Cached weights are
+   indexed by both exact rational phase endpoints, so cannot mix intervals.
+2. Multiplication of an interval [l,h] by a point scalar t is [lt,ht] for
+   t>=0 and [ht,lt] otherwise. Addition is endpoint addition. The scalar
+   helper performs those same operations, delegating non-point products to
+   the original method. All modules use the same exact_count_core_v5.I class.
+3. At a fixed cubic-moment vertex (x,y), the quartic score differs from its
+   interval base only by an affine phase polynomial. Its Bernstein control
+   phase is lo+(i/4)*(hi-lo). The respective cubic coefficients are
+   mass*(n-k)*(a0-O0-4*phase)/(K*a^4) and
+   mass*k*(O1-a1-4*phase)/(K*a^4).
+   An exact affine translation commutes with endpoint interval evaluation.
+   Taking max over vertices and control indices in either order is identical.
+   Positive denominator handling and all early exits retain their old values.
+
+Deployment is explicit in optimized_arithmetic.py: the original exact35_core
+is imported, its Bernstein global is replaced, and its joint module refers
+to the reviewed affine-translation implementation. The helper also replaces
+known imported Bernstein globals. There is no FLOAT discovery import.
+The inherited historical leaf token has been renamed PASS_POSITIVE23_TARGET;
+this is only a label. The new candidate and receipt schemas name OPTIMIZED_V1.
+
+Fresh check_optimization.py used a separate unmodified parent-directory
+Python process for the slow side, then compared70 complete n23 cell output
+dictionaries, including positive and empty cells in five different panels.
+All were exactly equal. 1,000 deterministic rational quartics also gave
+identical upper vectors and minima, including negative phase endpoints, zero widths and
+mixed-sign coefficients. CPU time was12.83s versus3.69s (3.48x in this sample).
+See OPTIMIZATION_EQUIVALENCE.json for measured values and source hashes.
+These checks corroborate the algebra; they do not acquire any resource guard.
+
+Existing candidates may be copied into this namespace with only schema and
+historical leaf-label changes. Such candidates are untrusted proposals:
+accept_strict.py still reconstructs every closed box, freshly evaluates every
+leaf, and runs its negative controls before recording a source-bound receipt.

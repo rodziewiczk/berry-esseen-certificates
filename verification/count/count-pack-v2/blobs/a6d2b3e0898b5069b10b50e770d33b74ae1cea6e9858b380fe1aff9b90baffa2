@@ -1,0 +1,11 @@
+{
+  "status": "PASS_EXPERIMENTAL_DIRECTED_INTERVAL_OPERATION_ENCLOSURES",
+  "operation_enclosures": 21383,
+  "domain_controls": 4,
+  "scope": "Basic arithmetic only; no count theorem or full kernel review.",
+  "sources": {
+    "check_operations.py": "da595fcc15cb187e7180aa24af7bafdf5192744cb80c92b754a438ae7f501640",
+    "directed_interval.py": "f93752f1b711708cb70a0dbddbd9bfdb0aa96aae4d2d67c1a87ee924de4d6326",
+    "PROOF.txt": "8ce34cda87d0b4c4190aabd5518ec0565d71b2561d126f5a9ba2fc7d41252cc8"
+  }
+}

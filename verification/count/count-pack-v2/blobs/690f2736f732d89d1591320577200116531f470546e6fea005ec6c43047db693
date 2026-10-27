@@ -1,0 +1,63 @@
+{
+  "status": "ACTUAL16_FRESH_COMPENSATED_RESOURCE_CONDITIONAL_COUNT_CONTRACT",
+  "n": 16,
+  "K": "0",
+  "band": "B0",
+  "index": 50,
+  "predecessor_verified": false,
+  "owncap_verified": false,
+  "global_bound_proved": false,
+  "cutoff15_proved": false,
+  "resource_candidate_sha256": "8c8a924e6bd3a367b387313078fec48781f110c7b216e23eb22d9cc2c318ce5f",
+  "resource_replay_sha256": "8a04d84c83f8576e11aced427522bef42669e7b47ae7bd063b9a7f4cb7977afb",
+  "resource_row_sha256": "affb3e044a77efe6f628ca53c83275a02f045c4867d31776dff377e860191c63",
+  "rows": [
+    {
+      "n": 16,
+      "K": "0",
+      "index": 50,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "25317/25000",
+      "D": "332279/1000000",
+      "d0": "7513/500000",
+      "Lambda": "58361/1000000",
+      "Hminus": "695653/500000",
+      "Hplus": "695653/500000",
+      "radius_minus": "17/10",
+      "radius_plus": "8/5",
+      "outer0": "88159/250000",
+      "outer1": "312481/1000000",
+      "binary_charge": "160777/1000000",
+      "gap_charge": "11413977/1000000",
+      "noise_charge": "2938633/1000000",
+      "quadratics": [
+        {
+          "A": "44413/125000",
+          "Fplus": "0",
+          "Fminus": "0",
+          "Qbudget": "1/1000"
+        }
+      ],
+      "acquired_lambda_upper": "58361/1000000",
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "30217/31250",
+        "positive_endpoint_lower": "947201/1000000"
+      },
+      "acquired_beta": [
+        "-521/20000",
+        "3087/500000"
+      ],
+      "acquired_mean": [
+        "90909/200000",
+        "1/2"
+      ]
+    }
+  ]
+}

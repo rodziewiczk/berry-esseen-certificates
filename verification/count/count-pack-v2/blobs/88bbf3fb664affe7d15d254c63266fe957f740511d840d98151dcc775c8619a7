@@ -1,0 +1,72 @@
+Independent physical-theta to count-lambda derivation
+====================================================
+Let X be centered, variance one, with p=P(X>0), q=1-p, v=pq>0,
+and m=EX_+=EX_->0. Assign zeros to B=0. Conditional means are -m/q
+and m/p. Put ell=m/v and U=X/ell-(B-p). Then E(U|B)=0, so writing
+s=qE(U²|B=0)+pE(U²|B=1) gives 1=ell²(v+s). The physical within-sign
+variance is theta=ell²s. Therefore
+
+ theta=s/(v+s), m²=v²/(v+s), lambda=n*s=n*v*theta/(1-theta).
+
+These are exact identities, including theta=0 and atoms at zero. Bounded
+support is unnecessary for this second-moment identity. The resource's raw
+row theta has this physical meaning: source_round rounds it upward;
+retained_cell preserves/intersects physical bounds; amplitude uses
+ell>=sqrt((1-theta_upper)/vmax); the harmonic step converts an actual lambda
+bound to theta<=lambda/(n*vmin+lambda). In the actual count kernel,
+exact35_core sets s in [lo/n,hi/n] and h=sqrt(v+s). Thus the count interval
+coordinate is exactly lambda=n*s; it is not n*theta.
+
+On any closed 0<l<=p<=u<1, define
+vmax=1/4 if l<=1/2<=u, otherwise max(l(1-l),u(1-u)). If the same law has
+0<=theta<=T<1, monotonicity in v and theta gives the rational cap
+
+                    lambda <= n*vmax*T/(1-T).
+
+Intersection of the incoming lambda interval with this upper bound is a
+necessary-condition contraction. Reject only when lo>new_hi; preserve an
+equal endpoint. A theta value from a FLOAT exploration is not an acquired
+premise. The bound must come from the accepted same-law resource or be
+assumed explicitly in a conditional count contract, then acquired later.
+
+The final resource export copies the earlier row.lambda_max while the last
+geometry step may further decrease row.theta. Thus the exported scalar
+lambda_max can be a weaker upper bound than this new cap, without either
+being incorrect. The cap may be substantially useful in count leaves.
+
+A direct alternative is already stored in each successful resource history:
+with actual conditional supports U0 in[-A0,a0], U1 in[-a1,A1], one has
+EUi²<=Ai*ai and lambda<=n*Amax*max(p,q)*(a0+a1). Intersecting this with
+the existing simultaneous relation d/d0+lambda/Lambda<=1 yields
+
+        lambda <= L=(1/Lambda+1/(n*Amax*max(u,1-l)*d0))^-1.
+
+The exact field lambda_geometry_cap is this L. Every accepted history step
+retains the same law, so all stored caps may be intersected. This avoids the
+small loss introduced by converting L to theta using vmin then back using
+vmax. Scope and exact field provenance still require a final interface.
+
+CRITICAL IMPLEMENTATION LIMITATION
+Keep the old joint-resource Lambda, d0 and all three prices unchanged.
+In exact35_core, cfg.Lambda enters not just the rootbox but also
+ d <= d0*(1-lambda/cfg.Lambda).
+Replacing that denominator by a new independent upper cap is invalid.
+For example d0=Lambda=1, actual d=lambda=1/2 satisfies the old joint plane
+and the extra lambda<=3/5, but violates d+lambda/(3/5)<=1. Keeping the old
+noise price alone does not fix this. Add a separate acquired_theta or
+acquired_lambda_upper field and contract only the working interval hi.
+
+Primary inherited source locations inspected, in addition to deriving the
+identities above from the standardized law:
+- BE_cutoff35_release_20261007/documents/source_notes/feedback35_proof.tex,
+  first section, conditional variance identity (1).
+- BE_cutoff35_release_20261007/documents/source_notes/endpoint_product_bootstrap.tex,
+  final variance paragraph (both probability halves).
+- new_low/resource25_b0_v1/resource25_core.py: source_round, retained_cell,
+  amplitude, final harmonic feedback/export.
+- new_low/count41_replay_v1/exact35_core.py: cell coordinates, s=I(lo/n,hi/n),
+  h=sqrt(v+s), and retained joint-plane inward gap.
+
+Status: locally derived and independently source-reviewed necessary
+inequality. No actual new count tree, resource acquisition or regional
+exclusion follows until separately checked.

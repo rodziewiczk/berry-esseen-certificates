@@ -1,0 +1,46 @@
+Necessary allocation-sensitive count-variance cap
+================================================
+Mathematical status: locally derived, conditional on the original count
+contract. No new physical premise, new target, or resource acquisition.
+
+Write p=P(B=1), q=1-p and s=lambda/n. The sign-conditioned residuals have
+means zero, variances w0=s(1-alpha)/q and w1=s*alpha/p, and supports in
+[-O0,a0] and[-a1,O1], respectively. Reflect the first residual when
+using the elementary pointwise inequality (U+a)(O-U)>=0, which gives
+E U^2<=a*O for support[-a,O]. Reflection does not change the variance. Hence
+
+  (lambda/n) [(1-alpha)/(q*O0)+alpha/(p*O1)]
+       <= a0+a1 <= d0(1-lambda/Lambda).
+
+O0 and O1 may be any valid positive contract upper bounds. Increasing
+either only decreases the left-hand coefficient and preserves necessity.
+All inequalities concern the same actual marginal and its same alpha.
+Rearranging with positive n,d0,Lambda gives
+
+  lambda <= [1/Lambda + f(p,alpha)/(n*d0)]^(-1),
+  f(p,alpha)=(1-alpha)/((1-p)O0)+alpha/(p O1).
+
+Find a lower bound c for f on the incoming closed p/alpha rectangle.
+For each fixed p, f is affine in alpha, so its minimum over alpha is at
+al or ah; equivalently minimum over the rectangle equals the smaller of
+the two p-minima at these endpoints. For fixed alpha let
+A=(1-alpha)/O0>=0, B=alpha/O1>=0. Then
+f(p)=A/(1-p)+B/p is convex for0<p<1. Its derivative sign equals
+A*p^2-B*(1-p)^2. If this sign is nonnegative at pl, the minimum is f(pl).
+If it is nonpositive at pu, the minimum is f(pu). Otherwise the unique
+stationary point lies inside, and the exact minimum is
+A+B+2sqrt(A*B). The implementation replaces this square root by its exact
+downward rational grid1e-12 approximation. Thus its coefficient c is at
+most the true minimum, and the computed cap is at least every admissible
+lambda. Degenerate alpha=0 or1 and degenerate p intervals are included.
+
+Intersect only the current lambda hi with this cap; discard only if
+incoming lo exceeds the new hi strictly. Equality is retained. The
+original cfg.Lambda and every original price and plane stay unchanged.
+All original count roots remain mandatory and leaf boxes are reconstructed
+before this necessary contraction. The helper has no cfg argument and
+cannot mutate the original intercept.
+
+This is an arithmetic propagation of existing joint-plane/support premises.
+It does not assert a stronger joint plane using the smaller scalar cap.
+The final compositor must still acquire every original count premise.

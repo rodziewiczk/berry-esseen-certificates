@@ -1,0 +1,61 @@
+Conditional exact sharp31 branch1 localized replacement, panels35,36
+=====================================================
+Mathematical scope: conditional on the literal fixed same-law contract.
+Its acquisition has NOT been established: guards came from FLOAT discovery.
+Execution scope: constructor and independent exact leaf replay are separate.
+No claimed complete branch1, n31, or cutoff31 theorem follows from this pilot.
+
+The contract fixes n=31,K=0,rho in[11/10,6/5], selected closed p panels,
+global D, joint d/lambda budget, signed H caps, signed support radii,
+outward conditional supports, nonnegative affine D charges and a signed
+quadratic maximum envelope. Each listed polynomial has positive Q; the
+acquired premise is the weaker envelope inequality
+ (997*n/15000)*D <= max_r[A_r+Fplus_r*H-Q_r*H^2] when H>=0,
+ (997*n/15000)*D <= max_r[A_r+Fminus_r*(-H)-Q_r*H^2] when H<=0.
+The actual C/rho corner is unknown. No individual polynomial is assumed
+to dominate the actual defect by itself. The old quadratic_cap correctly
+maximizes over every supplied polynomial and applicable sign interval.
+No sign branch is omitted. D=finite defect, never identified with its
+before-cubic lower.
+
+Only kernel change from root/positive30_count_exact/exact35_core.py:
+1. Adopt the fixed same-law literal rho lower in the score normalizer and
+   exclude if the retained lower exceeds the contract's rho upper.
+2. Add the following exact same-law absolute third-moment upper gate.
+All endpoint inversion, quartic, MGF, count, Gaussian and phase code is
+otherwise byte-identical to that base; see kernel.diff and COPIED_INPUTS.
+
+For v=p(1-p), h^2=v+s and conditional mean-zero U0,U1 supported in
+[-O0,a0],[-a1,O1], respectively,
+ h^3*rho=v*(1-2v)+3v*(s0+s1)+(1-p)*(-EU0^3)+p*EU1^3.
+For a centered Y<=O with variance w and O>0, expansion of
+ E[(O-Y)*(Y+w/O)^2]>=0 gives EY^3<=O*w-w^2/O.
+Reflection supplies -EU0^3's corresponding bound. The maximum over a
+variance interval is attained at w=clamp(O^2/2,wlo,whi). The resulting
+upper can have either sign, so its p or(1-p) weight uses the correct
+endpoint according to that sign. On0<p<=1/2, v*(1-2v) increases withv.
+The interval upper numerator is divided by the exact outward rational
+LOWER enclosure of(vlo+slo)^(3/2); its denominator is strictly positive.
+A negative numerator upper already contradicts rho>=0; clamping it to0
+is conservative. Strict rho_law_upper<11/10 excludes the entire cell.
+Equality never excludes. No distribution or endpoint attaining the
+individual cubic extrema needs to attain every other bound simultaneously.
+
+Each selected p panel independently covers lambda[0,Lambda],alpha[0,1],
+phaseu[-1/2,1/2],inwarda0[0,d0], and every nearest countk=0,...,31.
+The fixed domain assertions bound all possible nearest counts; closed
+midpoint subdivisions retain all endpoints and phase ties. Lambda0 is
+included without division by lambda. Existing kernel gates enforce the
+small actual displacementd<1/4 and all signs/divisions. A leaf accepts
+only a necessary empty-cell inequality or exact score_upper<CE_LO.
+The independent replay reconstructs the complete fixed roots and every
+split, rejects missing/duplicate/reordered nodes, and recomputes each
+leaf. It does not import the constructor or trust stored arithmetic.
+Full recursive type checks pin the contract, including booleans versus
+integers and both literal rho endpoints. Fixed-object mutation tests are
+not independent mathematical proofs and are described only as controls.
+
+These two new conditional profiles replace only failed count searches, not
+the original resource theorem. Two common-radius>=2.3 local INITIAL
+covers are still required to acquire these tighter bounds. Their exact
+acquisition and all other branch1 probability panels are separate obligations.

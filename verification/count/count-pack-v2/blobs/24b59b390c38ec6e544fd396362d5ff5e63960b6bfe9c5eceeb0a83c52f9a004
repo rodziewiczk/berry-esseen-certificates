@@ -1,0 +1,96 @@
+{
+  "status": "ACTUAL5_FAST_MEAN_NOISE_BATCH_CONDITIONAL_RESOURCE_COUNT_CONTRACT",
+  "n": 5,
+  "band": "BN",
+  "index": 47,
+  "resource_verified": false,
+  "cutoff_proved": false,
+  "resource_path": "work/cutoff5_20261020/entry/resource5_probe_v1/BN/panel047.json",
+  "resource_sha256": "f9d58d4adb6c0e8c341f71c5c5aa57d7972762dc635e70016d5de9bbda600396",
+  "rows": [
+    {
+      "n": 5,
+      "K": "0",
+      "index": 47,
+      "p": [
+        "47/100",
+        "12/25"
+      ],
+      "rho_lower": "11/10",
+      "rho_upper": "23/20",
+      "D": "1305243/500000",
+      "d0": "2577529/1000000",
+      "Lambda": "736381/250000",
+      "Hminus": "190281/100000",
+      "Hplus": "190281/100000",
+      "radius_minus": "21/10",
+      "radius_plus": "23/10",
+      "outer0": "735569/1000000",
+      "outer1": "160077/200000",
+      "binary_charge": "1063/25000",
+      "gap_charge": "996289/1000000",
+      "noise_charge": "871819/1000000",
+      "quadratics": [
+        {
+          "A": "38691/40000",
+          "Fplus": "17061/12500",
+          "Fminus": "288889/250000",
+          "Qbudget": "539/6250"
+        },
+        {
+          "A": "102617/100000",
+          "Fplus": "17061/12500",
+          "Fminus": "288889/250000",
+          "Qbudget": "142959/1000000"
+        },
+        {
+          "A": "967697/1000000",
+          "Fplus": "1365191/1000000",
+          "Fminus": "1155959/1000000",
+          "Qbudget": "10813/125000"
+        },
+        {
+          "A": "513313/500000",
+          "Fplus": "1365191/1000000",
+          "Fminus": "1155959/1000000",
+          "Qbudget": "28647/200000"
+        },
+        {
+          "A": "929299/1000000",
+          "Fplus": "275691/200000",
+          "Fminus": "1173159/1000000",
+          "Qbudget": "9779/100000"
+        },
+        {
+          "A": "493569/500000",
+          "Fplus": "275691/200000",
+          "Fminus": "1173159/1000000",
+          "Qbudget": "77517/500000"
+        }
+      ],
+      "acquired_lambda_upper": "99961/250000",
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "26049/250000",
+        "positive_endpoint_lower": "2301/20000"
+      },
+      "acquired_beta": [
+        "-145881/1000000",
+        "251629/1000000"
+      ],
+      "acquired_mean": [
+        "217391/500000",
+        "24569/50000"
+      ],
+      "acquired_scale_upper": "574081/1000000",
+      "acquired_gamma": [
+        "-709/2500",
+        "268337/500000"
+      ],
+      "geometry_gap_lower": "670481394491/1000000000000",
+      "acquired_inward_upper": "166341/250000"
+    }
+  ]
+}

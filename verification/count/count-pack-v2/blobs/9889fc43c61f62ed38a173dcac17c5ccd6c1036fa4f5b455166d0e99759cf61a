@@ -1,0 +1,32 @@
+Independent count exponential integer-Horner review, 2026-10-10
+==============================================================
+
+Reviewed shared/count_exp_integer/integer_exp.py and PROOF.txt. No algebraic,
+rounding-direction or domain issue found. Starting at the leading coefficient
+c48=1 and looping i=47,...,0 gives exactly
+ N=sum_i(48!/i!)*a^i*b^(48-i), D=48!*b^48.
+The denominator power is updated48 times. For x=a/b>=0, b>0, the degree49
+geometric tail equals50*a^49/[49*D*(50*b-a)], so the implemented combined
+integer numerator and denominator are exact. Positivity requires x<50 and
+is retained. Floor and ceiling at10^12 are precisely the original directed
+rounding; no intermediate rounding is introduced.
+
+The installer preserves x<10 unless the named generalized50 scope is
+explicitly requested. It checks Fraction arithmetic and the old common
+base/core exponential pair before replacing both active globals. Cached
+results depend only on the rational input and fixed scope/scale; no profile
+or radius is captured. Literal bool/float and arbitrary objects are rejected.
+The current exact count callers use Fraction arguments. The captured need
+function and fixed module Fraction/integer operations do not depend on
+mutable kernel geometry. The existing imported functions whose globals are
+the base/core modules see the replacement; the cubic polygon modules do not
+use these exponential helpers in their own copied globals.
+
+COUNT_EXP_INTEGER_REVIEW_CHECKED.json binds both reviewed source files and
+records21 additional independent rational polynomial identities, including
+a near50 input and a very large lower-exponential input;18 also check the
+exact combined upper rational before rounding. These support the algebraic
+proof and supplement the parent's larger helper/full-dictionary comparisons.
+Use only in a separately named package, bind the old kernels/new helper and
+proof, and freshly replay any complete count forest. Existing active or
+completed count receipts cannot be reassigned to changed source hashes.

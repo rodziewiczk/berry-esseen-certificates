@@ -1,0 +1,89 @@
+{
+  "status": "ACTUAL30_B0_ACQUIRED_CONDITIONAL_COUNT_SWEEP",
+  "n": 30,
+  "conditional_predecessor": "C29<CE; not established by this capsule",
+  "acquisition_path": "work/cutoff25_continue_20261015/b0_family/FAMILY_PROOF_V2.json",
+  "acquisition_sha256": "f594f4daa19cd5cd9885a883d19ff044ba2094b5285734fbe78f8f128a12b3e4",
+  "acquisition_receipt_sha256": "df0128bca79c90e2e15c9705c7f17e7698e3c12be441c5112ef6894d0db10c47",
+  "source_contract_sha256": "9816fd1d9ac05b856bc422dab8f33ae286e6e42ffeaacd4ec95bdc1e10217c5c",
+  "rows": [
+    {
+      "n": 30,
+      "K": "0",
+      "index": 39,
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "rho_lower": "1",
+      "rho_upper": "11/10",
+      "D": "618239/1200000",
+      "d0": "59997/1000000",
+      "Lambda": "7677/25000",
+      "Hminus": "376167/250000",
+      "Hplus": "145409/100000",
+      "radius_minus": "1700001/1000000",
+      "radius_plus": "2400001/1000000",
+      "outer0": "456463/1000000",
+      "outer1": "119001/200000",
+      "binary_charge": "8523/1000000",
+      "gap_charge": "50813/5000",
+      "noise_charge": "1985527/1200000",
+      "quadratics": [
+        {
+          "A": "939409/1000000",
+          "Fplus": "4107/25000",
+          "Fminus": "475029/1000000",
+          "Qbudget": "557271/1000000"
+        },
+        {
+          "A": "24293/25000",
+          "Fplus": "4107/25000",
+          "Fminus": "475029/1000000",
+          "Qbudget": "120893/200000"
+        },
+        {
+          "A": "939693/1000000",
+          "Fplus": "164163/1000000",
+          "Fminus": "475231/1000000",
+          "Qbudget": "278763/500000"
+        },
+        {
+          "A": "486011/500000",
+          "Fplus": "164163/1000000",
+          "Fminus": "475231/1000000",
+          "Qbudget": "604729/1000000"
+        },
+        {
+          "A": "156253/500000",
+          "Fplus": "76049/500000",
+          "Fminus": "496053/1000000",
+          "Qbudget": "583783/1000000"
+        },
+        {
+          "A": "5046/15625",
+          "Fplus": "76049/500000",
+          "Fminus": "496053/1000000",
+          "Qbudget": "31597/50000"
+        }
+      ],
+      "sign_premise": {
+        "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+        "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+        "conditional_means_zero": true,
+        "negative_endpoint_lower": "133137/200000",
+        "positive_endpoint_lower": "135499/125000"
+      },
+      "acquired_beta": [
+        "161651/1000000",
+        "244927/1000000"
+      ],
+      "acquired_mean": [
+        "119973/250000",
+        "492379/1000000"
+      ],
+      "acquired_theta_upper": "31957/1000000"
+    }
+  ],
+  "scope": "Verbatim acquired actual-n row. Literal sign orientation; no earlier-n verdict transfer."
+}

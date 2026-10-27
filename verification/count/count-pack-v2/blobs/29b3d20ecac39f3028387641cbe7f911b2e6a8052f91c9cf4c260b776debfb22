@@ -1,0 +1,159 @@
+"""Fixed exact acceptance of the guarded fixed-n31 branch0, K=0 count comparison.
+Does not import discovery. Every split is reconstructed; every leaf is replayed.
+"""
+from fractions import Fraction as F
+from pathlib import Path
+from hashlib import sha256
+from copy import deepcopy
+import json,re,sys,time
+from exact35_core import cell35,CE_LO
+from variance_geometry import need
+need(__debug__ and not sys.flags.optimize,'assertions enabled')
+HERE=Path(__file__).parent
+TARGET=CE_LO
+EXPECTED={'schema': 'CONDITIONAL_SHARP31_LADDER_BRANCH0_V1', 'n': 31, 'K': '0', 'branch': 0, 'rho_interval': ['1', '11/10'], 'contact_q': '31/100', 'global_radius': '47/20', 'scalar_premise': 'C30 < CE + 1/100', 'rows': [{'n': 31, 'index': 36, 'p': ['9/25', '37/100'], 'rho_lower': '1', 'rho_upper': '11/10', 'D': '159492/390625', 'd0': '3084229/100000000', 'Lambda': '5038951/25000000', 'Hminus': '1080027/800000', 'Hplus': '2254317/2000000', 'radius_minus': '160001/100000', 'radius_plus': '235001/100000', 'outer0': '10477797/25000000', 'outer1': '12857897/25000000', 'binary_charge': '5939437/100000000', 'gap_charge': '1131556909/100000000', 'noise_charge': '173101727/100000000', 'quadratics': [{'A': '80932843/100000000', 'Fplus': '601157/20000000', 'Fminus': '168964/390625', 'Qbudget': '16652041/25000000'}, {'A': '80392357/100000000', 'Fplus': '601157/20000000', 'Fminus': '168964/390625', 'Qbudget': '65942003/100000000'}, {'A': '80962653/100000000', 'Fplus': '2987673/100000000', 'Fminus': '21639027/50000000', 'Qbudget': '66634699/100000000'}, {'A': '80421851/100000000', 'Fplus': '2987673/100000000', 'Fminus': '21639027/50000000', 'Qbudget': '65968403/100000000'}, {'A': '1279799/20000000', 'Fplus': '642109/50000000', 'Fminus': '22733313/50000000', 'Qbudget': '8641303/12500000'}, {'A': '6221941/100000000', 'Fplus': '642109/50000000', 'Fminus': '22733313/50000000', 'Qbudget': '68451433/100000000'}]}, {'n': 31, 'index': 37, 'p': ['37/100', '19/50'], 'rho_lower': '1', 'rho_upper': '11/10', 'D': '1636747/4000000', 'd0': '3344587/100000000', 'Lambda': '21661979/100000000', 'Hminus': '27188021/20000000', 'Hplus': '115334137/100000000', 'radius_minus': '170001/100000', 'radius_plus': '235001/100000', 'outer0': '46274507/100000000', 'outer1': '53114377/100000000', 'binary_charge': '3729821/100000000', 'gap_charge': '1112183417/100000000', 'noise_charge': '34335139/20000000', 'quadratics': [{'A': '80511509/100000000', 'Fplus': '4775993/100000000', 'Fminus': '66183/156250', 'Qbudget': '64665507/100000000'}, {'A': '81490001/100000000', 'Fplus': '4775993/100000000', 'Fminus': '66183/156250', 'Qbudget': '13183187/20000000'}, {'A': '80541131/100000000', 'Fplus': '475959/10000000', 'Fminus': '21189417/50000000', 'Qbudget': '32345827/50000000'}, {'A': '81520197/100000000', 'Fplus': '475959/10000000', 'Fminus': '21189417/50000000', 'Qbudget': '13188467/20000000'}, {'A': '283687/4000000', 'Fplus': '3216837/100000000', 'Fminus': '22210567/50000000', 'Qbudget': '67150849/100000000'}, {'A': '3693157/50000000', 'Fplus': '3216837/100000000', 'Fminus': '22210567/50000000', 'Qbudget': '13685073/20000000'}]}, {'n': 31, 'index': 38, 'p': ['19/50', '39/100'], 'rho_lower': '1', 'rho_upper': '11/10', 'D': '1636747/4000000', 'd0': '1765761/50000000', 'Lambda': '4493651/20000000', 'Hminus': '27188021/20000000', 'Hplus': '116894127/100000000', 'radius_minus': '170001/100000', 'radius_plus': '235001/100000', 'outer0': '45709259/100000000', 'outer1': '27357679/50000000', 'binary_charge': '2044669/100000000', 'gap_charge': '220205287/20000000', 'noise_charge': '173015267/100000000', 'quadratics': [{'A': '19657223/25000000', 'Fplus': '6267817/100000000', 'Fminus': '1276877/3125000', 'Qbudget': '1965749/3125000'}, {'A': '40441083/50000000', 'Fplus': '6267817/100000000', 'Fminus': '1276877/3125000', 'Qbudget': '13183187/20000000'}, {'A': '78657717/100000000', 'Fplus': '3126553/50000000', 'Fminus': '40880197/100000000', 'Qbudget': '31464881/50000000'}, {'A': '10114039/12500000', 'Fplus': '3126553/50000000', 'Fminus': '40880197/100000000', 'Qbudget': '13188467/20000000'}, {'A': '1540791/25000000', 'Fplus': '4869531/100000000', 'Fminus': '21386887/50000000', 'Qbudget': '8169469/12500000'}, {'A': '6773739/100000000', 'Fplus': '4869531/100000000', 'Fminus': '21386887/50000000', 'Qbudget': '13685073/20000000'}]}, {'n': 31, 'index': 39, 'p': ['39/100', '2/5'], 'rho_lower': '1', 'rho_upper': '11/10', 'D': '20004059/50000000', 'd0': '3572501/100000000', 'Lambda': '2787121/12500000', 'Hminus': '33930067/25000000', 'Hplus': '14380913/12500000', 'radius_minus': '170001/100000', 'radius_plus': '230001/100000', 'outer0': '45059807/100000000', 'outer1': '2686381/5000000', 'binary_charge': '434697/50000000', 'gap_charge': '219161017/20000000', 'noise_charge': '175531743/100000000', 'quadratics': [{'A': '73525237/100000000', 'Fplus': '3425467/50000000', 'Fminus': '38519889/100000000', 'Qbudget': '6150321/10000000'}, {'A': '3071803/4000000', 'Fplus': '3425467/50000000', 'Fminus': '38519889/100000000', 'Qbudget': '33070257/50000000'}, {'A': '4596963/6250000', 'Fplus': '3418837/50000000', 'Fminus': '38538227/100000000', 'Qbudget': '15382171/25000000'}, {'A': '38411581/50000000', 'Fplus': '3418837/50000000', 'Fminus': '38538227/100000000', 'Qbudget': '33083457/50000000'}, {'A': '868459/50000000', 'Fplus': '5590523/100000000', 'Fminus': '40263007/100000000', 'Qbudget': '12784937/20000000'}, {'A': '1245509/50000000', 'Fplus': '5590523/100000000', 'Fminus': '40263007/100000000', 'Qbudget': '8581243/12500000'}]}, {'n': 31, 'index': 40, 'p': ['2/5', '41/100'], 'rho_lower': '1', 'rho_upper': '11/10', 'D': '18621523/50000000', 'd0': '26363/781250', 'Lambda': '12893/62500', 'Hminus': '33570581/25000000', 'Hplus': '22357821/20000000', 'radius_minus': '170001/100000', 'radius_plus': '230001/100000', 'outer0': '11083873/25000000', 'outer1': '27550303/50000000', 'binary_charge': '95371/50000000', 'gap_charge': '219657183/20000000', 'noise_charge': '5612889/3125000', 'quadratics': [{'A': '67850659/100000000', 'Fplus': '7250927/100000000', 'Fminus': '280189/781250', 'Qbudget': '30389499/50000000'}, {'A': '3594977/5000000', 'Fplus': '7250927/100000000', 'Fminus': '280189/781250', 'Qbudget': '33428799/50000000'}, {'A': '67873901/100000000', 'Fplus': '3619561/50000000', 'Fminus': '35880791/100000000', 'Qbudget': '60804187/100000000'}, {'A': '14385031/20000000', 'Fplus': '3619561/50000000', 'Fminus': '35880791/100000000', 'Qbudget': '33441999/50000000'}, {'A': '-1691619/50000000', 'Fplus': '122577/2000000', 'Fminus': '37442073/100000000', 'Qbudget': '1579333/2500000'}, {'A': '-2639619/100000000', 'Fplus': '122577/2000000', 'Fminus': '37442073/100000000', 'Qbudget': '17341757/25000000'}]}, {'n': 31, 'index': 41, 'p': ['41/100', '21/50'], 'rho_lower': '1', 'rho_upper': '109186181/100000000', 'D': '34187891/100000000', 'd0': '1549933/50000000', 'Lambda': '3807393/20000000', 'Hminus': '8298387/6250000', 'Hplus': '4324493/4000000', 'radius_minus': '180001/100000', 'radius_plus': '230001/100000', 'outer0': '12136393/25000000', 'outer1': '7052383/12500000', 'binary_charge': '0', 'gap_charge': '1103205549/100000000', 'noise_charge': '179590063/100000000', 'quadratics': [{'A': '15575297/25000000', 'Fplus': '7562479/100000000', 'Fminus': '16568219/50000000', 'Qbudget': '30147793/50000000'}, {'A': '33150421/50000000', 'Fplus': '7562479/100000000', 'Fminus': '16568219/50000000', 'Qbudget': '16670661/25000000'}, {'A': '3116079/5000000', 'Fplus': '1510419/20000000', 'Fminus': '16575659/50000000', 'Qbudget': '60320521/100000000'}, {'A': '33161789/50000000', 'Fplus': '1510419/20000000', 'Fminus': '16575659/50000000', 'Qbudget': '4169303/6250000'}, {'A': '-8464781/100000000', 'Fplus': '5137/78125', 'Fminus': '34550819/100000000', 'Qbudget': '62665823/100000000'}, {'A': '-7941717/100000000', 'Fplus': '5137/78125', 'Fminus': '34550819/100000000', 'Qbudget': '34586743/50000000'}]}, {'n': 31, 'index': 42, 'p': ['21/50', '43/100'], 'rho_lower': '1', 'rho_upper': '13434797/12500000', 'D': '15387939/50000000', 'd0': '2771177/100000000', 'Lambda': '4363661/25000000', 'Hminus': '62757663/50000000', 'Hplus': '51850651/50000000', 'radius_minus': '180001/100000', 'radius_plus': '220001/100000', 'outer0': '47730899/100000000', 'outer1': '52670877/100000000', 'binary_charge': '1081/50000000', 'gap_charge': '1110820333/100000000', 'noise_charge': '88152197/50000000', 'quadratics': [{'A': '56715737/100000000', 'Fplus': '7602849/100000000', 'Fminus': '3776461/12500000', 'Qbudget': '60069079/100000000'}, {'A': '29954349/50000000', 'Fplus': '7602849/100000000', 'Fminus': '3776461/12500000', 'Qbudget': '65531137/100000000'}, {'A': '28366649/50000000', 'Fplus': '7593811/100000000', 'Fminus': '6044963/20000000', 'Qbudget': '60093793/100000000'}, {'A': '5992813/10000000', 'Fplus': '7593811/100000000', 'Fminus': '6044963/20000000', 'Qbudget': '16389233/25000000'}, {'A': '-524109/5000000', 'Fplus': '6782247/100000000', 'Fminus': '981359/3125000', 'Qbudget': '62312899/100000000'}, {'A': '-10127721/100000000', 'Fplus': '6782247/100000000', 'Fminus': '981359/3125000', 'Qbudget': '67873083/100000000'}]}, {'n': 31, 'index': 43, 'p': ['43/100', '11/25'], 'rho_lower': '1', 'rho_upper': '53112687/50000000', 'D': '6969513/25000000', 'd0': '246923/10000000', 'Lambda': '62259/390625', 'Hminus': '14853943/12500000', 'Hplus': '99949629/100000000', 'radius_minus': '180001/100000', 'radius_plus': '220001/100000', 'outer0': '9381463/20000000', 'outer1': '1683953/3125000', 'binary_charge': '301369/100000000', 'gap_charge': '1117183691/100000000', 'noise_charge': '173018751/100000000', 'quadratics': [{'A': '51798703/100000000', 'Fplus': '8011069/100000000', 'Fminus': '27549529/100000000', 'Qbudget': '59864147/100000000'}, {'A': '54494333/100000000', 'Fplus': '8011069/100000000', 'Fminus': '27549529/100000000', 'Qbudget': '64786247/100000000'}, {'A': '51813729/100000000', 'Fplus': '8003411/100000000', 'Fminus': '2756099/10000000', 'Qbudget': '5988867/10000000'}, {'A': '27255469/50000000', 'Fplus': '8003411/100000000', 'Fminus': '2756099/10000000', 'Qbudget': '64811741/100000000'}, {'A': '-1055641/12500000', 'Fplus': '3692079/50000000', 'Fminus': '14243919/50000000', 'Qbudget': '618717/1000000'}, {'A': '-4027193/50000000', 'Fplus': '3692079/50000000', 'Fminus': '14243919/50000000', 'Qbudget': '33436647/50000000'}]}, {'n': 31, 'index': 44, 'p': ['11/25', '9/20'], 'rho_lower': '1', 'rho_upper': '52398061/50000000', 'D': '12447267/50000000', 'd0': '2114073/100000000', 'Lambda': '3493867/25000000', 'Hminus': '111481517/100000000', 'Hplus': '11951409/12500000', 'radius_minus': '180001/100000', 'radius_plus': '210001/100000', 'outer0': '46013651/100000000', 'outer1': '50015759/100000000', 'binary_charge': '108897/10000000', 'gap_charge': '7040561/625000', 'noise_charge': '1703351/1000000', 'quadratics': [{'A': '46845077/100000000', 'Fplus': '4108529/50000000', 'Fminus': '12344139/50000000', 'Qbudget': '59836581/100000000'}, {'A': '48892219/100000000', 'Fplus': '4108529/50000000', 'Fminus': '12344139/50000000', 'Qbudget': '31922829/50000000'}, {'A': '46857583/100000000', 'Fplus': '8210701/100000000', 'Fminus': '24698023/100000000', 'Qbudget': '59860943/100000000'}, {'A': '1956237/4000000', 'Fplus': '8210701/100000000', 'Fminus': '24698023/100000000', 'Qbudget': '63870809/100000000'}, {'A': '-201537/3125000', 'Fplus': '9693/125000', 'Fminus': '25397457/100000000', 'Qbudget': '6160947/10000000'}, {'A': '-6069571/100000000', 'Fplus': '9693/125000', 'Fminus': '25397457/100000000', 'Qbudget': '65675943/100000000'}]}, {'n': 31, 'index': 45, 'p': ['9/20', '23/50'], 'rho_lower': '1', 'rho_upper': '103718223/100000000', 'D': '22251071/100000000', 'd0': '17517/1000000', 'Lambda': '2962689/25000000', 'Hminus': '104334821/100000000', 'Hplus': '91483203/100000000', 'radius_minus': '180001/100000', 'radius_plus': '210001/100000', 'outer0': '9020327/20000000', 'outer1': '51118407/100000000', 'binary_charge': '1182899/50000000', 'gap_charge': '1135732269/100000000', 'noise_charge': '41948447/25000000', 'quadratics': [{'A': '5292047/12500000', 'Fplus': '4247877/50000000', 'Fminus': '5472639/25000000', 'Qbudget': '3741917/6250000'}, {'A': '21970237/50000000', 'Fplus': '4247877/50000000', 'Fminus': '5472639/25000000', 'Qbudget': '15808893/25000000'}, {'A': '846931/2000000', 'Fplus': '4245359/50000000', 'Fminus': '5474661/25000000', 'Qbudget': '59894903/100000000'}, {'A': '43951589/100000000', 'Fplus': '4245359/50000000', 'Fminus': '5474661/25000000', 'Qbudget': '3953779/6250000'}, {'A': '-4903477/100000000', 'Fplus': '4084793/50000000', 'Fminus': '2241443/10000000', 'Qbudget': '2457601/4000000'}, {'A': '-4544853/100000000', 'Fplus': '4084793/50000000', 'Fminus': '2241443/10000000', 'Qbudget': '64847727/100000000'}]}, {'n': 31, 'index': 46, 'p': ['23/50', '47/100'], 'rho_lower': '1', 'rho_upper': '25635681/25000000', 'D': '243961/1250000', 'd0': '1340897/100000000', 'Lambda': '9276957/100000000', 'Hminus': '24090601/25000000', 'Hplus': '43195031/50000000', 'radius_minus': '180001/100000', 'radius_plus': '200001/100000', 'outer0': '353013/800000', 'outer1': '5892573/12500000', 'binary_charge': '4138247/100000000', 'gap_charge': '229519419/20000000', 'noise_charge': '33153539/20000000', 'quadratics': [{'A': '37717917/100000000', 'Fplus': '8245129/100000000', 'Fminus': '18754883/100000000', 'Qbudget': '12016019/20000000'}, {'A': '38797769/100000000', 'Fplus': '8245129/100000000', 'Fminus': '18754883/100000000', 'Qbudget': '62526941/100000000'}, {'A': '1509029/4000000', 'Fplus': '8241353/100000000', 'Fminus': '18761277/100000000', 'Qbudget': '2404169/4000000'}, {'A': '3880621/10000000', 'Fplus': '8241353/100000000', 'Fminus': '18761277/100000000', 'Qbudget': '62551551/100000000'}, {'A': '-170131/5000000', 'Fplus': '8031533/100000000', 'Fminus': '9558267/50000000', 'Qbudget': '3072247/5000000'}, {'A': '-1556991/50000000', 'Fplus': '8031533/100000000', 'Fminus': '9558267/50000000', 'Qbudget': '1997467/3125000'}]}, {'n': 31, 'index': 47, 'p': ['47/100', '12/25'], 'rho_lower': '1', 'rho_upper': '635279/625000', 'D': '3414981/20000000', 'd0': '460349/50000000', 'Lambda': '6508249/100000000', 'Hminus': '8859841/10000000', 'Hplus': '81522637/100000000', 'radius_minus': '180001/100000', 'radius_plus': '200001/100000', 'outer0': '10782187/25000000', 'outer1': '48142943/100000000', 'binary_charge': '6407543/100000000', 'gap_charge': '1159658263/100000000', 'noise_charge': '81949347/50000000', 'quadratics': [{'A': '33482341/100000000', 'Fplus': '8138767/100000000', 'Fminus': '1961241/12500000', 'Qbudget': '15090303/25000000'}, {'A': '8545923/25000000', 'Fplus': '8138767/100000000', 'Fminus': '1961241/12500000', 'Qbudget': '15518903/25000000'}, {'A': '16743977/50000000', 'Fplus': '8136269/100000000', 'Fminus': '15694673/100000000', 'Qbudget': '60385269/100000000'}, {'A': '8547429/25000000', 'Fplus': '8136269/100000000', 'Fminus': '15694673/100000000', 'Qbudget': '62100007/100000000'}, {'A': '-282489/12500000', 'Fplus': '8015597/100000000', 'Fminus': '3980949/25000000', 'Qbudget': '61547171/100000000'}, {'A': '-1021291/50000000', 'Fplus': '8015597/100000000', 'Fminus': '3980949/25000000', 'Qbudget': '1977443/3125000'}]}, {'n': 31, 'index': 48, 'p': ['12/25', '49/100'], 'rho_lower': '1', 'rho_upper': '100762513/100000000', 'D': '918687/6250000', 'd0': '470753/100000000', 'Lambda': '1697713/50000000', 'Hminus': '40277717/50000000', 'Hplus': '76307391/100000000', 'radius_minus': '180001/100000', 'radius_plus': '190001/100000', 'outer0': '5260101/12500000', 'outer1': '22042621/50000000', 'binary_charge': '9184587/100000000', 'gap_charge': '293367217/25000000', 'noise_charge': '162394789/100000000', 'quadratics': [{'A': '366499/1250000', 'Fplus': '1986751/25000000', 'Fminus': '6277303/50000000', 'Qbudget': '30382689/50000000'}, {'A': '29642661/100000000', 'Fplus': '1986751/25000000', 'Fminus': '6277303/50000000', 'Qbudget': '2464951/4000000'}, {'A': '29323403/100000000', 'Fplus': '993219/12500000', 'Fminus': '12557687/100000000', 'Qbudget': '3799337/6250000'}, {'A': '29646333/100000000', 'Fplus': '993219/12500000', 'Fminus': '12557687/100000000', 'Qbudget': '30823979/50000000'}, {'A': '-1283419/100000000', 'Fplus': '394701/5000000', 'Fminus': '12684951/100000000', 'Qbudget': '1235627/2000000'}, {'A': '-1168261/100000000', 'Fplus': '394701/5000000', 'Fminus': '12684951/100000000', 'Qbudget': '6264687/10000000'}]}, {'n': 31, 'index': 49, 'p': ['49/100', '1/2'], 'rho_lower': '1', 'rho_upper': '25019693/25000000', 'D': '1582599/12500000', 'd0': '16739/100000000', 'Lambda': '1829/1562500', 'Hminus': '121094311/100000000', 'Hplus': '121094311/100000000', 'radius_minus': '180001/100000', 'radius_plus': '190001/100000', 'outer0': '41004311/100000000', 'outer1': '9000899/20000000', 'binary_charge': '311797/2500000', 'gap_charge': '1187607783/100000000', 'noise_charge': '161050927/100000000', 'quadratics': [{'A': '26101803721756564721/100000000000000000000', 'Fplus': '0', 'Fminus': '0', 'Qbudget': '1/10000'}]}], 'premise': 'Unacquired guarded resources selected from FLOAT discovery. All row bounds must hold simultaneously for the same oriented common marginal of a contrary sharp31 witness in rho branch[1,11/10]. Actual inward d<1/4, d/d0+lambda/Lambda<=1, signed support, finite sharp-D lower, affine D charge and all signed quadratic D caps are assumed. In row49 the positive-Q redundant cap is derived from scalar D and the acquired absolute H cap and covers p=1/2. Exact resource acquisition, support licensing, branch exhaustiveness, optimizer/contact and reflection are separate obligations; this count contract alone does not prove C31<=CE.'}
+FIELDS=set(EXPECTED)
+def fixed(index):return next(r for r in EXPECTED['rows']if r['index']==index)
+def unique_pairs(pairs):
+ out={}
+ for k,v in pairs:
+  need(k not in out,'duplicate JSON key');out[k]=v
+ return out
+def parse(raw):return json.loads(raw,object_pairs_hook=unique_pairs)
+def rational(x):
+ need(type(x)is str and re.fullmatch(r'-?[0-9]+(?:/[1-9][0-9]*)?',x) is not None,'typed rational')
+ return F(x)
+def same_typed(a,b):
+ if type(a)is not type(b):return False
+ if isinstance(a,dict):return a.keys()==b.keys()and all(same_typed(a[k],b[k])for k in a)
+ if isinstance(a,list):return len(a)==len(b)and all(same_typed(x,y)for x,y in zip(a,b))
+ return a==b
+def contract(raw):
+ o=parse(raw);need(type(o)is dict and set(o)==FIELDS,'contract fields')
+ need(type(o['n'])is int and o['n']==31 and all(type(r['index'])is int for r in o['rows']),'typed indices')
+ need(same_typed(o,EXPECTED),'fixed typed guarded contract')
+ need(type(o['premise'])is str,'contract premise')
+ for i,r in zip(range(36,50),o['rows']):
+  need(type(r['index'])is int and r['index']==i and type(r['n'])is int and r['n']==31,'typed row identity')
+  pl,pu=map(F,r['p']);d=F(r['d0']);need(pl==F(i,100)and pu==F(i+1,100),'contiguous p panels')
+  need(0<pl<=pu<=F(1,2) and 0<d<min(pl,1-pu,F(1,4)),'actual small central-gap scope')
+  need(all(0<F(r[k])<F(5,4) for k in('outer0','outer1')),'positive bounded outward support')
+  need(all(F(r[k])>0 for k in('Lambda','D','radius_minus','radius_plus','Hminus','Hplus')),'positive resources')
+  need(F(r['rho_lower'])==1 and 1<=F(r['rho_upper'])<=F(11,10),'fixed rho branch')
+  need(all(F(q['Qbudget'])>0 for q in r['quadratics']),'positive phase price')
+  need(F(r['binary_charge'])>=0 and F(r['gap_charge'])>0 and F(r['noise_charge'])>0,'actual affine defect charge')
+  need(F(1,4)+F(r['Lambda'])/31<1 and 31*pl-F(r['Hminus'])>0 and 31*pu+F(r['Hplus'])<31,'all nearest counts covered')
+ return sha256(raw).hexdigest()
+RAW=(HERE/'contract.json').read_bytes();CONTRACT_HASH=contract(RAW)
+def key(o):
+ need(type(o)is dict and type(o.get('k'))is int and 0<=o['k']<=31,'typed count')
+ path=o.get('path');need(type(path)is list and len(path)<=75 and all(type(v)is int and v in(0,1)for v in path),'typed binary path')
+ return o['k'],tuple(path)
+def structure(o,index):
+ need(type(index)is int and 36<=index<=49,'fixed p panel')
+ need(type(o)is dict and set(o)=={'schema','contract_sha256','index','root','splits','leaves','visited','maximum_score','target_lower','status'},'candidate fields')
+ need(o['schema']=='EXACT_SHARP31_LADDER_BRANCH0_ROW_V1' and o['status']=='EXACT_CONSTRUCTION_COMPLETE','candidate version')
+ need(type(o['index'])is int and o['index']==index,'candidate panel')
+ need(o['contract_sha256']==CONTRACT_HASH,'contract binding')
+ need(rational(o['target_lower'])==TARGET,'fixed positive barrier')
+ FIX=fixed(index)
+ start=[[F(index,100),F(index+1,100)],[F(0),F(FIX['Lambda'])],[F(0),F(1)],[-F(1,2),F(1,2)],[F(0),F(FIX['d0'])]]
+ need(o['root']==[[str(x)for x in a]for a in start],'fixed closed root')
+ need(type(o['splits'])is list and type(o['leaves'])is list and o['leaves'],'node lists')
+ splits={};leaves={}
+ for pos,node in enumerate(o['splits']):
+  need(type(node)is dict and set(node)=={'k','path','axis'},'split fields');kk=key(node)
+  need(type(node['axis'])is int and 0<=node['axis']<=4,'typed split axis')
+  need(kk not in splits,'duplicate split');splits[kk]=(pos,node)
+ for pos,node in enumerate(o['leaves']):
+  need(type(node)is dict and set(node)=={'k','path','status','score_upper'},'leaf fields');kk=key(node)
+  need(kk not in leaves and kk not in splits,'duplicate/overlapping leaf')
+  need(node['status'] in('EMPTY_SHARP_BOX','EMPTY_RHO_BRANCH','EMPTY_PHASE','EMPTY_NEGATIVE_BUDGET','EMPTY_SUPPORT_VARIANCE','EMPTY_SHARP_GAP','EMPTY_VARIANCE_IDENTITY','EMPTY_PHASE_RESOURCE','PASS_BELOW_CE'),'leaf status')
+  if node['status']=='PASS_BELOW_CE':need(0<=rational(node['score_upper'])<TARGET,'recorded score reserve')
+  else:need(node['score_upper']is None,'empty cell score')
+  leaves[kk]=(pos,node)
+ si=li=0;contexts=[]
+ for k in range(32):
+  stack=[([],deepcopy(start))]
+  while stack:
+   path,b=stack.pop();kk=(k,tuple(path))
+   if kk in splits:
+    pos,node=splits[kk];need(pos==si,'split canonical order');si+=1
+    axis=node['axis'];mid=sum(b[axis])/2
+    need(b[axis][0]<mid<b[axis][1],'nonempty split')
+    for side in(1,0):
+     bb=deepcopy(b);bb[axis][1-side]=mid;stack.append((path+[side],bb))
+   else:
+    need(kk in leaves,'missing closed branch/count')
+    pos,node=leaves[kk];need(pos==li,'leaf canonical order');li+=1
+    contexts.append((k,b,node))
+ need(si==len(splits) and li==len(leaves),'unused/extra nodes')
+ need(type(o['visited'])is int and o['visited']==si+li,'visited node count')
+ maximum=max((rational(z['score_upper'])for z in o['leaves']if z['status']=='PASS_BELOW_CE'),default=F(0))
+ need(rational(o['maximum_score'])==maximum,'recorded maximum')
+ return contexts
+
+def check_leaf(index,k,b,node):
+ out=cell35(fixed(index),pl=b[0][0],pu=b[0][1],lo=b[1][0],hi=b[1][1],al=b[2][0],ah=b[2][1],k=k,ul=b[3][0],uh=b[3][1],a0l=b[4][0],a0h=b[4][1])
+ if 'score_upper'in out:
+  need(F(out['score_upper'])<TARGET,'strict recomputed positive barrier')
+  need(node['status']=='PASS_BELOW_CE' and node['score_upper']==out['score_upper'],'recomputed leaf score/status')
+  return F(out['score_upper'])
+ need(out['status']==node['status'],'recomputed empty region')
+ return F(0)
+
+def controls(o,index,contexts):
+ controls=0
+ def rejects(f):
+  nonlocal controls
+  try:f()
+  except(ValueError,TypeError,KeyError,IndexError):controls+=1;return
+  raise ValueError('mutation unexpectedly accepted')
+ def mutate(f):
+  z=deepcopy(o);f(z);rejects(lambda:structure(z,index))
+ mutate(lambda z:z['leaves'].append(deepcopy(z['leaves'][0])))
+ mutate(lambda z:z['leaves'].pop())
+ mutate(lambda z:z['leaves'].reverse())
+ mutate(lambda z:z['leaves'][0].update(k=True))
+ mutate(lambda z:z.update(index=True))
+ mutate(lambda z:z.update(contract_sha256='0'*64))
+ mutate(lambda z:z.update(target_lower='1'))
+ mutate(lambda z:z.update(unknown=0))
+ if o['splits']:mutate(lambda z:z['splits'][0].update(axis=True))
+ else:mutate(lambda z:z['splits'].append(dict(k=0,path=[],axis=True)))
+ t=next((i for i,x in enumerate(o['leaves'])if x['path']),None)
+ if t is None:mutate(lambda z:z['leaves'][0].update(path=[True]))
+ else:mutate(lambda z:z['leaves'][t]['path'].__setitem__(0,True))
+ c=parse(RAW);c['rows'][0]['outer0']='4/5';rejects(lambda:contract(json.dumps(c).encode()))
+ for field in ('binary_charge','gap_charge','noise_charge','rho_lower','rho_upper'):
+  c=parse(RAW);c['rows'][0][field]='0';rejects(lambda:contract(json.dumps(c).encode()))
+ c=parse(RAW);c['premise']='Unlinked independent resources';rejects(lambda:contract(json.dumps(c).encode()))
+ c=parse(RAW);c['branch']=False;rejects(lambda:contract(json.dumps(c).encode()))
+ c=parse(RAW);c['rows'].pop();rejects(lambda:contract(json.dumps(c).encode()))
+ c=parse(RAW);c['rows'].reverse();rejects(lambda:contract(json.dumps(c).encode()))
+ selected=next((x for x in contexts if x[2]['status']=='PASS_BELOW_CE'),contexts[0])
+ k,b,node=selected
+ false=deepcopy(node)
+ if node['status']=='PASS_BELOW_CE':false['score_upper']='0'if F(node['score_upper']) else'1/1000000'
+ else:false.update(status='PASS_BELOW_CE',score_upper='0')
+ rejects(lambda:check_leaf(index,k,b,false))
+ false=deepcopy(node);false['status']='EMPTY_PHASE'if node['status']!='EMPTY_PHASE'else'EMPTY_SHARP_GAP';false['score_upper']=None
+ rejects(lambda:check_leaf(index,k,b,false))
+ rejects(lambda:parse('{"index":31,"index":31}'))
+ rejects(lambda:contract('{"n":32,"n":32}'))
+ return controls
+
+def main():
+ need(len(sys.argv)==2 and sys.argv[1].isdigit(),'one panel argument')
+ index=int(sys.argv[1]);path=HERE/f'candidate_{index}.json';raw=path.read_bytes();o=parse(raw);contexts=structure(o,index)
+ began=time.monotonic();maximum=F(0);passed=empty=0
+ for i,(k,b,node)in enumerate(contexts):
+  maximum=max(maximum,check_leaf(index,k,b,node))
+  if node['status']=='PASS_BELOW_CE':passed+=1
+  else:empty+=1
+  if i and i%1000==0:print('REPLAY',index,i,len(contexts),flush=True)
+ nc=controls(o,index,contexts)
+ record=dict(schema='SHARP31_LADDER_BRANCH0_ACCEPTANCE_V2',status='PASS',index=index,n=31,K='0',contract_sha256=CONTRACT_HASH,candidate_sha256=sha256(raw).hexdigest(),passed_cells=passed,empty_cells=empty,all_closed_leaves=len(contexts),maximum_score=str(maximum),target_lower=str(TARGET),negative_controls=nc,source_sha256={name:sha256((HERE/name).read_bytes()).hexdigest()for name in('accept_strict_v2.py','baseline_core.py','exact35_core.py','exact_count_core_v5.py','finite_gaussian.py','variance_geometry.py','contract.json')})
+ dest=HERE/f'accepted_strict_v2_{index}.json';need(not dest.exists(),'fresh acceptance output');dest.write_text(json.dumps(record,indent=2)+'\n')
+ print('ACCEPTED_SHARP31_LADDER_BRANCH0',index,passed,empty,len(contexts),nc,float(maximum),round(time.monotonic()-began,2),flush=True)
+if __name__=='__main__':main()

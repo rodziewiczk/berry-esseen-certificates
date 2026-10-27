@@ -1,0 +1,9 @@
+{
+  "status": "PASS_INDEPENDENT_MEAN_VARIANCE_DERIVATION_AND_SOURCE_REVIEW",
+  "source_sha256": {
+    "work/cutoff25_20261011/new_root/mean_variance.py": "c2fe5362f74792879998e23dbb37090cbce6898dad94acbb01b646c1fc7ad50f",
+    "work/cutoff25_20261011/new_root/MEAN_VARIANCE_PROOF.txt": "83f95878db5e88154725f11c81514b8dee8553b8a1d8c19facc1c0d36f2c208a",
+    "work/cutoff25_20261011/new_middle/MEAN_VARIANCE_INDEPENDENT_REVIEW.txt": "ee57777239b36c63e0b83de76bd33ef7c5b84ec7a305e496ec7b0ee9c14d1693"
+  },
+  "scope": "Necessary conditional interval contraction; no resource acquisition."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS_INDEPENDENT_DIRECTED_INTERVAL_SOURCE_REVIEW_AT_NAMED_SCOPE",
+  "enclosure_substitution": true,
+  "output_identity_claimed": false,
+  "full_forest_replay_required": true,
+  "clean_import_inspection": {
+    "old_module_scope_interval_instances": 0,
+    "nonempty_decorated_caches": 0,
+    "changed_interval_aliases": 9
+  },
+  "scope": "Reviewed primitive and Bernstein enclosures plus named clean bridge32 count integration. Future named copies must bind their own integration and replay every selected leaf.",
+  "files_sha256": {
+    "continuation_20261010/repair31/DIRECTED_INTERVAL_INDEPENDENT_REVIEW.txt": "7cd3860e91034cd5b1b7a4b2233347a11ef4d96db2f330535809c23ae954f43c",
+    "continuation_20261010/shared/directed_count_interval/directed_interval.py": "f93752f1b711708cb70a0dbddbd9bfdb0aa96aae4d2d67c1a87ee924de4d6326",
+    "continuation_20261010/shared/directed_count_interval/PROOF.txt": "8ce34cda87d0b4c4190aabd5518ec0565d71b2561d126f5a9ba2fc7d41252cc8",
+    "continuation_20261010/shared/directed_count_interval/OPERATIONS_CHECKED.json": "a6d2b3e0898b5069b10b50e770d33b74ae1cea6e9858b380fe1aff9b90baffa2",
+    "continuation_20261010/shared/directed_count_interval/CELLS_CHECKED.json": "641946e3ae7cf3079c78ab46aa34f4e607441cea89abf9bb02692b45ed7150ae",
+    "continuation_20261010/shared/directed_count_interval/check_cells.py": "459d5568404f1702818ccea8483a41a642efac76a283999c6db8552d0c59891e",
+    "continuation_20261010/shared/bridge32_b3_count/exact_count_core_v5.py": "a959e10e9b6e7cd0bc34046e2bb6a8e8e9680746a11ce04b04d53eec5b2219a0",
+    "continuation_20261010/shared/bridge32_b3_count/exact35_core.py": "1c44f3eae518e68a088ba53ea8ca73190eb012d2febc6fff8990e40b7dfcac5b",
+    "continuation_20261010/shared/bridge32_b3_count/joint_cubic.py": "240ad2f6f9ab4f2c5f35f31cb802fcb06e7d5e4cfc6aa1bfa4c1d88c670b2bb9",
+    "continuation_20261010/shared/bridge32_b3_count/joint_cubic_defect.py": "3dad2f2843232df14eee69f2ee2c600bbc57e4655c57b28a83cf6f9be88f7b45",
+    "continuation_20261010/shared/bridge32_b3_count/joint_cubic_normalized.py": "278f56e0850c46df78026a05b18ea4649137173857bc1cd1e7fba42ac8b0646b",
+    "continuation_20261010/shared/bridge32_b3_count/joint_cubic_normalized_fast.py": "7d72ff8ec7cfc2ad59e45d26fcccd6998ef01abe24cb54653ba18b05f2bbf347",
+    "continuation_20261010/shared/bridge32_b3_count/bernstein_fast.py": "4983c9af05673775c3fd5b521e898a9c7f7fe5c9523a5009646872bf75adc607",
+    "continuation_20261010/shared/bridge32_b3_count/interval_scalar_fast.py": "3eaa0d78eec8b8d5c2044eb020a406ec352ac5a99b30f9d2773694a4f9601512",
+    "continuation_20261010/shared/bridge32_b3_count/optimized_arithmetic.py": "e96d7c0cceff2354b08ac0914acfb05f9ea92a86e1bdf68bd22d96e49ae9109a"
+  }
+}

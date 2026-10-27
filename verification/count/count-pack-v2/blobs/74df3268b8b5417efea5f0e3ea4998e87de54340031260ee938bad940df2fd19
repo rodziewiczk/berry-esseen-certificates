@@ -1,0 +1,11 @@
+{
+  "status": "CONDITIONAL_UNACQUIRED_GUARDS",
+  "source_sha256": "a47ba570e8fc532e36e85db82b0e87095526e82a9dd9d7464e75228591a50c6c",
+  "contract_sha256": "876454fcd98c2351241892dd0ee87aee0eac1b359e6c5da3c51d61de13643de4",
+  "branch": 1,
+  "indices": [
+    35,
+    36
+  ],
+  "rounding": "ceil1e-5+1e-4 upper/floor1e-5-1e-4 lower; literal rho interval retained"
+}

@@ -1,0 +1,145 @@
+{
+  "schema": "public-foundation-tasks/1",
+  "tasks": [
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n2-scalars",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": null,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n2-scalars",
+      "scope": "all source scalar reductions",
+      "stage": "n2-scalars"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n2-primary",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": 70,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n2-primary",
+      "scope": "all original rational tensor and moment certificates",
+      "stage": "n2-primary"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n2-independent",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": 70,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n2-independent",
+      "scope": "all independent homogeneous-integer tensor and moment certificates",
+      "stage": "n2-independent"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n3-scalars",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": null,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n3-scalars",
+      "scope": "all source scalar reductions",
+      "stage": "n3-scalars"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n3-identities",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": 111,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n3-identities",
+      "scope": "95904 exact polynomial identities",
+      "stage": "n3-identities"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "n3-full",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": 111,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.n3-full",
+      "scope": "one fresh C++ compilation and111 original cube checks",
+      "stage": "n3-full"
+    },
+    {
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "foundations.py",
+        "root4-two-pass",
+        "--output",
+        "NEW_OUTPUT"
+      ],
+      "cells": 260,
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": true,
+      "id": "foundation.root4-two-pass",
+      "scope": "two full1300-HIGH/260-parent passes",
+      "stage": "root4-two-pass"
+    },
+    {
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": false,
+      "id": "smoke.n2-cell",
+      "stage": "n2-cell"
+    },
+    {
+      "entry": "foundations.py",
+      "full_pass": false,
+      "full_task": false,
+      "id": "smoke.root4-prepare",
+      "stage": "root4-prepare"
+    }
+  ]
+}

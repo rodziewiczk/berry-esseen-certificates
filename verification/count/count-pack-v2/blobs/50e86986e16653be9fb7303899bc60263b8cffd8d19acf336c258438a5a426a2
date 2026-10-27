@@ -1,0 +1,21 @@
+{
+  "status": "PASS_EXACT_ALLOCATION_VARIANCE_FIXTURES",
+  "same_law_coordinate_fixtures": 450,
+  "negative_controls": [
+    "boolean n",
+    "float p",
+    "endpoint zero",
+    "reversed p",
+    "negative alpha",
+    "alpha above one",
+    "zero gap",
+    "zero Lambda",
+    "zero outer"
+  ],
+  "sources": {
+    "allocation_variance.py": "3d4d42bdc3cbaa1f578a83f1691c32cb33599a417989a274d21ec42e66671973",
+    "ALLOCATION_VARIANCE_PROOF_v2.txt": "75d1abced86acf5fd671f6eaa61fa990fa08f45691522052ff41fbcd11eced79",
+    "check_allocation_variance_v2.py": "e5cd528e89f78bada796cdd66512ba87e2d305c53179d6d26e5f2c516e84a103"
+  },
+  "scope": "Finite implementation fixtures supplement the symbolic proof; no physical acquisition or count forest asserted."
+}

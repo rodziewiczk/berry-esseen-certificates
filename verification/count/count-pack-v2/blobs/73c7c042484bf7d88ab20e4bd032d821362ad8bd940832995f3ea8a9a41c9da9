@@ -1,0 +1,21 @@
+{
+  "status": "PASS_EXACT_DIRECTED_BERNSTEIN_CONTAINMENT",
+  "coefficient_checks": 3000,
+  "near_zero_constructor_checks": 9,
+  "patched_aliases": [
+    "exact_count_core_v5",
+    "exact35_core",
+    "joint_cubic",
+    "joint_cubic_defect",
+    "joint_cubic_normalized",
+    "joint_cubic_normalized_fast",
+    "bernstein_fast",
+    "interval_scalar_fast",
+    "optimized_arithmetic"
+  ],
+  "sources": {
+    "check_bernstein.py": "ee29a1eb4217293abe1cdf0daa9b9aac7a42d5358553d6483c6aa76001e14241",
+    "directed_interval.py": "f93752f1b711708cb70a0dbddbd9bfdb0aa96aae4d2d67c1a87ee924de4d6326",
+    "PROOF.txt": "8ce34cda87d0b4c4190aabd5518ec0565d71b2561d126f5a9ba2fc7d41252cc8"
+  }
+}
