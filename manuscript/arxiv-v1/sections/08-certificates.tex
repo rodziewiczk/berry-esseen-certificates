@@ -250,8 +250,10 @@ In total, the verified public release records 1,243/1,243 passed public
 \texttt{upper/PROOF.json} (\texttt{5acc019642ae}), \texttt{lower/PROOF.json}
 (\texttt{018bdf1b6918}), and \texttt{equality/PROOF.json}
 (\texttt{8be2f7c6083d}). Running \texttt{python -I -B be.py status} and
-\texttt{python -I -B be.py verify} verifies the complete release with
-\texttt{EXIT\_CODE=0}.
+\texttt{python -I -B be.py verify} (or the single-command multi-core Docker
+container \texttt{docker compose up --build --abort-on-container-exit} from
+\url{https://github.com/rodziewiczk/berry-esseen-certificates}) verifies the
+complete release with \texttt{EXIT\_CODE=0}.
 
 \begin{center}
 \begin{tabular}{@{}P{0.36\textwidth}P{0.30\textwidth}P{0.27\textwidth}@{}}
