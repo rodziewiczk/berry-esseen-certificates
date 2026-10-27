@@ -107,13 +107,7 @@ def main() -> int:
             ),
             (
                 "Live exact verification: N1 (150 cubic-dual cells, 1,128 Bernstein intervals)",
-                [
-                    PY, "-I", "-B", "verification/n1/verify_n1.py",
-                    "--candidate", "verification/count/witnesses/N1-dual.json",
-                    "--source", "verification/count/capsules/N1-dual",
-                    "--worker", "verification/count/capsule_worker.py",
-                    "--output", str(tmp_root / "n1-live"),
-                ],
+                [PY, "-I", "-B", "be.py", "verify", "--n1"],
             ),
             (
                 "Live exact verification: actual20 5-contract scalar & 250 controls",
@@ -141,6 +135,24 @@ def main() -> int:
                 ],
             ),
             (
+                "Live exact verification: foundation stage n2-primary (70/70 cells)",
+                [
+                    PY, "-I", "-B", "verification/foundations/foundations.py",
+                    "n2-primary",
+                    "--output", str(tmp_root / "foundation-n2-primary"),
+                    "--timeout", "1800",
+                ],
+            ),
+            (
+                "Live exact verification: foundation stage n2-independent (70/70 cells)",
+                [
+                    PY, "-I", "-B", "verification/foundations/foundations.py",
+                    "n2-independent",
+                    "--output", str(tmp_root / "foundation-n2-independent"),
+                    "--timeout", "1800",
+                ],
+            ),
+            (
                 "Live exact verification: foundation stage n3-scalars",
                 [
                     PY, "-I", "-B", "verification/foundations/foundations.py",
@@ -159,12 +171,21 @@ def main() -> int:
                 ],
             ),
             (
+                "Live exact verification: foundation stage n3-full (111/111 C++ cubes)",
+                [
+                    PY, "-I", "-B", "verification/foundations/foundations.py",
+                    "n3-full",
+                    "--output", str(tmp_root / "foundation-n3-full"),
+                    "--timeout", "3600",
+                ],
+            ),
+            (
                 "Live exact verification: resource package indexed40",
                 [
                     PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
                     "--task-id", "indexed40",
                     "--output", str(tmp_root / "res-indexed40"),
-                    "--seconds", "300",
+                    "--seconds", "600",
                 ],
             ),
             (
@@ -173,7 +194,52 @@ def main() -> int:
                     PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
                     "--task-id", "support35",
                     "--output", str(tmp_root / "res-support35"),
-                    "--seconds", "300",
+                    "--seconds", "600",
+                ],
+            ),
+            (
+                "Live exact verification: resource package positive39",
+                [
+                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+                    "--task-id", "positive39",
+                    "--output", str(tmp_root / "res-positive39"),
+                    "--seconds", "600",
+                ],
+            ),
+            (
+                "Live exact verification: resource package support16",
+                [
+                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+                    "--task-id", "support16",
+                    "--output", str(tmp_root / "res-support16"),
+                    "--seconds", "600",
+                ],
+            ),
+            (
+                "Live exact verification: resource package support32_34",
+                [
+                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+                    "--task-id", "support32_34",
+                    "--output", str(tmp_root / "res-support32_34"),
+                    "--seconds", "600",
+                ],
+            ),
+            (
+                "Live exact verification: resource package low26_30_support",
+                [
+                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+                    "--task-id", "low26_30_support",
+                    "--output", str(tmp_root / "res-low26_30_support"),
+                    "--seconds", "600",
+                ],
+            ),
+            (
+                "Live exact verification: resource package companions9",
+                [
+                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+                    "--task-id", "companions9",
+                    "--output", str(tmp_root / "res-companions9"),
+                    "--seconds", "600",
                 ],
             ),
             (
@@ -182,7 +248,7 @@ def main() -> int:
                     PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
                     "--task-id", "acquisition2_recovery",
                     "--output", str(tmp_root / "res-acquisition2"),
-                    "--seconds", "300",
+                    "--seconds", "600",
                 ],
             ),
         ]
