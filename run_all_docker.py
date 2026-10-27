@@ -186,6 +186,7 @@ def main() -> int:
                     "--task-id", "indexed40",
                     "--output", str(tmp_root / "res-indexed40"),
                     "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
             (
@@ -195,15 +196,7 @@ def main() -> int:
                     "--task-id", "support35",
                     "--output", str(tmp_root / "res-support35"),
                     "--seconds", "600",
-                ],
-            ),
-            (
-                "Live exact verification: resource package positive39",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "positive39",
-                    "--output", str(tmp_root / "res-positive39"),
-                    "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
             (
@@ -213,6 +206,7 @@ def main() -> int:
                     "--task-id", "support16",
                     "--output", str(tmp_root / "res-support16"),
                     "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
             (
@@ -222,6 +216,7 @@ def main() -> int:
                     "--task-id", "support32_34",
                     "--output", str(tmp_root / "res-support32_34"),
                     "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
             (
@@ -231,15 +226,7 @@ def main() -> int:
                     "--task-id", "low26_30_support",
                     "--output", str(tmp_root / "res-low26_30_support"),
                     "--seconds", "600",
-                ],
-            ),
-            (
-                "Live exact verification: resource package companions9",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "companions9",
-                    "--output", str(tmp_root / "res-companions9"),
-                    "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
             (
@@ -249,18 +236,23 @@ def main() -> int:
                     "--task-id", "acquisition2_recovery",
                     "--output", str(tmp_root / "res-acquisition2"),
                     "--seconds", "600",
+                    "--jobs", str(max(1, jobs // 4)),
                 ],
             ),
         ]
 
         steps.extend(run_parallel_steps(parallel_batch, max_workers=jobs))
 
+        # Clean up any temporary request-* directory created by `be.py verify --n1`
+        vr_dir = ROOT / "verification-results"
+        if vr_dir.is_dir():
+            for child in vr_dir.glob("request-*"):
+                if child.is_dir():
+                    shutil.rmtree(child, ignore_errors=True)
+
         if args.mode in ("resources-all", "full-recompute"):
             extra_res = [
                 "positive39",
-                "support16",
-                "support32_34",
-                "low26_30_support",
                 "companions9",
                 "low31",
                 "initial35_39",
