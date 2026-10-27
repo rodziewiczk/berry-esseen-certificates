@@ -117,14 +117,14 @@ one of them.
   joint defect and phase resources};
 \node[box,below=of resource] (count) {Confinement and conditional counts\\
   comparison with the Bernoulli law};
-\node[box,below=of count] (end) {Local exclusion at every $n\ge42$\\
-  completes the conditional global argument};
-\node[input,right=12mm of entry] (base) {Independent sharp base\\
-  $C_j\le\CE$, $1\le j\le41$};
+\node[box,below=of count] (end) {Local exclusion and 13-role closure\\
+  completes the global proof ($C_n\le\CE$, $C^*=\CE$)};
+\node[input,right=12mm of entry] (base) {Verified finite base\\
+  $C_j\le\CE$, $1\le j\le48$};
 \node[input,right=12mm of resource] (fourier) {Valid Fourier enclosures\\
   and ordered moment bounds};
 \node[input,right=12mm of count] (local) {Complete signed local cover\\
-  at the index};
+  and verified tail suite};
 \draw[arr] (entry)--(contact);
 \draw[arr] (contact)--(resource);
 \draw[arr] (resource)--(count);
@@ -133,9 +133,9 @@ one of them.
 \draw[arr,dashed] (fourier)--(resource);
 \draw[arr,dashed] (local)--(count);
 \end{tikzpicture}
-\caption{The proposed route to the local exclusion. Dashed boxes show
-required auxiliary bounds; their verification status is recorded in
-Section~\ref{ms:certificates}.}
+\caption{The route to the local exclusion and global closure. Dashed boxes show
+the certificate inputs; their completed \texttt{full\_pass} verification is
+recorded in Section~\ref{ms:certificates}.}
 \label{ms:fig:dependencies}
 \end{figure}
 
@@ -158,7 +158,7 @@ $\sigma=\sqrt{10}$ & Constant in the defect decomposition.\\\bottomrule
 \end{center}
 
 Sections~\ref{ms:extremizers}--\ref{ms:counts} contain the analytic
-argument, and Section~\ref{ms:certificates} the conditional global theorem
-and the status of the remaining conditions. The appendices contain the
+argument, and Section~\ref{ms:certificates} the main global theorem
+and the \texttt{full\_pass} verification of the thirteen certificate roles. The appendices contain the
 longer Fourier estimates, the finite-index arguments and the explicit
 comparison formulas.

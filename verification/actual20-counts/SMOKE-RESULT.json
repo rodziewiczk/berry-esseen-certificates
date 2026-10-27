@@ -1,0 +1,18 @@
+{
+  "all49_arithmetic_executed": false,
+  "all49_sources_verified": true,
+  "checks": [
+    "fresh30-leaf24-control-native-acceptor",
+    "whole-original-mathematical-reader",
+    "complete-fresh-process-and-source-inventory",
+    "unknown-job-rejected-before-output",
+    "nonfinite-timeout-rejected-before-output",
+    "incomplete49-bridge-rejected",
+    "altered-native-controls-rejected-by-original-whole-reader"
+  ],
+  "full_pass": false,
+  "job": "n20.B0.p58.79bbd7ee573f",
+  "leaves": 30,
+  "linux_original_stage_executed": false,
+  "native_controls": 24
+}

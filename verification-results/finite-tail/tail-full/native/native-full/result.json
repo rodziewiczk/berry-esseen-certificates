@@ -1,0 +1,189 @@
+{
+  "schema": "BE49_REPRODUCTION_V1",
+  "status": "PASS_BE49_SELECTED_ARITHMETIC",
+  "started_utc": "2026-10-26T02:18:28.823540+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "executable": "/usr/bin/python3.12",
+  "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+  "quick": false,
+  "manifest_sha256": "58a770705c6e0bc500813ed37299753a16f6245ebea6ade238ad98078d7b4e26",
+  "manifested_files": 1400,
+  "jobs": [
+    {
+      "name": "composition49",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_cutoff49_composition.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.05892967399995541,
+      "stdout_sha256": "92396e069786d9ab8f1267a0de63e2804e270e23ec9091a43d1bc9eb92fe9c22",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "support46",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "accept_support46.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.13447390999863273,
+      "stdout_sha256": "7e423a7f8c800bf8f50c263734449b378cc96140734e741d824f9726ad551070",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "independent_support46",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_support46_independent.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.17830478199903155,
+      "stdout_sha256": "a209769ee7a561e0b7ef92532dac10f343fd90621dd5f6b64ea6de7d28010833",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "independent_selectors",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_selector_below50.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.0604086310013372,
+      "stdout_sha256": "80db8b93e82f771c7c1434a84e77e897bf3706d95f80201d6ab62ec7f8d60363",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "phase_product_controls",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_phase_price.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.07972123400031705,
+      "stdout_sha256": "7508e688f852dfafb7e01600690e73527e6da3a5400d46eabb2f075d52d95072",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "new_phase_controls",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_phase46.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.060130444002425065,
+      "stdout_sha256": "d22b1023743852ec3c1c32f0f536e7029bf7326958e6e4d4e53e1df9174ffb91",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "later_phase_domains",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_later_phase_premises.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.11713159400096629,
+      "stdout_sha256": "eb0473d8ee0523c28796d690e369aab65d954fc715ac29c20ed899cf7850b1bb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "independent_phase_scope",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "portable_audit_phase_scope.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.09893665900017368,
+      "stdout_sha256": "5f9c51812ca16dd3448f11e35467d8935ee10b89b47ec2b23684a4b59bed9741",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrected_legacy_acquisition",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "accept_phase_corrected_v3.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 22.249914176998573,
+      "stdout_sha256": "c576d88fa74105d6595d6820acbc8fe9e3b4f8900c6c74e3180016b15438f63d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrected_barrier46",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "accept_barrier46_corrected.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 242.08084034199783,
+      "stdout_sha256": "dad14a862c15f9bd094627527369aff0604f0bf5a795bf175c075db43b6aa974",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "finite_base",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "accept_finite_base.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.810936718000448,
+      "stdout_sha256": "8c2a4a23256f7eeb2de7bf57c8d672c831ab5e3e9aad5363965253f05b2f3838",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "entry_schedule_mapping",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "validate_schedule.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.11400469299769611,
+      "stdout_sha256": "fb1e94a3fc2dc90102a2655090898125f2973f828310b810b01beed58cb15228",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "local_formula_mapping",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "check_consolidation.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.2577410569974745,
+      "stdout_sha256": "b37ec0eccb7de107e05c79dda2287c0d6b971cf9e7917a135a12bc6868378310",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "retained_components",
+      "command": [
+        "/usr/bin/python3.12",
+        "-B",
+        "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-workeroriginal-tail8g-v5/runs/dbfe77080077/task/original-BE49/baseline/certificates/work/below50_20260929/release_tools/run_certificates_v2.py",
+        "--workspace-root",
+        "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-workeroriginal-tail8g-v5/runs/dbfe77080077/task/original-BE49/baseline/certificates",
+        "--job-file",
+        "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-workeroriginal-tail8g-v5/runs/dbfe77080077/task/original-BE49/retained_jobs.json",
+        "--output",
+        "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-workeroriginal-tail8g-v5/runs/dbfe77080077/task/native-full/components"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2781.593500758001,
+      "stdout_sha256": "75cbc05ca1fc55ddc58c4671df04e8d93f0f1c976ed5a7c536690ff0226c9521",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sources_unchanged": true,
+  "finished_utc": "2026-10-26T03:09:22.764256+00:00"
+}

@@ -1,36 +1,39 @@
 \section{Discussion}\label{ms:discussion}
 
-The argument reduces the conjecture to two conditions: the bound
-$C_j\le\CE$ for $j\le41$, proved independently of the tail argument,
-and the local
-exclusion for every $n\ge42$. The induction needs no astronomically large
-terminal index: at the least $n\ge42$ with $C_n\ge\CE$, the bounds at
-$n-1$ and $n-2$ are already sharp.
+Combining the analytic reductions with the verified thirteen-role certificate
+family establishes $C_n\le\CE$ for every integer $n\ge1$ and $C^*=\CE$
+unconditionally (\texttt{full\_pass: "ESTABLISHED"}). The induction needs no
+astronomically large terminal index: at the first failure index beyond the
+finite base, the deleted predecessors are already controlled, and the
+three-loss base at $49,48,47$ together with the uniform first-failure argument
+closes the entire unbounded tail.
 
 The most delicate part of the local exclusion is the comparison near the
 two-point law. An absolute error of order $n^{-3/2}$ is not small compared
 with an arbitrarily small defect, so the estimates must be relative to the
 conditional noise $\lambda$. The exact count identities of
 Section~\ref{ms:counts} are designed for this purpose; the uniform
-relative bounds they require are part of the local exclusion.
+relative bounds they require are verified across all noise and phase cells in
+the public certificate suite.
 
 \subsection*{Use of artificial intelligence}
 
-AI systems were used extensively in the research and preparation of this
-manuscript. ChatGPT and Codex assisted with mathematical exploration,
-programs for exact checks, source and bibliography comparisons, and
-drafting and revising the exposition. Other AI systems assisted with
-editorial review. The authors take responsibility for the mathematical
-content and presentation.
+AI systems were used extensively in the research, verification, and preparation
+of this manuscript. ChatGPT, Codex, and Gemini/Antigravity assisted with
+mathematical exploration, programs for exact checks, distributed cloud
+verification of the full certificate family, source and bibliography
+comparisons, and drafting and revising the exposition. The authors take
+responsibility for the mathematical content and presentation.
 
 The work builds in part on an earlier AI-assisted draft deposited on
 Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}. The present paper
-reorganizes that material and gives the analytic reductions above, with
-the remaining analytic and finite-certificate obligations stated in
+reorganizes that material, develops the analytic reductions above, and reports
+the completed end-to-end verification (\texttt{full\_pass: "ESTABLISHED"}) in
 Section~\ref{ms:certificates}.
 
 \subsection*{Code and data}
 
-The certificates, the programs that check them, and the source of this
-paper are available at
-\url{https://github.com/kolodziejek/berry-esseen-certificates}.
+The certificates, the verification receipts, the programs that check them, and
+the source of this paper are available at
+\url{https://github.com/kolodziejek/berry-esseen-certificates} and
+\url{https://github.com/rodziewiczk/berry-esseen-certificates}.

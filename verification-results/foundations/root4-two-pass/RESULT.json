@@ -1,0 +1,20 @@
+{
+  "all_law_theorem_verified": false,
+  "checked": {
+    "candidate_bytes": 36911931,
+    "candidate_sha256": "ced52d62d471a90f480cff0fb7b7d979fdb9e7993f1c71a6720a2e419b007bdc",
+    "conditional_physical_target_closed": true,
+    "high_slots_per_pass": 1300,
+    "parents_per_pass": 260,
+    "root_bound_exact": "4097/10000",
+    "unresolved_geometry_indices": []
+  },
+  "elapsed_seconds": 9953.449567784002,
+  "execution_readback_sha256": "147f13f8065fcfdf78ff9edb904f87ae1a4077cb6b82084d7e1acf74b09f91c5",
+  "export_index_sha256": "8b3bdf8a093be814a56682a40162b493941a966cf5f680cdd26303e5a81777cc",
+  "full_pass": false,
+  "full_selected_numerical_stage": true,
+  "native_ledger_sha256": "897e7dd50ba61fae39153f0984536f42faa8fd4e78d88048de795d5a14a2f76d",
+  "schema": "public-foundation-fresh-execution/1",
+  "stage": "root4-two-pass"
+}

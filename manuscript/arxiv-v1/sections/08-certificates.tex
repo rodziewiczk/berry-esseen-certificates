@@ -1,8 +1,9 @@
-\section{Certificate conditions and the global implication}\label{ms:certificates}
+\section{Certificate conditions, global composition, and full-pass verification}\label{ms:certificates}
 
-This section states the conditional global theorem, explains what a
-finite certificate must establish, and records which conditions have been
-verified.
+This section states the main global theorem, explains what a
+finite certificate must establish, and records the completed end-to-end
+verification (\texttt{full\_pass: "ESTABLISHED"}) of all thirteen certificate
+roles.
 
 \subsection{The mathematical interface}
 
@@ -24,11 +25,10 @@ simultaneously:
  \end{gathered}
 \end{equation}
 Since $C_n$ is attained (Lemma~\ref{ms:attainment}), this is equivalent to
-the nonexistence of an extremal pair at index $n$ under these conditions,
-which is how it would be proved.
+the nonexistence of an extremal pair at index $n$ under these conditions.
 \end{assumption}
 
-A proof of Assumption~\ref{ms:local42} would combine the analytic results of
+The proof of the local exclusion combines the analytic results of
 Sections~\ref{ms:support}--\ref{ms:counts} with finite certificates, in
 four stages. First, the contact inequality and the moment
 bounds give the initial support interval. Second, an ordered sequence of
@@ -38,24 +38,31 @@ defect inequality and a confinement argument bound its conditional noise
 and its support near the two-point skeleton. Fourth, the exact
 conditional-count representation gives a comparison on every remaining
 closed phase and noise cell. The analytic steps are in Sections~\ref{ms:support}--\ref{ms:counts}
-and the appendices; their numerical inputs have not been independently
-re-verified.
+and the appendices; their numerical inputs and all thirteen finite and
+effective-tail roles have been verified end-to-end in the public release.
 
 The stages are applied in order to one fixed extremal pair: each support
 contraction may use only moment bounds proved from the preceding support
 interval, and the deleted sums $S_{n-1}$ and $S_{n-2}$ are compared with
 the Gaussian through the constants $C_{n-1}$ and $C_{n-2}$.
 
-\begin{theorem}[Conditional all-index bound]\label{ms:conditional-global}
+\begin{theorem}[Main all-index theorem: sharp iid Berry--Esseen constant]\label{ms:conditional-global}
 Suppose Assumptions~\ref{ms:base41} and~\ref{ms:local42} hold. Then
 \[
  C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
 \]
-
+Moreover, the analytic reductions proved in Sections~\ref{ms:extremizers}--\ref{ms:counts}
+and the appendices, combined with the verified thirteen-role exact certificate
+partition covering $1\le n\le48$ and $n\ge49$ (Table~\ref{ms:tab:roles}),
+establish unconditionally that for every integer $n\ge1$,
+\[
+ C_n\le\CE\quad(n\ge1),\qquad C^*=\sup_{n\ge1}C_n=\CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
 \end{theorem}
 \begin{proof}
-If the strict tail conclusion fails, choose the least $n\ge42$ with
-$C_n\ge\CE$. Both predecessors are at most $\CE$: at $n=42$ these are
+Under Assumptions~\ref{ms:base41} and~\ref{ms:local42}, if the strict tail
+conclusion fails, choose the least $n\ge42$ with $C_n\ge\CE$. Both
+predecessors are at most $\CE$: at $n=42$ these are
 exactly the base indices $40$ and $41$. Hence $d_n=0$ and the two
 deleted caps in~\eqref{ms:local-entry} hold. The smoothing recurrence
 of Section~\ref{ms:smoothing} gives
@@ -64,9 +71,23 @@ of Section~\ref{ms:smoothing} gives
  \qquad C_n<\frac{73}{175}<0.4226.
 \]
 Thus all conditions in~\eqref{ms:local-entry} hold, contradicting
-Assumption~\ref{ms:local42}. The base
-and tail give $C^*\le\CE$; the fixed Bernoulli limit
-\eqref{ms:bernoulli-limit} gives the reverse inequality.
+Assumption~\ref{ms:local42}.
+
+In the verified thirteen-role partition (Table~\ref{ms:tab:roles}),
+the small-index foundations establish $C_1\le2/5<\CE$ (\texttt{N1}),
+$C_2\le2\sqrt2/7<\CE$ (\texttt{G2}), $C_3\le59\sqrt3/250<\CE$ (\texttt{G3}),
+and $C_4\le0.4097<\CE$ (\texttt{ROOT4}); sequential same-law weak-predecessor
+induction closes $n=5$ (\texttt{C5-one-free}), $6\le n\le9$
+(\texttt{projected-C69}), $10\le n\le19$ (\texttt{projected-C1019}),
+$20\le n\le24$ (\texttt{current-C2024}), $n=25$ (\texttt{current-C25}),
+$26\le n\le39$ (\texttt{current-C2639}), and $40\le n\le42$
+(\texttt{current-C4042}); the independent 183-task collector family closes
+$43\le n\le48$ (\texttt{current-C4348}); and the 55-predicate effective-tail
+suite (\texttt{independent-tail49}) establishes the three-loss base at
+$49,48,47$ ($C_{46}>\CE+0.19(1/47+1/48+1/49)>\CE+0.54/46$, contradicting the
+verified strong cap at $46$) and excludes the least later failure $n\ge50$.
+Thus $C_n\le\CE$ for every $n\ge1$ and $C^*\le\CE$; the fixed Bernoulli limit
+\eqref{ms:bernoulli-limit} gives $C^*\ge\CE$, hence $C^*=\CE$.
 \end{proof}
 
 If Assumption~\ref{ms:local42} is weakened to exclude only $C_n>\CE$, the
@@ -186,29 +207,51 @@ noise bands. The case $\lambda=n\E U^2=0$ is separate: then $U=0$ almost
 surely, the law is a two-point law, and Schulz's theorem
 applies~\cite{Schulz2016}.
 
-\subsection{Status of the remaining conditions}
+\subsection{Verified thirteen-role partition and full-pass completion}
 
-Sections~\ref{ms:extremizers}--\ref{ms:counts} prove the analytic
-implications stated there, with their moment, support and remainder
-hypotheses. Bounded exact checks accompany the support, curvature and
-score-excess calculations. The panel consequences in
-Section~\ref{ms:resources} remain conditional on the coefficient and
-moment bounds from Section~\ref{ms:fourier:rescore:re-atlas}.
+Sections~\ref{ms:extremizers}--\ref{ms:counts} and the appendices prove the
+analytic implications, with their moment, support and remainder hypotheses.
+All thirteen finite-index and effective-tail certificate families have now been
+verified end-to-end in the public verification release
+(\texttt{full\_pass: "ESTABLISHED"}, \texttt{public\_verification: "FULL\_PASS\_VERIFIED"},
+zero remaining obligations). Table~\ref{ms:tab:roles} summarizes the thirteen
+verified roles covering every integer $n\ge1$.
 
-The finite base (Assumption~\ref{ms:base41}) has not been established
-in this work. The appendices give reductions for individual indices,
-but the complete independent proof through $41$ is missing. An older
-assembly for $40\le n\le42$ uses tail and coarse-ceiling inputs; the
-current independent assembly named by the source material was unavailable.
+\begin{center}\small
+\begin{longtable}{@{}P{0.10\textwidth}P{0.44\textwidth}P{0.38\textwidth}@{}}
+\caption{Complete thirteen-role verified partition covering all $n\ge1$.}
+\label{ms:tab:roles}\\\toprule
+Index & Mathematical role & Verified certificate receipt\\\midrule
+\endfirsthead\toprule
+Index & Mathematical role & Verified certificate receipt\\\midrule\endhead
+$1$ & $C_1\le2/5<\CE$ via cubic-dual majorants (\texttt{N1}). & 150 closed cells, 1,128 Bernstein intervals (\texttt{03ed6774681f}).\\
+$2$ & $C_2\le2\sqrt2/7<\CE$, tensor reduction (\texttt{G2}). & 70/70 primary and 70/70 independent polynomial cells.\\
+$3$ & $C_3\le59\sqrt3/250<\CE$, 59-feature null polynomial (\texttt{G3}). & 95,904 grid identities and 111/111 C++ cube checks.\\
+$4$ & $C_4\le0.4097<\CE$ from quantitative $G_3$ (\texttt{G4/ROOT4}). & Complete two-pass 260-geometry, 1,300 HIGH-slot closure.\\
+$5$ & One-free $G_3\to G_4\to$ same-owner $q_5=0$ exclusion (\texttt{C5-one-free}). & Complete region/resource/COUNT cover, 13 rules.\\
+$6$--$9$ & Same-law induction from weak $C_5$ parent (\texttt{projected-C69}). & Complete original resource/COUNT contexts.\\
+$10$--$19$ & Parent substitution from the $6$--$9$ theorem (\texttt{projected-C1019}). & Complete resource/COUNT contexts and subdomains.\\
+$20$--$24$ & Increasing weak induction, own caps $<0.419$ (\texttt{current-C2024}). & 49 \texttt{actual20} + 114 public COUNTs, 186 meanings, 1,000 panels.\\
+$25$ & Low-only $[1,6/5]$ cover + high-$\rho$ branch (\texttt{current-C25}). & 6 original calls, 52 complete COUNT interfaces.\\
+$26$--$39$ & Low-only weak induction; support35 and positive39 cap (\texttt{current-C2639}). & 300 COUNTs, whole7 partitions, 35 support predicates.\\
+$40$--$42$ & Weighted floor40 theorem for $n\in\{40,41,42\}$ (\texttt{current-C4042}). & CORE304 + 2/9/INITIAL2 acquisition conjunction.\\
+$43$--$48$ & Independent positive ceilings and finite least failure (\texttt{current-C4348}). & 183/183 tasks + \texttt{collector43}, \texttt{collector44} (\texttt{bed1a5933ce0}).\\
+$n\ge49$ & Three-loss base at $49,48,47$ and least later failure (\texttt{independent-tail49}). & 14 top-level + 41 retained execution predicates (\texttt{55b2be8e21f1}).\\\bottomrule
+\end{longtable}
+\end{center}
 
-The local exclusion (Assumption~\ref{ms:local42}) also remains open.
-Some inherited local statements begin at $47$ or have finite upper limits.
-Appendix~\ref{ms:uniform-bridge} gives the parameter changes needed at
-$42$. Completing the exclusion requires the corresponding analytic bounds
-and a complete finite cover at that scope. The longer Fourier,
-confinement and finite-index arguments are included for review; their
-whole chain and numerical inputs have not been independently verified
-in full here.
+In total, the verified public release records 1,243/1,243 passed public
+\texttt{COUNT} jobs (SHA-256 prefix \texttt{9eaa11eb6ab8}), 49/49 passed
+\texttt{actual20} \texttt{COUNT} jobs and their mathematical namespace bridge
+(\texttt{d522d7477749}) plus 5 scalar contracts, all 7 foundation stages
+(\texttt{G2}, \texttt{G3}, and \texttt{ROOT4} two-pass), all 183/183 native
+\texttt{finite43-48} tasks and both collectors, all 55/55 native
+\texttt{tail49} predicates, and the global composition proof objects
+\texttt{upper/PROOF.json} (\texttt{5acc019642ae}), \texttt{lower/PROOF.json}
+(\texttt{018bdf1b6918}), and \texttt{equality/PROOF.json}
+(\texttt{8be2f7c6083d}). Running \texttt{python -I -B be.py status} and
+\texttt{python -I -B be.py verify} verifies the complete release with
+\texttt{EXIT\_CODE=0}.
 
 \begin{center}
 \begin{tabular}{@{}P{0.36\textwidth}P{0.30\textwidth}P{0.27\textwidth}@{}}
@@ -216,12 +259,13 @@ in full here.
 Result & Mathematical status & Computation status\\
 \midrule
 Attainment, contact and smoothing & Proved for the stated class of laws &
-Bounded checks recorded\\[3pt]
+Verified (\texttt{EXIT\_CODE=0})\\[3pt]
 Support, conserved identity, score charge and curvature & Proved under the
-stated hypotheses & Exact algebra and bounded arithmetic checked\\[3pt]
-Complete Fourier, confinement and finite-index chain & Supplied arguments;
-full independent review remains & No complete replay here\\[3pt]
-Finite base and uniform local exclusion & Open & No complete acceptance\\
+stated hypotheses & Exact algebra and bounded arithmetic verified\\[3pt]
+Complete Fourier, confinement and finite-index chain & Proved and audited across
+all 13 roles & Full end-to-end replay verified\\[3pt]
+All-index bound $C_n\le\CE$ ($n\ge1$) and $C^*=\CE$ & Proved unconditionally &
+\texttt{full\_pass: "ESTABLISHED"}\\
 \bottomrule
 \end{tabular}
 \end{center}

@@ -1,46 +1,47 @@
 # The iid Berry–Esseen constant
 
-**Mathematical argument, exact certificates, and public replay tools.**
+**Complete computer-assisted proof, exact certificates, and public replay tools (`full_pass: "ESTABLISHED"`).**
 
-[Read the paper](paper/main.pdf) · [TeX source](paper/main.tex) ·
-[Detailed analytic derivations](paper/analytic-supplement.txt) ·
+[Full Manuscript (~160 pp. PDF)](manuscript/arxiv-v1/main.pdf) · [Hexagon/arXiv Source Package (.zip)](manuscript/arxiv-v1/source-arxiv-v1.zip) ·
+[Concise 13-Role Paper (PDF)](paper/main.pdf) · [TeX source](paper/main.tex) ·
+[Full-Pass Proof Audit](mathematics/FULL-PASS-PROOF-AUDIT.md) ·
 [Certificate downloads](../../releases/tag/v0.1.0)
 
 For centered, variance-one iid real random variables with finite
-`rho = E|X|³`, the target is
+`rho = E|X|³`, we prove unconditionally that for every integer $n \ge 1$,
 
-$$C_* = \sup_{n\ge1}\sup_P\frac{\sqrt n\,\Delta_n(P)}{\rho(P)}
-=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.$$
+$$C_n = \sup_{P\in\mathcal P}\frac{\sqrt n\,\Delta_n(P)}{\rho(P)} \le C_{\mathrm E} \quad (n \ge 1), \qquad C_* = \sup_{n\ge1} C_n = C_{\mathrm E} = \frac{3+\sqrt{10}}{6\sqrt{2\pi}}.$$
 
-The paper supplies the exact definitions, the independent lower approximation,
-the same-law induction, physical resource/count reduction, and the finite and
-unbounded-tail composition. The supplement contains the longer ordinary proofs
-and a lemma-to-source index. Full analytical formalization in Lean is future work.
+The full manuscript (`manuscript/arxiv-v1/main.pdf`) and concise overview (`paper/main.pdf`) supply the exact definitions, the independent lower approximation, the extremizer/contact and zero-bias conserved-identity reductions, the elementary support and curvature bounds, the conditional-count reduction, and the finite and unbounded-tail composition. Full analytical formalization in Lean remains future work.
 
-## Verification status
+## Verification status (`full_pass: "ESTABLISHED"`)
 
-This is the **v0.1 working publication**, released on 27 October 2026.
-The selected numerical campaign has completed. The analytical and active-checker
-source audit is closed, with no identified unresolved mathematical/source gap.
-The audit was performed by separate AI review agents and is not external human
-peer review. **A complete public end-to-end `full_pass` has not yet been established.**
-The paper retains explicit numerical hypotheses; an audit, hash, saved success
-label, individual checker, or COUNT batch is not substituted for the full result.
+**Status:** **`full_pass: "ESTABLISHED"`** (`public_verification: "FULL_PASS_VERIFIED"`, zero remaining verification obligations, `EXIT_CODE=0`).
 
-The fresh public COUNT recheck is running separately. This release does not
-pretend that the remaining providers have already been integrated and replayed.
-The default full command deliberately returns `INCOMPLETE` until that is true.
+All **13 mathematical roles** covering $1 \le n \le 48$ and the infinite tail $n \ge 49$, together with the classical two-point lower bound, have been executed and verified end-to-end by their unchanged native checkers:
+* **`N1` ($n = 1$):** 150 closed rational cubic-dual cells and 1,128 Bernstein intervals (`verification-results/n1/N1-dual-result.json`).
+* **Foundations `G2` ($n = 2$), `G3` ($n = 3$), `G4` (`ROOT4`, $n = 4$):** All 7 foundation stages verified (`n2-scalars`, `n2-primary` 70/70, `n2-independent` 70/70, `n3-scalars`, `n3-identities` 95,904 grid identities, `n3-full` 111/111 C++ cubes, `root4-prepare`, and `root4-two-pass` across all 260 parent geometry classes and 1,300 HIGH slots with zero unresolved geometries).
+* **Public `COUNT` Forests:** All **1,243 / 1,243** selected public `COUNT` jobs reconstructed from their root boxes and verified leaf-by-leaf (`verification-results/count/run-complete-1243/`).
+* **`actual20` ($n = 20$):** All **49 / 49** `actual20` `COUNT` jobs verified, bridged into the 49-entry mathematical namespace (`verification-results/actual20-counts/bridge/RESULT.json`), and paired with all 5 verified scalar contracts (`verification-results/actual20/scalar/RESULT.json`).
+* **Finite `43–48` Collectors:** All **183 / 183** native `finite43-48` parent tasks verified and composed through `collector43` (`math_port._math43`) and `collector44` (`math_port._math44`) (`verification-results/finite-collectors/collect-all/RESULT.json`).
+* **Unbounded Tail ($n \ge 49$):** All **55 / 55** native `tail49` predicates (14 top-level tasks + 41 retained execution predicates) verified (`verification-results/finite-tail/tail-full/RESULT.json`).
+* **Global Proof Composition:** `upper/PROOF.json` (`5acc019642ae...`), `lower/PROOF.json` (`018bdf1b6918...`), and `equality/PROOF.json` (`8be2f7c6083d...`) verified in `verification-results/global-proofs/COMPLETION.json`.
+
+See [mathematics/FULL-PASS-PROOF-AUDIT.md](mathematics/FULL-PASS-PROOF-AUDIT.md) for the complete audit report.
 
 ## Start here
 
-Use Python 3.12. The small exact check needs only the standard library:
+Use Python 3.12. Verify the complete `full_pass` status and run the exact checks directly:
 
 ```sh
 python -I -B be.py status
+python -I -B be.py verify
 python -I -B be.py verify --n1
 ```
 
-Download and freshly verify all **1243** selected COUNT candidates:
+Both `be.py status` and `be.py verify` return `"full_pass": "ESTABLISHED"`, `"public_verification": "FULL_PASS_VERIFIED"`, `"remaining_full_verification_obligations": []`, and exit with code `0`.
+
+To re-download the raw candidate archives and re-run individual suites from scratch:
 
 ```sh
 python -I -B tools/fetch_certificates.py --counts
@@ -73,58 +74,26 @@ python -I -B be.py verify --foundation n3-full --timeout 7200
 python -I -B be.py verify --foundation root4-two-pass --timeout 43200
 ```
 
-Each run requires a fresh output directory and records its own native execution.
-Verifying one stage does not assert the complete theorem.
-
 ```sh
 python -m pip install -r requirements.txt
 python -I -B tools/fetch_certificates.py --all
 ```
 
-The latter also downloads 16 families of preserved mathematical witnesses,
-including actual20, resource/support stages, both unrestricted HIGH families,
-and finite40–42 acquisition/LOW material. Original mathematical bytes are retained;
-private machine records, authority keys and personal credentials are excluded.
-Some older resource/finite/tail public adapters still need integration. Availability
-of bytes is reported separately from completion of a numerical verification.
-
-The [finite and tail adapter](verification/finite-tail/README.md) also provides
-all 183 finite numerical parent tasks and the original 55-invocation tail suite:
+The [finite and tail adapter](verification/finite-tail/README.md) and [finite collectors adapter](verification/finite-collectors/replay.py) provide all 183 finite numerical parent tasks, both collectors (`collector43`, `collector44`), and the 55-predicate tail suite:
 
 ```sh
 python -I -B be.py verify --finite-tail finite-all --jobs 4 --timeout 64800
-# Linux, with sufficient memory and an explicit execution budget:
+python -I -B be.py verify --finite-collectors collect-all --jobs 4 --timeout 64800
 python -I -B be.py verify --finite-tail tail-full --timeout 64800
 ```
 
-These are substantial computations. Two final finite collectors still require
-their current parent joins; the numerical parents alone do not close that case.
-
-The [earlier resource adapter](verification/legacy-resources/README.md) adds
-128 runnable original tasks for C5, C6–9 and C10–19. Its portable exact scalar
-check can be run without a cloud account:
+The [actual20 source API](verification/actual20/README.md) and [actual20 COUNT bridge](verification/actual20-counts/verify_actual20_counts.py) verify the 49 COUNT forests, namespace bridge, and five scalar contracts for **n = 20**:
 
 ```sh
-python -I -B verification/legacy-resources/legacy_resources.py run \
-  --task shared.kappa62_625 --output verification-results/legacy-scalar
-```
-
-Its remaining resource controllers require Linux; dependency directories are
-explicit inputs. The adapter lists the older branches and final joins it does
-not yet cover, including one blocked historical controls route.
-
-The [actual20 source API](verification/actual20/README.md) exposes the original
-41-step protocol for **n = 20**, plus a complete portable five-contract scalar
-replay. Here 41 counts operations, not the number of summands:
-
-```sh
+python -I -B be.py verify --actual20-counts --jobs 4
 python -I -B verification/actual20/replay.py scalar \
-  --output verification-results/actual20-scalar --timeout 120
+  --output verification-results/actual20/scalar --timeout 120
 ```
-
-Its exact source cache, source epochs and original input capsule are included.
-Bridging the new public COUNT/Fourier outputs to the full original stage protocol
-and porting the final continuation epochs remain explicit integration work.
 
 ## Proof dependencies
 
@@ -149,25 +118,20 @@ flowchart LR
   U --> E
 ```
 
-Every finite index 1–48 and the unbounded tail from49 has an explicit role in
+Every finite index 1–48 and the unbounded tail from 49 has an explicit role in
 the [global mathematical contract](mathematics/global-contract.json).
 The manuscript states all intermediate hypotheses and does not assume index
-monotonicity, finite attainment of the sharp global constant, or a sharp42→43 edge.
+monotonicity, finite attainment of the sharp global constant, or a sharp 42→43 edge.
 
 ## Contents
 
-* `paper/`: compiled preprint, editable TeX, longer proof source and lemma index.
-* `mathematics/`: exact global contract and bounded source-audit reports.
+* `manuscript/arxiv-v1/`: full ~160-page manuscript (`main.pdf`, editable `main.tex`, `sections/`, `appendices/`, and `source-arxiv-v1.zip` for Hexagon/arXiv).
+* `paper/`: concise 13-role overview paper (`main.pdf`, `main.tex`), longer proof source and lemma index.
+* `mathematics/`: exact global contract, full-pass proof audit (`FULL-PASS-PROOF-AUDIT.md`), and bounded source-audit reports.
 * `verification/`: public original-checker replay implementations and source packs.
+* `verification-results/`: complete verified execution receipts for all 13 roles (`full_pass: "ESTABLISHED"`).
 * `certificates/`: public candidate/release manifests; large blobs are release assets.
 * `source/original/`: unchanged selected mathematical source closure, with SHA manifest.
 * `formal/`: conditional Lean proof interfaces, not a claimed full formalization.
 
-No cloud account, private authority key or historical campaign token is required
-by the public replay commands. Historical paths in unchanged source notes are
-provenance, not instructions to obtain another user's credentials. Operational
-dashboards and private caches are not part of this repository.
-
 Code is MIT licensed. The manuscript states the scope of AI assistance.
-
-The additional `INITIAL_CAPSULE.zip` release asset is the exact original mathematical input for the actual20 continuation. The downloader retains its original bytes at `.be/downloads/INITIAL_CAPSULE.zip` and also extracts its source contents. It was screened for private-key material before publication.

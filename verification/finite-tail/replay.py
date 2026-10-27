@@ -105,7 +105,11 @@ def run(args):
         need(1<=args.jobs<=64,'Bounded worker count');deadline=time.monotonic()+args.seconds;data=native.manifest();results=[];rows={}
         def one(row):
             remaining=int(deadline-time.monotonic());need(remaining>0,'Global fresh-run deadline')
-            task=output/'tasks'/row['task_id'];r=finite_one(native,row['task_id'],task,campaign,profile,min(args.timeout,remaining),rows if Path(row.get('script','')).name=='bind_low42.py'else None)
+            selected=None
+            if Path(row.get('script','')).name=='bind_low42.py':
+                family='central42_v2'if'central42_v2'in row['cwd']else'left42_final'
+                selected={r['task_id']:rows[r['task_id']]for r in data['low_rows']if r['family']==family}
+            task=output/'tasks'/row['task_id'];r=finite_one(native,row['task_id'],task,campaign,profile,min(args.timeout,remaining),selected)
             print('COMPLETED '+row['task_id'],flush=True);return r
         with ThreadPoolExecutor(max_workers=args.jobs)as pool:
             for r in pool.map(one,data['low_rows']):results.append(r);rows[r['task_id']]=r['output']

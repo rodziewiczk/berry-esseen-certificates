@@ -4,7 +4,7 @@ __pycache__/
 .be/
 certificates/count/blobs/
 certificates/resources/
-verification-results/
+verification-results/foundations/root4-two-pass/native/capsule/
 *.aux
 *.log
 *.out

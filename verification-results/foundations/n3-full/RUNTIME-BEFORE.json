@@ -1,0 +1,24 @@
+{
+  "compiler": {
+    "executable_sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+    "original_argv": [
+      "g++",
+      "-O2",
+      "-std=c++17",
+      "check_cube.cpp",
+      "-o",
+      "FRESH_BINARY"
+    ],
+    "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+  "hermetic_runtime_claimed": false,
+  "legacy_authentication_required": false,
+  "output_validator_sha256": "79f7e33bb31b16b71a0ed66825a627a218afe12d7e2f87b3c2398c9d0540ba3e",
+  "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "schema": "public-current-foundation-runtime/1",
+  "scientific_packages_required": false,
+  "source_adapter_sha256": "85d9e05ebf6096d0b5e1f256178902a77d4fc06f48ca131e6a34c6fd43ad671f",
+  "source_manifest_sha256": "31eba103d1d5c8d1b31c9437266eca5b07bbe6290eeb62238af19fa715a85e91"
+}

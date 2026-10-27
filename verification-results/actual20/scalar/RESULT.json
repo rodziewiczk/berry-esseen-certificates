@@ -1,0 +1,62 @@
+{
+  "actual41_completed": false,
+  "argv": [
+    "python3.12",
+    "-I",
+    "-B",
+    "verification\\actual20\\path_abi.py",
+    "work\\public-actual20-root-smoke-v1\\scalar-task\\capsule\\work\\cutoff20_20261016\\root\\coupled_noise_v1\\CURRENT_PARENT.py"
+  ],
+  "full_original_reader": {
+    "action": "coupled_scalar_parent",
+    "conditional_scalar_cases": 5,
+    "controls": {
+      "actual_laws": 144,
+      "excluded_unsupported_collision_domain": 1,
+      "malformed_domains": 5,
+      "negative_f_cases": 52,
+      "rare_distant_cases": 48
+    },
+    "global_proof_accepted": false,
+    "historical_graph_acquired": false,
+    "historical_graph_edges": 492,
+    "original_math_and_control_AST_preserved": true,
+    "output_sha256": "8819be6942d98ae67630a2cc7f040daf2370d09ba12bb1e884c8d8aae28c613e",
+    "whole_conditional_contracts_checked": true
+  },
+  "full_pass": false,
+  "profile": {
+    "executable": "python3.12",
+    "executable_sha256": "737a7e3b71e3578f8432acc7dd88c452e593622c544bc13da4789d69c63da5ae",
+    "fresh_observation": true,
+    "full_pass": false,
+    "legacy_runtime_profile_required": false,
+    "numerical_only": true,
+    "optimize": 0,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]"
+  },
+  "returncode": 0,
+  "schema": "public-actual41-scalar-numerical-replay/1",
+  "scope": "Five exact conditional scalar contracts only",
+  "seconds": 10.0,
+  "source_epoch": {
+    "files_sha256": {
+      "work/cutoff20_20261016/root/coupled_noise_v1/CURRENT_PARENT.py": "e24cf2a968185644a8724638f733d73a27a28774f9316a923bb7cb9ddc63c61c",
+      "work/cutoff20_20261016/root/coupled_noise_v1/CURRENT_PARENT_REQUEST.json": "cb7856835bb63b360375e811a255e74edec110628ef444bd0fe87e4a49c3fd42"
+    },
+    "historical_execution_relabelled": false,
+    "mathematical_source_body_changed": false,
+    "original_controls": {
+      "actual_laws": 144,
+      "excluded_unsupported_collision_domain": 1,
+      "malformed_domains": 5,
+      "negative_f_cases": 52,
+      "rare_distant_cases": 48
+    },
+    "schema": "EXPLICIT_CURRENT_CONDITIONAL_COUPLED_PARENT_SOURCE_EPOCH_V1"
+  },
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a2302af1d4f8176005b1ac9a16f4aa4e2e458102195573c7321fda6dae5db9e9",
+  "upstream_numerical_parents_acquired": false
+}

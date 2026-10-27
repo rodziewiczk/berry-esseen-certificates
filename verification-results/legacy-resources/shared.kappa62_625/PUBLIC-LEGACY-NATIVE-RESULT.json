@@ -1,0 +1,33 @@
+{
+  "adapter_sha256": "e1f1bd9e41bdb7a81de8ce80b98a384bc405cd5774d3fe39329dff3d9dd5a84d",
+  "all_index_full_pass": false,
+  "fresh_native_execution_completed": true,
+  "global_theorem_accepted": false,
+  "historical_authority_used": false,
+  "original_complete_controller_result": {
+    "actual_returncode": 0,
+    "stdout_sha256": "64a7b2bcc7fba607bbe8984dd6b30a9af1e239f1f0f03502b452a2687fcac9b7",
+    "summary": {
+      "additional_identity_checks": 324,
+      "bernstein_coefficients": 1134,
+      "cells": 81,
+      "certificate_domain": [
+        "0",
+        "625/124"
+      ],
+      "certificate_sha256": "66dec3042e34e76d312b1aeebfb7fcef52070edf0d39e919ac3e2cda17695ab2",
+      "checked_sha256": "64a7b2bcc7fba607bbe8984dd6b30a9af1e239f1f0f03502b452a2687fcac9b7",
+      "global_domain": "all real x",
+      "kappa": "62/625",
+      "negative_controls": 21,
+      "scalar_fact": "cos(x)<=1-x^2/2+(62/625)*abs(x)^3; associated nonnegative convex decreasing splice on z>=0"
+    },
+    "transport": "public ordinary subprocess; no historical supervisor identity claimed",
+    "whole_original_scalar_math_verified": true
+  },
+  "same_law_parent_facts_acquired": false,
+  "saved_pass_reused": false,
+  "schema": "be.public-fresh-legacy-resource-execution/1",
+  "source_package_sha256": "9108bb1e1c45910c1f83c41ec4d9246af2b8a91563aa2f7894dd32e73b5cd148",
+  "task_id": "shared.kappa62_625"
+}

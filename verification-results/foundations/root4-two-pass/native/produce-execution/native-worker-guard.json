@@ -1,0 +1,27 @@
+{
+  "address_space_bytes": 268435456,
+  "audit_architecture": 3221225534,
+  "birth_tick": 790160,
+  "cpu_seconds": 43200,
+  "denied_syscalls": {
+    "clone": 56,
+    "clone3": 435,
+    "execve": 59,
+    "execveat": 322,
+    "fork": 57,
+    "setns": 308,
+    "setpgid": 109,
+    "setrlimit": 160,
+    "setsid": 112,
+    "unshare": 272,
+    "vfork": 58
+  },
+  "filter_instructions_sha256": "664c8b4182d8096bb08e777e1dbd7189ccb30d2c522c864363c883653f63d25b",
+  "machine": "x86_64",
+  "no_new_privileges": true,
+  "pid": 266411,
+  "prlimit64_query_only": 302,
+  "script_sha256": "5b4d23da8caa7f919c24ba4bba4f8b71735aead43f99fffc733186f6a04daa7e",
+  "seccomp_mode": 2,
+  "x32_or_unknown_syscall_ABI_killed": true
+}

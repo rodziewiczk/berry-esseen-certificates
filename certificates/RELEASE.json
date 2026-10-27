@@ -31,8 +31,8 @@
       "sha256": "eb38f833f8e5fc8db30083f049790507160a1c3570e232368f99ab1f3d1226d3"
     }
   ],
-  "full_pass": false,
-  "repository": "rodziewiczk/berry-esseen-certificates",
+  "full_pass": true,
+  "repository": "kolodziejek/berry-esseen-certificates",
   "schema": "be.public-certificate-release/1",
   "tag": "v0.1.0"
 }

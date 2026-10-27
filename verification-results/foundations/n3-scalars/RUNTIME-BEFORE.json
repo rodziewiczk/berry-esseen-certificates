@@ -1,0 +1,12 @@
+{
+  "executable_sha256": "737a7e3b71e3578f8432acc7dd88c452e593622c544bc13da4789d69c63da5ae",
+  "hermetic_runtime_claimed": false,
+  "legacy_authentication_required": false,
+  "output_validator_sha256": "79f7e33bb31b16b71a0ed66825a627a218afe12d7e2f87b3c2398c9d0540ba3e",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+  "schema": "public-current-foundation-runtime/1",
+  "scientific_packages_required": false,
+  "source_adapter_sha256": "85d9e05ebf6096d0b5e1f256178902a77d4fc06f48ca131e6a34c6fd43ad671f",
+  "source_manifest_sha256": "31eba103d1d5c8d1b31c9437266eca5b07bbe6290eeb62238af19fa715a85e91"
+}

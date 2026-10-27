@@ -1,0 +1,2967 @@
+{
+  "schema": "public-finite-tail-tasks/1",
+  "tasks": [
+    {
+      "task_id": "61.native.44.entry.accept4044_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/accept_barrier40_44.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.accept41_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/accept_barrier41.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.accept4248_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/accept_barrier42_48.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.support4044_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support40_44.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.support41_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support41.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.support4248_01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support42_48.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.local42_initial_support01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/check_local42_support.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.initial42_accept02",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_initial42.py",
+      "arguments": [
+        "initial42_candidate.json"
+      ],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.central42_accept02",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_central42_acquisition.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.central42_confinement_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_central42_confinement_profiles.py",
+      "arguments": [
+        "confinement"
+      ],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.central42_profiles_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_central42_confinement_profiles.py",
+      "arguments": [
+        "profiles"
+      ],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.central42_interface01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/check_central42_interface.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.central42_profile_interface01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/check_central42_profile_interface.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.acquisition.upper42_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_upper42.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.central42_v2_tiny_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/accept_tiny_central42.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.central42_v2_mid_phase_accept02",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/accept_mid42_phase_v2.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.central42_low_fresh_replay01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/bind_low42.py",
+      "arguments": [
+        "--replay"
+      ],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.left42_tiny_actual_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_tiny_final",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_tiny_final/accept_tiny42_actual.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.entry.harmonic_interpolation01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/local_audit",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/local_audit/check_harmonic_interpolation.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.left42_source_bind01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/bind_source42.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.left42_mid_exact01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/accept_mid42.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.local.left42_low_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/bind_low42.py",
+      "arguments": [
+        "--replay"
+      ],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.package_audit.left42_accept02",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact/accept_acquisition.py",
+      "arguments": [],
+      "stdout_rule_kind": "exact_terminal",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.package_audit.left42_confinement_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_confinement",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_confinement/accept_confinement.py",
+      "arguments": [],
+      "stdout_rule_kind": "exact_terminal",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.44.package_audit.left42_profiles_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_confinement",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_confinement/accept_profiles.py",
+      "arguments": [],
+      "stdout_rule_kind": "exact_terminal",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.anchor_support01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support41_b048.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.anchor_accept01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/accept_barrier41_b048.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.initial_support01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/check_support42_n42.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.scalar01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule",
+      "script": "work/toward40_20261007/audit43/capsule/check_cutoff43_composition.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.left_fixed01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact",
+      "script": "work/toward40_20261007/audit43/accept_left43.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "task_id": "61.native.43.central_fixed01",
+      "kind": "finite-native",
+      "runnable": true,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition",
+      "script": "work/toward40_20261007/audit43/accept_central43.py",
+      "arguments": [],
+      "stdout_rule_kind": "whole_typed_final_json",
+      "full_statement": "Original whole task definition/stdout rule and source closure in pinned finite61 MANIFEST"
+    },
+    {
+      "H_cells": 32,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_00_minus.json",
+      "index": 0,
+      "kind": "low-row",
+      "outer_phase_cells": 16,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.00.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_00_plus.json",
+      "index": 0,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.00.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_01_minus.json",
+      "index": 1,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.01.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_01_plus.json",
+      "index": 1,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.01.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_02_minus.json",
+      "index": 2,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.02.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_02_plus.json",
+      "index": 2,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.02.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_03_minus.json",
+      "index": 3,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.03.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_03_plus.json",
+      "index": 3,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.03.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_04_minus.json",
+      "index": 4,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.04.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_04_plus.json",
+      "index": 4,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.04.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_05_minus.json",
+      "index": 5,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.05.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_05_plus.json",
+      "index": 5,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.05.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_06_minus.json",
+      "index": 6,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.06.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_06_plus.json",
+      "index": 6,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.06.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_07_minus.json",
+      "index": 7,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.07.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_07_plus.json",
+      "index": 7,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.07.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_08_minus.json",
+      "index": 8,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.08.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_08_plus.json",
+      "index": 8,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.08.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_09_minus.json",
+      "index": 9,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.09.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_09_plus.json",
+      "index": 9,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.09.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_10_minus.json",
+      "index": 10,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.10.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_10_plus.json",
+      "index": 10,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.10.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_11_minus.json",
+      "index": 11,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.11.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_11_plus.json",
+      "index": 11,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.11.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_12_minus.json",
+      "index": 12,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.12.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_12_plus.json",
+      "index": 12,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.12.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_13_minus.json",
+      "index": 13,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.13.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_13_plus.json",
+      "index": 13,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.13.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_14_minus.json",
+      "index": 14,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.14.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_14_plus.json",
+      "index": 14,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.14.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_15_minus.json",
+      "index": 15,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.15.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_15_plus.json",
+      "index": 15,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.15.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_16_minus.json",
+      "index": 16,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.16.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_16_plus.json",
+      "index": 16,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.16.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_17_minus.json",
+      "index": 17,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.17.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_17_plus.json",
+      "index": 17,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.17.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_18_minus.json",
+      "index": 18,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.18.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_18_plus.json",
+      "index": 18,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.18.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_19_minus.json",
+      "index": 19,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.19.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_19_plus.json",
+      "index": 19,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.19.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_20_minus.json",
+      "index": 20,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.20.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_20_plus.json",
+      "index": 20,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.20.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_21_minus.json",
+      "index": 21,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.21.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_21_plus.json",
+      "index": 21,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.21.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_22_minus.json",
+      "index": 22,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.22.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_22_plus.json",
+      "index": 22,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.22.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_23_minus.json",
+      "index": 23,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.23.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_23_plus.json",
+      "index": 23,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.23.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_24_minus.json",
+      "index": 24,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.24.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_24_plus.json",
+      "index": 24,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.24.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_25_minus.json",
+      "index": 25,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.25.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_25_plus.json",
+      "index": 25,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.25.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_26_minus.json",
+      "index": 26,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.26.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_26_plus.json",
+      "index": 26,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.26.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_27_minus.json",
+      "index": 27,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.27.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_27_plus.json",
+      "index": 27,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.27.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_28_minus.json",
+      "index": 28,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.28.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_28_plus.json",
+      "index": 28,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.28.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_29_minus.json",
+      "index": 29,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.29.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_29_plus.json",
+      "index": 29,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.29.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_30_minus.json",
+      "index": 30,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.30.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_30_plus.json",
+      "index": 30,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.30.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_31_minus.json",
+      "index": 31,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.31.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_31_plus.json",
+      "index": 31,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.31.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_32_minus.json",
+      "index": 32,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.32.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_32_plus.json",
+      "index": 32,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.32.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_33_minus.json",
+      "index": 33,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.33.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_33_plus.json",
+      "index": 33,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.33.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_34_minus.json",
+      "index": 34,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.34.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_34_plus.json",
+      "index": 34,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.34.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_35_minus.json",
+      "index": 35,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.35.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_35_plus.json",
+      "index": 35,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.35.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_36_minus.json",
+      "index": 36,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.36.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_36_plus.json",
+      "index": 36,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.36.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_37_minus.json",
+      "index": 37,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.37.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_37_plus.json",
+      "index": 37,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.37.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_38_minus.json",
+      "index": 38,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": -1,
+      "task_id": "61.low.central42_v2.38.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 16,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2",
+      "family": "central42_v2",
+      "file": "row_38_plus.json",
+      "index": 38,
+      "kind": "low-row",
+      "outer_phase_cells": 8,
+      "sign": 1,
+      "task_id": "61.low.central42_v2.38.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_08_minus.json",
+      "index": 8,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.08.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_08_plus.json",
+      "index": 8,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.08.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_09_minus.json",
+      "index": 9,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.09.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_09_plus.json",
+      "index": 9,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.09.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_10_minus.json",
+      "index": 10,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.10.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_10_plus.json",
+      "index": 10,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.10.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_11_minus.json",
+      "index": 11,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.11.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_11_plus.json",
+      "index": 11,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.11.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_12_minus.json",
+      "index": 12,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.12.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_12_plus.json",
+      "index": 12,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.12.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_13_minus.json",
+      "index": 13,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.13.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_13_plus.json",
+      "index": 13,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.13.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_14_minus.json",
+      "index": 14,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.14.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_14_plus.json",
+      "index": 14,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.14.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_15_minus.json",
+      "index": 15,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.15.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_15_plus.json",
+      "index": 15,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.15.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_16_minus.json",
+      "index": 16,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.16.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_16_plus.json",
+      "index": 16,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.16.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_17_minus.json",
+      "index": 17,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.17.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_17_plus.json",
+      "index": 17,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.17.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_18_minus.json",
+      "index": 18,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.18.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_18_plus.json",
+      "index": 18,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.18.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_19_minus.json",
+      "index": 19,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.19.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_19_plus.json",
+      "index": 19,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.19.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_20_minus.json",
+      "index": 20,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.20.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_20_plus.json",
+      "index": 20,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.20.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_21_minus.json",
+      "index": 21,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.21.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_21_plus.json",
+      "index": 21,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.21.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_22_minus.json",
+      "index": 22,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.22.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_22_plus.json",
+      "index": 22,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.22.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_23_minus.json",
+      "index": 23,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.23.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_23_plus.json",
+      "index": 23,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.23.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_24_minus.json",
+      "index": 24,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.24.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_24_plus.json",
+      "index": 24,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.24.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_25_minus.json",
+      "index": 25,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.25.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_25_plus.json",
+      "index": 25,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.25.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_26_minus.json",
+      "index": 26,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.26.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_26_plus.json",
+      "index": 26,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.26.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_27_minus.json",
+      "index": 27,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.27.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_27_plus.json",
+      "index": 27,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.27.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_28_minus.json",
+      "index": 28,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.28.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_28_plus.json",
+      "index": 28,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.28.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_29_minus.json",
+      "index": 29,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.29.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_29_plus.json",
+      "index": 29,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.29.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_30_minus.json",
+      "index": 30,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.30.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_30_plus.json",
+      "index": 30,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.30.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_31_minus.json",
+      "index": 31,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.31.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_31_plus.json",
+      "index": 31,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.31.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_32_minus.json",
+      "index": 32,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.32.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_32_plus.json",
+      "index": 32,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.32.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_33_minus.json",
+      "index": 33,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.33.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_33_plus.json",
+      "index": 33,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.33.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_34_minus.json",
+      "index": 34,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.34.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_34_plus.json",
+      "index": 34,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.34.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_35_minus.json",
+      "index": 35,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.35.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_35_plus.json",
+      "index": 35,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.35.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_36_minus.json",
+      "index": 36,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.36.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_36_plus.json",
+      "index": 36,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.36.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_37_minus.json",
+      "index": 37,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.37.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_37_plus.json",
+      "index": 37,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.37.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_38_minus.json",
+      "index": 38,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.38.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_38_plus.json",
+      "index": 38,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.38.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_39_minus.json",
+      "index": 39,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.39.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_39_plus.json",
+      "index": 39,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.39.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_40_minus.json",
+      "index": 40,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.40.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_40_plus.json",
+      "index": 40,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.40.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_41_minus.json",
+      "index": 41,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.41.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_41_plus.json",
+      "index": 41,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.41.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_42_minus.json",
+      "index": 42,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.42.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_42_plus.json",
+      "index": 42,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.42.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_43_minus.json",
+      "index": 43,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.43.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_43_plus.json",
+      "index": 43,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.43.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_44_minus.json",
+      "index": 44,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": -1,
+      "task_id": "61.low.left42_final.44.minus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "H_cells": 8,
+      "cwd": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final",
+      "family": "left42_final",
+      "file": "row_44_plus.json",
+      "index": 44,
+      "kind": "low-row",
+      "outer_phase_cells": 4,
+      "sign": 1,
+      "task_id": "61.low.left42_final.44.plus",
+      "runnable": true,
+      "numerical_scope": "fresh producer only; matching original full binder replay remains required"
+    },
+    {
+      "allowed_final_projection": "finite43..48 plus separately supplied independent49+; do not claim n>=43 solely from old retained integrity",
+      "kind": "collector",
+      "required_adaptation": "replace historical capture/sourceepoch binding with exact fresh31action and fresh shared12 receipt binding; retain every original scalar/probability/phase/dominance check and all negative controls",
+      "section": "61C",
+      "source_member": "cutoff25_20261011/BE_cutoff35_release_20261007/work/cutoff40_release_20261007/work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/cutoff44/check_cutoff44_composition.py",
+      "source_sha256": "9ac3c0f9268e428080b00f983403761a531743537adb03ffb1e1e83b18a73fb9",
+      "status": "BLOCKED_BY_CURRENT_PARENT_AND_METADATA_EPOCH_ADAPTER",
+      "task_id": "61.collect.cutoff44",
+      "runnable": false,
+      "remaining": "Fresh31+shared12 source/capture epoch adaptation; never load historical collector success"
+    },
+    {
+      "allowed_final_projection": "finite43..48 plus separately supplied independent49+; do not claim n>=43 solely from old retained integrity",
+      "kind": "collector",
+      "required_adaptation": "replace historical capture/sourceepoch binding with exact fresh31action and fresh shared12 receipt binding; retain every original scalar/probability/phase/dominance check and all negative controls",
+      "section": "61C",
+      "source_member": "cutoff25_20261011/BE_cutoff35_release_20261007/work/cutoff40_release_20261007/work/toward40_20261007/audit43/accept_cutoff43_join.py",
+      "source_sha256": "34411408c7fa9c6d38d0212edd80c85e497b436c04f6af8a2d90bbd0a076b7ea",
+      "status": "BLOCKED_BY_CURRENT_PARENT_AND_METADATA_EPOCH_ADAPTER",
+      "task_id": "61.collect.cutoff43",
+      "runnable": false,
+      "remaining": "Fresh31+shared12 source/capture epoch adaptation; never load historical collector success"
+    },
+    {
+      "task_id": "tail.new.composition49",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "root",
+      "argv": [
+        "check_cutoff49_composition.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.support46",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "root",
+      "argv": [
+        "accept_support46.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.independent_support46",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "audit",
+      "argv": [
+        "check_support46_independent.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.independent_selectors",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "audit",
+      "argv": [
+        "check_selector_below50.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.phase_product_controls",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "audit",
+      "argv": [
+        "check_phase_price.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.new_phase_controls",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "entry",
+      "argv": [
+        "check_phase46.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.later_phase_domains",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "legacy_phase",
+      "argv": [
+        "check_later_phase_premises.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.independent_phase_scope",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "audit",
+      "argv": [
+        "portable_audit_phase_scope.py"
+      ],
+      "quick": true
+    },
+    {
+      "task_id": "tail.new.corrected_legacy_acquisition",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "legacy_phase",
+      "argv": [
+        "accept_phase_corrected_v3.py"
+      ],
+      "quick": false
+    },
+    {
+      "task_id": "tail.new.corrected_barrier46",
+      "kind": "tail-native",
+      "runnable": true,
+      "cwd": "entry",
+      "argv": [
+        "accept_barrier46_corrected.py"
+      ],
+      "quick": false
+    },
+    {
+      "task_id": "tail.mapping.finite_base",
+      "kind": "tail-mapping",
+      "runnable": true,
+      "cwd": "baseline/finite",
+      "argv": [
+        "accept_finite_base.py"
+      ]
+    },
+    {
+      "task_id": "tail.mapping.entry_schedule_mapping",
+      "kind": "tail-mapping",
+      "runnable": true,
+      "cwd": "baseline/entry",
+      "argv": [
+        "validate_schedule.py"
+      ]
+    },
+    {
+      "task_id": "tail.mapping.local_formula_mapping",
+      "kind": "tail-mapping",
+      "runnable": true,
+      "cwd": "baseline/local",
+      "argv": [
+        "check_consolidation.py"
+      ]
+    },
+    {
+      "name": "certificate_predecessor_cap",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_predecessor_score_cap.py"
+      ],
+      "source_run": "runs/below50_20260929/root_predecessor_cap02",
+      "task_id": "tail.retained.certificate_predecessor_cap",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_barrier45_support",
+      "cwd": "work/below50_20260929/structural",
+      "argv": [
+        "accept_barrier45_support.py"
+      ],
+      "source_run": "runs/below50_20260929/structural/barrier45_support_accept01",
+      "task_id": "tail.retained.certificate_barrier45_support",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_anchor45",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_signed_entry.py",
+        "anchor45_signed_proof.json"
+      ],
+      "source_run": "runs/below50_20260929/entry/anchor45_signed_accept01",
+      "task_id": "tail.retained.certificate_anchor45",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_propagation46",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_signed_entry.py",
+        "prop46_signed_proof.json"
+      ],
+      "source_run": "runs/below50_20260929/entry/prop46_signed_accept01",
+      "task_id": "tail.retained.certificate_propagation46",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_unrestricted_support384",
+      "cwd": "work/below50_20260929/structural",
+      "argv": [
+        "accept_unrestricted_cover50.py"
+      ],
+      "source_run": "runs/below50_20260929/structural/unrestricted_cover_accept03",
+      "task_id": "tail.retained.certificate_unrestricted_support384",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_high_tail",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_high_tail.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/high_tail_accept01",
+      "task_id": "tail.retained.certificate_high_tail",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_high_window",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_high_window50.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/high_window_accept01",
+      "task_id": "tail.retained.certificate_high_window",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_initial47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_initial47.py",
+        "initial47_proof.json"
+      ],
+      "source_run": "runs/below50_20260929/entry/initial47_accept01",
+      "task_id": "tail.retained.certificate_initial47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_support47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_support47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_support47_accept02",
+      "task_id": "tail.retained.certificate_central_support47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_input47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_central47.py",
+        "input"
+      ],
+      "source_run": "runs/below50_20260929/entry/central47_input_accept01",
+      "task_id": "tail.retained.certificate_central_input47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_strip47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_panel_exterior47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_panel_exterior_accept01",
+      "task_id": "tail.retained.certificate_central_strip47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_original_confinement47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_confinement47.py"
+      ],
+      "source_run": "runs/below50_20260929/local/confinement47_accept01",
+      "task_id": "tail.retained.certificate_original_confinement47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_confined_feedback47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_confined_feedback47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/confined_feedback47_accept01",
+      "task_id": "tail.retained.certificate_confined_feedback47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_sperner47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_sperner47.py"
+      ],
+      "source_run": "runs/below50_20260929/local/sperner47_accept01",
+      "task_id": "tail.retained.certificate_sperner47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_sperner_feedback47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_sperner_feedback47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/sperner_feedback47_accept01",
+      "task_id": "tail.retained.certificate_sperner_feedback47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_support47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_left_support47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/left_support47_accept01",
+      "task_id": "tail.retained.certificate_left_support47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_input47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_left_input47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/left_input47_accept01",
+      "task_id": "tail.retained.certificate_left_input47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_signed_resource47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_signed_resource47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/signed_resource47_accept01",
+      "task_id": "tail.retained.certificate_signed_resource47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_radius270",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_left_radius270_47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/left_radius270_47_accept01",
+      "task_id": "tail.retained.certificate_left_radius270",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left270_input47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_left270_input47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/left270_input47_accept01",
+      "task_id": "tail.retained.certificate_left270_input47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_strip47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_left_strip47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_left_strip47_accept01",
+      "task_id": "tail.retained.certificate_left_strip47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_sperner47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_left_sperner47.py"
+      ],
+      "source_run": "runs/below50_20260929/local/left_sperner47_accept01",
+      "task_id": "tail.retained.certificate_left_sperner47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_profile47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_sperner47_profile.py"
+      ],
+      "source_run": "runs/below50_20260929/local/sperner47_profile_accept02",
+      "task_id": "tail.retained.certificate_central_profile47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_profile47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_left_sperner47_profile.py"
+      ],
+      "source_run": "runs/below50_20260929/local/left_sperner47_profile_accept01",
+      "task_id": "tail.retained.certificate_left_profile47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_tiny_wide47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_tiny47wide.py"
+      ],
+      "source_run": "runs/below50_20260929/local/tiny47wide_accept01",
+      "task_id": "tail.retained.certificate_tiny_wide47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_mid47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_mid47a.py"
+      ],
+      "source_run": "runs/below50_20260929/local/mid47a_accept01",
+      "task_id": "tail.retained.certificate_central_mid47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_mid47b",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "accept_left_mid47b.py"
+      ],
+      "source_run": "runs/below50_20260929/local/left_mid47b_accept01",
+      "task_id": "tail.retained.certificate_left_mid47b",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_low_normalization47",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "accept_low47_normalization.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/low47_normalization_accept02",
+      "task_id": "tail.retained.certificate_low_normalization47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_central_low47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_low47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_low47_accept01",
+      "task_id": "tail.retained.certificate_central_low47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_left_low47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_phase_left_low47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_phase_left_low47_accept01",
+      "task_id": "tail.retained.certificate_left_low47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "certificate_positive_left_low47",
+      "cwd": "work/below50_20260929/root",
+      "argv": [
+        "accept_positive_left_low47.py"
+      ],
+      "source_run": "runs/below50_20260929/root_positive_left_low47_accept01",
+      "task_id": "tail.retained.certificate_positive_left_low47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "coverage_local47",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "final_review/accept_local47_coverage.py"
+      ],
+      "source_run": "runs/below50_20260929/local/local47_coverage_accept01",
+      "task_id": "tail.retained.coverage_local47",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_signed_regressions",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "check_signed_regressions.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/signed_regressions02",
+      "task_id": "tail.retained.control_signed_regressions",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_gamma_actual",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "check_gamma47.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/gamma47_actual_laws02",
+      "task_id": "tail.retained.control_gamma_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_phase_low_geometry",
+      "cwd": "work/below50_20260929/entry",
+      "argv": [
+        "check_phase_low47_geometry.py"
+      ],
+      "source_run": "runs/below50_20260929/entry/phase_low47_geometry02",
+      "task_id": "tail.retained.control_phase_low_geometry",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_active_marks",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "check_active_mark_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/local/active_mark_actual01",
+      "task_id": "tail.retained.control_active_marks",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_sperner_actual",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "check_sperner_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/local/sperner_actual01",
+      "task_id": "tail.retained.control_sperner_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_shifted_quartic_actual",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "check_shifted_quartic_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/local/shifted_quartic_actual01",
+      "task_id": "tail.retained.control_shifted_quartic_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_left_mid_actual",
+      "cwd": "work/below50_20260929/local",
+      "argv": [
+        "check_left_mid47b_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/local/left_mid47b_actual01",
+      "task_id": "tail.retained.control_left_mid_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_low_lemmas_actual",
+      "cwd": "work/below50_20260929/structural",
+      "argv": [
+        "check_low47_new_lemmas_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/structural/low47_actual01",
+      "task_id": "tail.retained.control_low_lemmas_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "name": "control_signed_resource_actual",
+      "cwd": "work/below50_20260929/structural",
+      "argv": [
+        "check_signed_resource_actual.py"
+      ],
+      "source_run": "runs/below50_20260929/structural/signed_resource_actual01",
+      "task_id": "tail.retained.control_signed_resource_actual",
+      "kind": "tail-retained",
+      "runnable": true,
+      "execution": "Original run_certificates_v2.py --only NAME, including declared writer isolation"
+    },
+    {
+      "task_id": "tail.retained-all",
+      "kind": "tail-umbrella",
+      "runnable": true,
+      "children": 41,
+      "execution": "Original full retained runner without --only"
+    }
+  ],
+  "workflows": {
+    "finite-all": {
+      "numerical_tasks": 183,
+      "collectors_pending": 2
+    },
+    "tail-full": {
+      "top_level": 14,
+      "retained": 41,
+      "total_execution_predicates": 55
+    }
+  },
+  "full_pass": false
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/usr/bin/python3.12",
+    "-B",
+    "-S",
+    "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-worker4-root4-v1/runs/83d9bfe57fdf/task/capsule/n4_cpu_time_entire_root_2026_10_09.py",
+    "--replay-existing"
+  ],
+  "checkpoint_paths": [],
+  "cpu_seconds": 43230,
+  "cwd": "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-worker4-root4-v1/runs/83d9bfe57fdf/task/capsule",
+  "disk_bytes": 536870912,
+  "heartbeat_seconds": 60.0,
+  "log_bytes": 16777216,
+  "memory_bytes": 335544320,
+  "mode": "trusted_native",
+  "output_dir": "/var/tmp/be-night-3d009141cbb9474599146ee9c41fe346-worker4-root4-v1/runs/83d9bfe57fdf/task/replay-execution",
+  "sample_seconds": 0.2,
+  "supervisor_cpu_seconds": 30,
+  "supervisor_memory_bytes": 67108864,
+  "wall_seconds": 24738.0,
+  "worker_cpu_seconds": 43200,
+  "worker_memory_bytes": 268435456
+}

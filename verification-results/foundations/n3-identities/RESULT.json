@@ -1,0 +1,15 @@
+{
+  "all_law_theorem_verified": false,
+  "checked": {
+    "cells": 111,
+    "exact_grid_identities": 95904,
+    "native_log_sha256": "2bb0cda1e6d08afe9f5fe99ddda34b70bfdae31ccb253c03ffce5dbcad6f2121",
+    "orthants": 444
+  },
+  "elapsed_seconds": 52.375,
+  "full_pass": false,
+  "full_selected_numerical_stage": true,
+  "runtime_sha256": "d7b2d9843ed3507578721e47292a83135d143e7a069954e413d6c76f354925f2",
+  "schema": "public-foundation-fresh-execution/1",
+  "stage": "n3-identities"
+}

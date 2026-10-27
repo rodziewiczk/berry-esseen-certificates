@@ -1,0 +1,44 @@
+{
+  "all49_arithmetic_executed": false,
+  "files": {
+    "INTEGRATION.md": {
+      "bytes": 1531,
+      "sha256": "fa8c3c7beb16872f9786221c5b195e4fb2a071b8cd1f4ee85f42d170fe0e0314"
+    },
+    "JOBS.json": {
+      "bytes": 552015,
+      "sha256": "f950cc2f23b11ec2b16afb9d6e03ffa0dbdd206da08237f99f93fee05be2deff"
+    },
+    "README.md": {
+      "bytes": 5656,
+      "sha256": "ae5f9837f411b2f0ebbff8c84510d66d3e20157502787d508e6fae0190f8a1dc"
+    },
+    "SMOKE-RESULT.json": {
+      "bytes": 564,
+      "sha256": "3a22581db848ffc038033d5aac5f4e46a4153eae06cc54fc930a7bcfed3699a3"
+    },
+    "SOURCE-MANIFEST.json": {
+      "bytes": 452564,
+      "sha256": "f9d4bcaecc9bca4d39c0426e278707e0b1afa617198662faf9b3870a1d6fd67d"
+    },
+    "count-sources.zip": {
+      "bytes": 10671132,
+      "sha256": "961eab3cbcc1bf70d6189437fb643d38618f65f325b84680b592b40ca62e1e11"
+    },
+    "replay.py": {
+      "bytes": 10644,
+      "sha256": "2b2b64300b7fb136d176aae4b3baaa15af07732c96402ed1bf7ff5ca92c0b249"
+    },
+    "runtime.zip": {
+      "bytes": 4299167,
+      "sha256": "6ed6a96803167294340eaff9da69eb7de75abb5e1180d1947e6ba30c9d58932c"
+    },
+    "smoke_test.py": {
+      "bytes": 2657,
+      "sha256": "284f9aa7cfffde7c21b191c68024c169c0aa6ef6c5bfadd0142137d3aa8f8ecb"
+    }
+  },
+  "full_pass": false,
+  "linux_native_stage_tested": false,
+  "schema": "PUBLIC_ACTUAL20_COUNT_BRIDGE_PUBLICATION_V1"
+}

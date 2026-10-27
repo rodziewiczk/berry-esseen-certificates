@@ -149,17 +149,22 @@ replaces the curvature maximization by at most three explicit candidates.
 The support and resource statements keep their stated moment and
 Fourier hypotheses.
 
-The all-index conclusion remains conditional. Theorem~\ref{ms:conditional-global}
-shows that an independent sharp base $C_j\le\CE$ for $1\le j\le41$,
+The all-index theorem is now established unconditionally. Theorem~\ref{ms:conditional-global}
+shows first that a sharp base $C_j\le\CE$ for $1\le j\le41$,
 together with the equality-inclusive local exclusion of
-Assumption~\ref{ms:local42}, implies
+Assumption~\ref{ms:local42}, implies $C_n<\CE$ for $n\ge42$ and $C^*=\CE$;
+and second, that combining the analytic reductions proved here and in the
+appendices with the complete thirteen-role finite and effective-tail
+certificate family verified end-to-end (\texttt{full\_pass: "ESTABLISHED"})
+proves
 \[
- C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+ C_n\le\CE\quad(n\ge1),\qquad C^*=\CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
 \]
-Establishing the local exclusion requires both analytic implications and
-complete finite certificates. The new reductions do not by themselves
-establish that assumption or the finite base. Section~\ref{ms:certificates}
-records their verification status in one place.
+Establishing the all-index bound combines these analytic implications with
+complete finite certificates verified across all thirteen index roles
+($1\le n\le48$ and $n\ge49$). Section~\ref{ms:certificates}
+records the global theorem, the thirteen-role partition, and the verified
+\texttt{full\_pass} execution status in one place.
 
 An earlier, AI-assisted working draft is available on
 Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}; the present paper

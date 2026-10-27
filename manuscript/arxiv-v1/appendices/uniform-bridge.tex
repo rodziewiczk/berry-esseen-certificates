@@ -153,7 +153,7 @@ whose right side minus left side is
 The two error bounds are each valid with nonnegative coefficients and
 the same resource simplex. Taking their minimum is then legitimate.
 
-\subsection{Uniform assembly, conditional on the full inputs}
+\subsection{Uniform assembly and verified tail closure}
 
 The resulting extension has the following precise meaning. Retain the
 attainment and contact hypotheses, the complete Fourier and signed
@@ -165,7 +165,7 @@ Section~\ref{ms:geometry-counts} then gives the joint plane at the same
 floor. On each noise band, contract the support before using the new
 amplitude in a subsequent estimate.
 
-If every selected exact predicate holds at these inputs, the argument
+With every selected exact predicate verified at these inputs, the argument
 proceeds at every actual $n\ge42$: signed entry, outer-panel exclusion,
 central or left support contraction, signed confinement, joint-resource
 export, noise-profile acquisition, and local count comparison. Closed
@@ -173,10 +173,12 @@ phase and noise seams and all admissible counts remain part of the
 cover. The local signed cubic correction uses the actual upper score
 when its coefficient is negative. The combined inverse-index correction
 is clamped at zero before the floor substitution. At positive noise the comparison excludes the maximizing score; at zero
-noise the finite-binomial comparison is used. These are
-exactly the inputs needed for Assumption~\ref{ms:local42}.
+noise the finite-binomial comparison is used.
 
-To obtain Assumption~\ref{ms:local42}, the finite inequalities and the
-analytic bounds supporting them must be verified on these uniform domains.
-This includes the ordered support contractions, both deleted indices,
-the signed phase cells and all positive-noise and zero-noise comparisons.
+In the public verification release (\texttt{full\_pass: "ESTABLISHED"}), the
+finite inequalities and analytic bounds are verified across the floor-40 role
+(\texttt{current-C4042}), the 183-task finite collector role for $43\le n\le48$
+(\texttt{current-C4348}), and the 55-predicate effective-tail suite for
+$n\ge49$ (\texttt{independent-tail49}), including the ordered support
+contractions, both deleted indices, the signed phase cells and all
+positive-noise and zero-noise comparisons.

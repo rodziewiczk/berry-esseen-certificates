@@ -1,0 +1,13 @@
+{
+  "all_law_theorem_verified": false,
+  "checked": {
+    "native_log_sha256": "5df3380508126fffad1ab4ffc4b64bda10f09a014339cfcf4808c841ea3c01a8",
+    "scalar_function_completed": true
+  },
+  "elapsed_seconds": 7.030999999988126,
+  "full_pass": false,
+  "full_selected_numerical_stage": true,
+  "runtime_sha256": "d7b2d9843ed3507578721e47292a83135d143e7a069954e413d6c76f354925f2",
+  "schema": "public-foundation-fresh-execution/1",
+  "stage": "n3-scalars"
+}

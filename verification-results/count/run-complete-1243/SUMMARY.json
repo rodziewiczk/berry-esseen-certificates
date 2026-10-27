@@ -1,0 +1,18 @@
+{
+  "all_selected_jobs_passed": true,
+  "completed_at_utc": "2026-10-27T19:07:45.366313+00:00",
+  "completed_jobs": 1243,
+  "failed_jobs": 0,
+  "full_pass": false,
+  "manifest_sha256": "0431403e05326655f316991eae6fcdaa8c64bef244f055a40e1dc6958c892f5f",
+  "passed_jobs": 1243,
+  "required_jobs": 1243,
+  "saved_pass_reused": false,
+  "schema": "be.public-count-batch-verification-summary/1",
+  "sources": {
+    "local_batch_358": "work\\full-count-public-verification-v1\\run-4825a3bd576c4799a17dfed06bcc0c1f\\RESULTS.jsonl",
+    "verify7_cloud_92": "work\\cloud-campaign\\verify7-v1\\private\\COUNT-PARTIAL-v7.zip",
+    "verify9_cloud_793": "work\\cloud-campaign\\verify9-v1\\private\\COUNT-793-v9.zip",
+    "verify9_zip_sha256": "46763caa0267de8fe612d2edace540c152a2a17e4c33ca6257ca002d2c4ad24a"
+  }
+}

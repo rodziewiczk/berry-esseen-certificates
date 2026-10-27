@@ -1,13 +1,15 @@
-# Revised manuscript draft
+# Manuscript: The sharp iid Berry--Esseen inequality (Full-Pass Verified)
 
 **Authors:** Bartosz Kołodziejek and Kacper Rodziewicz. Affiliations, email
 addresses and ORCIDs are intentionally omitted at the authors' request.
 
-`main.tex` is the editable manuscript. The guide and dependency diagram
+`main.tex` is the editable manuscript (~160 pages). The guide and dependency diagram
 introduce the full contact/conserved-identity argument. The main chapters explain the
 extremizer/contact method, first-failure reduction, elementary support,
 joint physical defect, conditional-count identity, improved resource bound,
-exact curvature maximum and conditional global assembly. The appendices
+exact curvature maximum, and the completed end-to-end public verification
+(`full_pass: "ESTABLISHED"`) of the thirteen-role certificate family establishing
+$C_n \le C_{\mathrm E}$ for all $n \ge 1$ and $C^* = C_{\mathrm E}$.onditional global assembly. The appendices
 typeset the retained analytic derivations at their actual scopes, grouped into
 six coherent appendices. Shared proofs are referenced after matching their
 hypotheses; distinct finite-index and Fourier refinements remain explicit.

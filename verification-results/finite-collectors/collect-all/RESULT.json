@@ -1,0 +1,2635 @@
+{
+  "all_law_provider_populated": false,
+  "all_law_theorem_verified": false,
+  "analytic_and_same_law_contracts_discharged": false,
+  "campaign_id": "35d8f7f60a164f82bb50dd2cf6e420f4",
+  "collector43": {
+    "acquired_probability_cells": 70,
+    "cells": [
+      [
+        "0",
+        "1/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/100",
+        "1/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/50",
+        "3/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "3/100",
+        "1/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/25",
+        "1/20",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/20",
+        "3/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "3/50",
+        "7/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "7/100",
+        "2/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "2/25",
+        "9/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "9/100",
+        "1/10",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/10",
+        "11/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "11/100",
+        "3/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "3/25",
+        "13/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "13/100",
+        "7/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "7/50",
+        "3/20",
+        "excluded",
+        "initial"
+      ],
+      [
+        "3/20",
+        "4/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "4/25",
+        "17/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "17/100",
+        "9/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "9/50",
+        "19/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "19/100",
+        "1/5",
+        "excluded",
+        "initial"
+      ],
+      [
+        "1/5",
+        "21/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "21/100",
+        "11/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "11/50",
+        "23/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "23/100",
+        "6/25",
+        "excluded",
+        "lower-coarse"
+      ],
+      [
+        "6/25",
+        "1/4",
+        "excluded",
+        "lower-coarse"
+      ],
+      [
+        "1/4",
+        "13/50",
+        "excluded",
+        "lower-coarse"
+      ],
+      [
+        "13/50",
+        "27/100",
+        "excluded",
+        "lower-coarse"
+      ],
+      [
+        "27/100",
+        "34/125",
+        "excluded",
+        "left"
+      ],
+      [
+        "34/125",
+        "137/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "137/500",
+        "69/250",
+        "excluded",
+        "left"
+      ],
+      [
+        "69/250",
+        "139/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "139/500",
+        "7/25",
+        "excluded",
+        "left"
+      ],
+      [
+        "7/25",
+        "141/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "141/500",
+        "71/250",
+        "excluded",
+        "left"
+      ],
+      [
+        "71/250",
+        "143/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "143/500",
+        "36/125",
+        "excluded",
+        "left"
+      ],
+      [
+        "36/125",
+        "29/100",
+        "excluded",
+        "left"
+      ],
+      [
+        "29/100",
+        "73/250",
+        "excluded",
+        "left"
+      ],
+      [
+        "73/250",
+        "147/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "147/500",
+        "37/125",
+        "excluded",
+        "left"
+      ],
+      [
+        "37/125",
+        "149/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "149/500",
+        "3/10",
+        "excluded",
+        "left"
+      ],
+      [
+        "3/10",
+        "151/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "151/500",
+        "38/125",
+        "excluded",
+        "left"
+      ],
+      [
+        "38/125",
+        "153/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "153/500",
+        "77/250",
+        "excluded",
+        "left"
+      ],
+      [
+        "77/250",
+        "31/100",
+        "excluded",
+        "left"
+      ],
+      [
+        "31/100",
+        "39/125",
+        "excluded",
+        "left"
+      ],
+      [
+        "39/125",
+        "157/500",
+        "excluded",
+        "left"
+      ],
+      [
+        "157/500",
+        "79/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "79/250",
+        "159/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "159/500",
+        "8/25",
+        "acquired",
+        "left"
+      ],
+      [
+        "8/25",
+        "161/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "161/500",
+        "81/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "81/250",
+        "163/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "163/500",
+        "41/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "41/125",
+        "33/100",
+        "acquired",
+        "left"
+      ],
+      [
+        "33/100",
+        "83/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "83/250",
+        "167/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "167/500",
+        "42/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "42/125",
+        "169/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "169/500",
+        "17/50",
+        "acquired",
+        "left"
+      ],
+      [
+        "17/50",
+        "171/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "171/500",
+        "43/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "43/125",
+        "173/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "173/500",
+        "87/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "87/250",
+        "7/20",
+        "acquired",
+        "left"
+      ],
+      [
+        "7/20",
+        "44/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "44/125",
+        "177/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "177/500",
+        "89/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "89/250",
+        "179/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "179/500",
+        "9/25",
+        "acquired",
+        "left"
+      ],
+      [
+        "9/25",
+        "181/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "181/500",
+        "91/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "91/250",
+        "183/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "183/500",
+        "46/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "46/125",
+        "37/100",
+        "acquired",
+        "left"
+      ],
+      [
+        "37/100",
+        "93/250",
+        "acquired",
+        "left"
+      ],
+      [
+        "93/250",
+        "187/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "187/500",
+        "47/125",
+        "acquired",
+        "left"
+      ],
+      [
+        "47/125",
+        "189/500",
+        "acquired",
+        "left"
+      ],
+      [
+        "189/500",
+        "19/50",
+        "acquired",
+        "left"
+      ],
+      [
+        "19/50",
+        "191/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "191/500",
+        "48/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "48/125",
+        "193/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "193/500",
+        "97/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "97/250",
+        "39/100",
+        "acquired",
+        "central"
+      ],
+      [
+        "39/100",
+        "49/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "49/125",
+        "197/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "197/500",
+        "99/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "99/250",
+        "199/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "199/500",
+        "2/5",
+        "acquired",
+        "central"
+      ],
+      [
+        "2/5",
+        "201/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "201/500",
+        "101/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "101/250",
+        "203/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "203/500",
+        "51/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "51/125",
+        "41/100",
+        "acquired",
+        "central"
+      ],
+      [
+        "41/100",
+        "103/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "103/250",
+        "207/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "207/500",
+        "52/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "52/125",
+        "209/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "209/500",
+        "21/50",
+        "acquired",
+        "central"
+      ],
+      [
+        "21/50",
+        "211/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "211/500",
+        "53/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "53/125",
+        "213/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "213/500",
+        "107/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "107/250",
+        "43/100",
+        "acquired",
+        "central"
+      ],
+      [
+        "43/100",
+        "54/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "54/125",
+        "217/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "217/500",
+        "109/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "109/250",
+        "219/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "219/500",
+        "11/25",
+        "acquired",
+        "central"
+      ],
+      [
+        "11/25",
+        "221/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "221/500",
+        "111/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "111/250",
+        "223/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "223/500",
+        "56/125",
+        "acquired",
+        "central"
+      ],
+      [
+        "56/125",
+        "9/20",
+        "acquired",
+        "central"
+      ],
+      [
+        "9/20",
+        "113/250",
+        "acquired",
+        "central"
+      ],
+      [
+        "113/250",
+        "227/500",
+        "acquired",
+        "central"
+      ],
+      [
+        "227/500",
+        "57/125",
+        "excluded",
+        "central"
+      ],
+      [
+        "57/125",
+        "229/500",
+        "excluded",
+        "central"
+      ],
+      [
+        "229/500",
+        "23/50",
+        "excluded",
+        "central"
+      ],
+      [
+        "23/50",
+        "231/500",
+        "excluded",
+        "central"
+      ],
+      [
+        "231/500",
+        "58/125",
+        "excluded",
+        "central"
+      ],
+      [
+        "58/125",
+        "233/500",
+        "excluded",
+        "central"
+      ],
+      [
+        "233/500",
+        "117/250",
+        "excluded",
+        "central"
+      ],
+      [
+        "117/250",
+        "47/100",
+        "excluded",
+        "central"
+      ],
+      [
+        "47/100",
+        "59/125",
+        "excluded",
+        "central"
+      ],
+      [
+        "59/125",
+        "237/500",
+        "excluded",
+        "central"
+      ],
+      [
+        "237/500",
+        "119/250",
+        "excluded",
+        "central"
+      ],
+      [
+        "119/250",
+        "239/500",
+        "excluded",
+        "central"
+      ],
+      [
+        "239/500",
+        "12/25",
+        "excluded",
+        "central"
+      ],
+      [
+        "12/25",
+        "49/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "49/100",
+        "1/2",
+        "excluded",
+        "upper"
+      ],
+      [
+        "1/2",
+        "51/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "51/100",
+        "13/25",
+        "excluded",
+        "upper"
+      ],
+      [
+        "13/25",
+        "53/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "53/100",
+        "27/50",
+        "excluded",
+        "upper"
+      ],
+      [
+        "27/50",
+        "11/20",
+        "excluded",
+        "upper"
+      ],
+      [
+        "11/20",
+        "14/25",
+        "excluded",
+        "upper"
+      ],
+      [
+        "14/25",
+        "57/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "57/100",
+        "29/50",
+        "excluded",
+        "upper"
+      ],
+      [
+        "29/50",
+        "59/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "59/100",
+        "3/5",
+        "excluded",
+        "upper"
+      ],
+      [
+        "3/5",
+        "61/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "61/100",
+        "31/50",
+        "excluded",
+        "upper"
+      ],
+      [
+        "31/50",
+        "63/100",
+        "excluded",
+        "upper"
+      ],
+      [
+        "63/100",
+        "16/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "16/25",
+        "13/20",
+        "excluded",
+        "initial"
+      ],
+      [
+        "13/20",
+        "33/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "33/50",
+        "67/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "67/100",
+        "17/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "17/25",
+        "69/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "69/100",
+        "7/10",
+        "excluded",
+        "initial"
+      ],
+      [
+        "7/10",
+        "71/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "71/100",
+        "18/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "18/25",
+        "73/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "73/100",
+        "37/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "37/50",
+        "3/4",
+        "excluded",
+        "initial"
+      ],
+      [
+        "3/4",
+        "19/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "19/25",
+        "77/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "77/100",
+        "39/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "39/50",
+        "79/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "79/100",
+        "4/5",
+        "excluded",
+        "initial"
+      ],
+      [
+        "4/5",
+        "81/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "81/100",
+        "41/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "41/50",
+        "83/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "83/100",
+        "21/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "21/25",
+        "17/20",
+        "excluded",
+        "initial"
+      ],
+      [
+        "17/20",
+        "43/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "43/50",
+        "87/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "87/100",
+        "22/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "22/25",
+        "89/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "89/100",
+        "9/10",
+        "excluded",
+        "initial"
+      ],
+      [
+        "9/10",
+        "91/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "91/100",
+        "23/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "23/25",
+        "93/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "93/100",
+        "47/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "47/50",
+        "19/20",
+        "excluded",
+        "initial"
+      ],
+      [
+        "19/20",
+        "24/25",
+        "excluded",
+        "initial"
+      ],
+      [
+        "24/25",
+        "97/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "97/100",
+        "49/50",
+        "excluded",
+        "initial"
+      ],
+      [
+        "49/50",
+        "99/100",
+        "excluded",
+        "initial"
+      ],
+      [
+        "99/100",
+        "1",
+        "excluded",
+        "initial"
+      ]
+    ],
+    "excluded_probability_cells": 114,
+    "forced_41a41": "87371/180600",
+    "inherited_K42": "399/2150",
+    "mathematical_negative_controls": [
+      "duplicate JSON key",
+      "boolean integer ambiguity",
+      "missing acquired left cell",
+      "reordered central cells",
+      "weaker decrement",
+      "missing inherited barrier",
+      "wrong index",
+      "wrong anchor coverage"
+    ],
+    "probability_cells": 184,
+    "surplus": "683/180600"
+  },
+  "collector44": {
+    "actual_left_profile_interface": {
+      "noise_endpoint": "Actual acquired Lambda; enlarged local Lambda is only a containing domain",
+      "nonempty_profile_bands": 144,
+      "probability_panels": 45,
+      "profile_status_counts": {
+        "empty": 36,
+        "existing": 20,
+        "new": 124
+      },
+      "source_sha256": "d0a1f547aa4c181d4ad64e9db403ae566760137d1fe75caedc4f317c8aec2ace",
+      "target_sha256": "9244aee2e0eef320915fb41d1ac3fccaaf1300c25ca686f361602a251d8ec563"
+    },
+    "comparison_covers": [
+      {
+        "LOW_signed_rows": 78,
+        "MID_blocks": 552,
+        "MID_full_phase": null,
+        "MID_phase_cells": 182520,
+        "TINY": "0<lambda<=min(.05,Lambda)",
+        "full_phase_LOW": "lambda>=.12",
+        "probability_panels": 47,
+        "region": "CENTRAL42",
+        "split_regions": [
+          [
+            "1/20",
+            "3/50",
+            "9/100"
+          ],
+          [
+            "3/50",
+            "2/25",
+            "7/50"
+          ],
+          [
+            "2/25",
+            "1/10",
+            "19/100"
+          ],
+          [
+            "1/10",
+            "3/25",
+            "29/100"
+          ]
+        ],
+        "zero_noise": "Retained strict Bernoulli theorem"
+      },
+      {
+        "LOW_signed_rows": 74,
+        "MID_blocks": 604,
+        "MID_full_phase": "[.05,.08]",
+        "MID_phase_cells": 236080,
+        "TINY": "0<lambda<=min(.05,Lambda)",
+        "full_phase_LOW": "lambda>=.12",
+        "probability_panels": 45,
+        "region": "LEFT42",
+        "split_regions": [
+          [
+            "2/25",
+            "1/10",
+            "19/100"
+          ],
+          [
+            "1/10",
+            "3/25",
+            "27/100"
+          ]
+        ],
+        "zero_noise": "Retained strict Bernoulli theorem"
+      }
+    ],
+    "mathematical_negative_controls": [
+      "missing left coarse",
+      "left fine gap",
+      "false lower exclusion",
+      "reordered central",
+      "missing central seam exclusion",
+      "hidden initial survivor",
+      "boolean central index",
+      "false upper exclusion",
+      "all-index left relabel",
+      "stronger unproved left cap",
+      "changed finite ceiling",
+      "changed decrement",
+      "false own cap",
+      "duplicate JSON key",
+      "missing MID block",
+      "missing LOW sign",
+      "MID endpoint gap",
+      "boolean MID sign",
+      "boolean LOW index",
+      "profile noise gap",
+      "missing empty profile",
+      "changed actual profile source",
+      "wrong negative TINY score cap",
+      "TINY threshold underbound",
+      "missing profile sign"
+    ],
+    "probability_cover": {
+      "acquired_intervals": [
+        [
+          "29/100",
+          "19/50"
+        ],
+        [
+          "19/50",
+          "237/500"
+        ]
+      ],
+      "cells": [
+        [
+          "0",
+          "1/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/100",
+          "1/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/50",
+          "3/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "3/100",
+          "1/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/25",
+          "1/20",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/20",
+          "3/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "3/50",
+          "7/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "7/100",
+          "2/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "2/25",
+          "9/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "9/100",
+          "1/10",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/10",
+          "11/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "11/100",
+          "3/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "3/25",
+          "13/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "13/100",
+          "7/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "7/50",
+          "3/20",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "3/20",
+          "4/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "4/25",
+          "17/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "17/100",
+          "9/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "9/50",
+          "19/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "19/100",
+          "1/5",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "1/5",
+          "21/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "21/100",
+          "11/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "11/50",
+          "23/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "23/100",
+          "6/25",
+          "excluded",
+          "LEFT42_coarse"
+        ],
+        [
+          "6/25",
+          "1/4",
+          "excluded",
+          "LEFT42_coarse"
+        ],
+        [
+          "1/4",
+          "13/50",
+          "excluded",
+          "LEFT42_coarse"
+        ],
+        [
+          "13/50",
+          "27/100",
+          "excluded",
+          "LEFT42_coarse"
+        ],
+        [
+          "27/100",
+          "34/125",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "34/125",
+          "137/500",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "137/500",
+          "69/250",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "69/250",
+          "139/500",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "139/500",
+          "7/25",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "7/25",
+          "141/500",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "141/500",
+          "71/250",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "71/250",
+          "143/500",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "143/500",
+          "36/125",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "36/125",
+          "29/100",
+          "excluded",
+          "LEFT42_fine"
+        ],
+        [
+          "29/100",
+          "73/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "73/250",
+          "147/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "147/500",
+          "37/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "37/125",
+          "149/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "149/500",
+          "3/10",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "3/10",
+          "151/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "151/500",
+          "38/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "38/125",
+          "153/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "153/500",
+          "77/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "77/250",
+          "31/100",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "31/100",
+          "39/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "39/125",
+          "157/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "157/500",
+          "79/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "79/250",
+          "159/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "159/500",
+          "8/25",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "8/25",
+          "161/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "161/500",
+          "81/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "81/250",
+          "163/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "163/500",
+          "41/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "41/125",
+          "33/100",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "33/100",
+          "83/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "83/250",
+          "167/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "167/500",
+          "42/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "42/125",
+          "169/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "169/500",
+          "17/50",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "17/50",
+          "171/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "171/500",
+          "43/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "43/125",
+          "173/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "173/500",
+          "87/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "87/250",
+          "7/20",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "7/20",
+          "44/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "44/125",
+          "177/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "177/500",
+          "89/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "89/250",
+          "179/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "179/500",
+          "9/25",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "9/25",
+          "181/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "181/500",
+          "91/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "91/250",
+          "183/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "183/500",
+          "46/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "46/125",
+          "37/100",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "37/100",
+          "93/250",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "93/250",
+          "187/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "187/500",
+          "47/125",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "47/125",
+          "189/500",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "189/500",
+          "19/50",
+          "LEFT42",
+          "LEFT42_fine"
+        ],
+        [
+          "19/50",
+          "191/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "191/500",
+          "48/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "48/125",
+          "193/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "193/500",
+          "97/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "97/250",
+          "39/100",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "39/100",
+          "49/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "49/125",
+          "197/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "197/500",
+          "99/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "99/250",
+          "199/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "199/500",
+          "2/5",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "2/5",
+          "201/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "201/500",
+          "101/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "101/250",
+          "203/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "203/500",
+          "51/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "51/125",
+          "41/100",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "41/100",
+          "103/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "103/250",
+          "207/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "207/500",
+          "52/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "52/125",
+          "209/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "209/500",
+          "21/50",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "21/50",
+          "211/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "211/500",
+          "53/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "53/125",
+          "213/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "213/500",
+          "107/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "107/250",
+          "43/100",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "43/100",
+          "54/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "54/125",
+          "217/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "217/500",
+          "109/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "109/250",
+          "219/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "219/500",
+          "11/25",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "11/25",
+          "221/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "221/500",
+          "111/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "111/250",
+          "223/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "223/500",
+          "56/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "56/125",
+          "9/20",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "9/20",
+          "113/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "113/250",
+          "227/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "227/500",
+          "57/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "57/125",
+          "229/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "229/500",
+          "23/50",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "23/50",
+          "231/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "231/500",
+          "58/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "58/125",
+          "233/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "233/500",
+          "117/250",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "117/250",
+          "47/100",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "47/100",
+          "59/125",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "59/125",
+          "237/500",
+          "CENTRAL42",
+          "CENTRAL42_fine"
+        ],
+        [
+          "237/500",
+          "119/250",
+          "excluded",
+          "CENTRAL42_fine"
+        ],
+        [
+          "119/250",
+          "239/500",
+          "excluded",
+          "CENTRAL42_fine"
+        ],
+        [
+          "239/500",
+          "12/25",
+          "excluded",
+          "CENTRAL42_fine"
+        ],
+        [
+          "12/25",
+          "49/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "49/100",
+          "1/2",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "1/2",
+          "51/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "51/100",
+          "13/25",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "13/25",
+          "53/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "53/100",
+          "27/50",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "27/50",
+          "11/20",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "11/20",
+          "14/25",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "14/25",
+          "57/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "57/100",
+          "29/50",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "29/50",
+          "59/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "59/100",
+          "3/5",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "3/5",
+          "61/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "61/100",
+          "31/50",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "31/50",
+          "63/100",
+          "excluded",
+          "UPPER42"
+        ],
+        [
+          "63/100",
+          "16/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "16/25",
+          "13/20",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "13/20",
+          "33/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "33/50",
+          "67/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "67/100",
+          "17/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "17/25",
+          "69/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "69/100",
+          "7/10",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "7/10",
+          "71/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "71/100",
+          "18/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "18/25",
+          "73/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "73/100",
+          "37/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "37/50",
+          "3/4",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "3/4",
+          "19/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "19/25",
+          "77/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "77/100",
+          "39/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "39/50",
+          "79/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "79/100",
+          "4/5",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "4/5",
+          "81/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "81/100",
+          "41/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "41/50",
+          "83/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "83/100",
+          "21/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "21/25",
+          "17/20",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "17/20",
+          "43/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "43/50",
+          "87/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "87/100",
+          "22/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "22/25",
+          "89/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "89/100",
+          "9/10",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "9/10",
+          "91/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "91/100",
+          "23/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "23/25",
+          "93/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "93/100",
+          "47/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "47/50",
+          "19/20",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "19/20",
+          "24/25",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "24/25",
+          "97/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "97/100",
+          "49/50",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "49/50",
+          "99/100",
+          "excluded",
+          "INITIAL42"
+        ],
+        [
+          "99/100",
+          "1",
+          "excluded",
+          "INITIAL42"
+        ]
+      ],
+      "closed_cells": 184,
+      "counts": {
+        "CENTRAL42": 47,
+        "LEFT42": 45,
+        "excluded": 92
+      },
+      "excluded_intervals": [
+        [
+          "0",
+          "29/100"
+        ],
+        [
+          "237/500",
+          "1"
+        ]
+      ]
+    },
+    "scalar_composition": {
+      "deleted40_cap_reserve": "81/100000",
+      "own_cap_reserve": "1/350000",
+      "tail_scaled_excess_upper": "33331529979/115000000000",
+      "three_loss_surplus": "14639/162901200"
+    }
+  },
+  "finite_observed_results": {
+    "61.low.central42_v2.00.minus": "991a17b3daaaa008becd7b1ebb651c807c90b500cf5a53702fd4c3e726fe19ca",
+    "61.low.central42_v2.00.plus": "4391d92853885d0570f85c8de3aa77074f8613b01003f6c1bdc78fdcb3d06b0d",
+    "61.low.central42_v2.01.minus": "faf13ec24e8d796a7255da1b40995e6bf82689e80e7da3a74e5eeecfcbf9dc46",
+    "61.low.central42_v2.01.plus": "67f3a8df20fe724e79028db7c10daa6f966c20d54ba41859b8b3d6806e71c0ba",
+    "61.low.central42_v2.02.minus": "5ba221cde6b328f0054571f0d2fbc948a75c42f622dda1e4202fb1fa5d4049b0",
+    "61.low.central42_v2.02.plus": "9ef21ac96e4d4247b251cf07e238d143f6cdba60598754afb1f05365cf29d2f3",
+    "61.low.central42_v2.03.minus": "7dc1e41daaee3b53c4ddd51d2b68598b20ff8cf110625c5c7ec88eded31a5b6d",
+    "61.low.central42_v2.03.plus": "ca0e6975617991de0ff82b0e803ea3f1219e00618e74a1a1d41ac4772ada1baf",
+    "61.low.central42_v2.04.minus": "35a3565c4e5a4d12d03c3c0fdbd9b5fbe522cd6d880fba210584ab0b82e8fcb7",
+    "61.low.central42_v2.04.plus": "c034445b67f9d0b21d1108e72215b6a652f3aa3b9c52a163e340b38f338d69c3",
+    "61.low.central42_v2.05.minus": "67c409328acbeec71682f41128f333c7b3c3c164d7a97d4f1684fce52b28ede2",
+    "61.low.central42_v2.05.plus": "5ac84e7c475af9bc5ba36a1da12c57a574015edd8ce9cc43e4af8f1a2f62bcd7",
+    "61.low.central42_v2.06.minus": "2bc58bfa08e7b90a4ce5493fcfa14dd796655d81145900846d8abaca0692bf0d",
+    "61.low.central42_v2.06.plus": "ac537bb8968cecb6cf2ed331d50d0e61da4e925ab804973592a80da6df0f77e1",
+    "61.low.central42_v2.07.minus": "903404aefbc742f90f50c2635b4a0bc41095d072d4cdfa8aa8b834b8b9a5d742",
+    "61.low.central42_v2.07.plus": "01cdcaacf044edb217024a8012b31630341362951efa02df6d07a13de6281f47",
+    "61.low.central42_v2.08.minus": "62325a411f8d4f24a111bde37de1c34820451e2678c48feadbccb6905b81553d",
+    "61.low.central42_v2.08.plus": "7bfe5d655fd9e41dbaef35432e29e901fe9c41243e87f8ae00a48077fc208907",
+    "61.low.central42_v2.09.minus": "0bc0b88355c21ec8f5b6e6009bfd2922e19b141bccc2dddc599fc624e80a5fcf",
+    "61.low.central42_v2.09.plus": "8f37099b383eebcba025325bdd3a304a214b07189dcbd6a4ca4b1d5968cc4074",
+    "61.low.central42_v2.10.minus": "075f8571d9bdd3f2402e5d9b48ac19316952ceb8b3666db270945075cd579865",
+    "61.low.central42_v2.10.plus": "3ca60f335c51614301856cd46f088adf3ed11e5eb7df43e68a0069794ece74eb",
+    "61.low.central42_v2.11.minus": "329db770ff951032cfb4d65100f6c5b38428ed27b560d05d54fe1fd9118d06e9",
+    "61.low.central42_v2.11.plus": "8d1cda4cd42d302e1cd9aeede43e41cc71216244990590345b069cf5cff05145",
+    "61.low.central42_v2.12.minus": "9d9a6bbe13ebde16fc97488dbfa0ffaa125b255f12fdfdea53f6c236cd7f91d5",
+    "61.low.central42_v2.12.plus": "b0b858e3a708fd1a355fcae55a76b2fa685b16a0c1bf00902a5a51266c89ca3c",
+    "61.low.central42_v2.13.minus": "d2b248067722c43f9551d9e99b371e9c28d488cb2c5f8b15ebbea5825809379c",
+    "61.low.central42_v2.13.plus": "15a6443a7ac5a0ed3a75b568fcbceb018e478d06403be9fa8fd50620891219c4",
+    "61.low.central42_v2.14.minus": "9acefa66e7e7ab11569fa4c18d8e7d4e2d8296cf2de5d2ed25126789df01d52b",
+    "61.low.central42_v2.14.plus": "937ddbcb3bfb1fb7e8ab04f2a1e3cca4472763ff112afb3274e868cd15a5e52a",
+    "61.low.central42_v2.15.minus": "2a72fba584eefb8b1072db6e83f799ef97b787d0c38e7aa61c35941fbe50e65c",
+    "61.low.central42_v2.15.plus": "370f1503e2549885cdace6ada8c131d61e2b641db045a77f62c5edb31250b03d",
+    "61.low.central42_v2.16.minus": "05685a7e08489f89a922b0c1c4b0675b8caa2747576bd297a90e50d848882895",
+    "61.low.central42_v2.16.plus": "22397a18f21e0f70231ea8d0adc2c21ceb67e46eff5b2e42fef89d3dccb8e105",
+    "61.low.central42_v2.17.minus": "631d4a8674d49bfde8040918e4acf6092b6f95ecced886d85c01512c34410772",
+    "61.low.central42_v2.17.plus": "75f059f623864bfb26669f5227631b1c7af7023cac0fca4e0834e09f6906b5b6",
+    "61.low.central42_v2.18.minus": "f0fa8206f60c2fb3c6ba371c242c2f1bf2bbd1a33b0ed10620d61b8e158068b0",
+    "61.low.central42_v2.18.plus": "da258fbfc0ad85709a9c5088b58d48c00a524f4fa3e2889e33f1a77842889a02",
+    "61.low.central42_v2.19.minus": "f5d813f394955a60afa01b19d99f5c6df3e378617a5b93cf6cf226c6ae1b465f",
+    "61.low.central42_v2.19.plus": "abe6e3649e71e88824451a169680c0718cfdbe335983ac0785f2b3c48d7b25f2",
+    "61.low.central42_v2.20.minus": "5eb8d6edf8d899bc9b38d4ecbe37528d9900ef02278ed0d3a0849c1606d5c586",
+    "61.low.central42_v2.20.plus": "2c37f045f53c073e9aef94c0c106f37c2588e78b1c1b7512cd79abb87761678e",
+    "61.low.central42_v2.21.minus": "960de8282ed8f63d951833897798365f3ef97400ab91bc59b62ccffffb8bba2e",
+    "61.low.central42_v2.21.plus": "aca00b21e96496c475853fade24195a8217956784ba63c0142a97bf095f88f21",
+    "61.low.central42_v2.22.minus": "13ecde6df3504a4da16f40d5065793595b0bd148485562f01614a0f7d265e101",
+    "61.low.central42_v2.22.plus": "a31116952c01dc34f8e141da9e177b969f5efd16997557267a3becb67161fb7f",
+    "61.low.central42_v2.23.minus": "96c5fffbd64df820a1a6196045d54538de49116d26e722d70e75fe163a35907e",
+    "61.low.central42_v2.23.plus": "6259fa62b6a65514e96f56658477bf10c0a54b12197ed7d851519eed5de61f87",
+    "61.low.central42_v2.24.minus": "d802536ddcc8f40962d7985e26a48a76722edd94fcbe1bca0b1839e44647ec92",
+    "61.low.central42_v2.24.plus": "85b495fde61afbef53aae98dc044df2d2b601b8cd26b4e15163a4cb1ba0196ed",
+    "61.low.central42_v2.25.minus": "212863da01eeaee5675d23e384b2f7c9a15608c63fa814b02bfb1e3a6890bebc",
+    "61.low.central42_v2.25.plus": "89886bef68847a4ef940df7bf5cb063b0057cc32e2513465e094b85110252164",
+    "61.low.central42_v2.26.minus": "743ce629c6298b64f65e17c39f3a3794f41dd124f331f7e3d24901e155e61884",
+    "61.low.central42_v2.26.plus": "a4ed3e48857a1f9039e4d3524cd7ddc3c7788a5f8847023b338294142cd630c3",
+    "61.low.central42_v2.27.minus": "42ba617dd72bae0297af12146e39ec16a36af60e57bcd4b74dc0e73051e928cb",
+    "61.low.central42_v2.27.plus": "9208e85993c46d2046cd000e3434de2c7e2cc8417144d01788678ea7f14d9dbd",
+    "61.low.central42_v2.28.minus": "e22f572b467a724f4fddc2c8d346016cdc1d02fdbbe0738a480b77b3bb78053e",
+    "61.low.central42_v2.28.plus": "fe132243b20004c5299a21cfbb5870c23f31a86ec0b32e8c9f61b7373fc67d24",
+    "61.low.central42_v2.29.minus": "ee8d72637d5496d8800a1db72fec50121a60cbf14b9bfa3d420753aa5f5cac57",
+    "61.low.central42_v2.29.plus": "df696a1c1c3a67c557a292ca3c11ae6e539b94b9065eaf7db0479cc2842b3f60",
+    "61.low.central42_v2.30.minus": "a36991e1c7fa57fd99393b2c96ab1497ba8668b3fa2974a082e14b9a34a8b1fb",
+    "61.low.central42_v2.30.plus": "3aa2cecaf706d474ed7c3e3e0211aaa955b67f85248a83b780000bf0d8fbb985",
+    "61.low.central42_v2.31.minus": "ef4828dccc5e70973033207ff4b0b42e02106457c68b61cf7306e67ac2b185a2",
+    "61.low.central42_v2.31.plus": "d95caa0cbf2cd61396b12ffadb734cb45c005e9703077e738f7dcec0d4562472",
+    "61.low.central42_v2.32.minus": "5639c235dacf4a3940f6193fef3d0a3995d04cb895f42ee0ab26b25d89e456f7",
+    "61.low.central42_v2.32.plus": "1cb78e1dd64aa09286788f7457ef1993626f6b79103e197a8a1843ca93d00706",
+    "61.low.central42_v2.33.minus": "8a1f23dcecde71b83ca12b928b28f085a6472f3e960c2d9de7294f4734df9680",
+    "61.low.central42_v2.33.plus": "64a1a8392175d93a5b13850247924875a333650d8dbd4b6c43841e30b19065b1",
+    "61.low.central42_v2.34.minus": "39ba9276972c109cd8492c5d113220dcdcbbe29bc1c9009ee1414c74badfcafa",
+    "61.low.central42_v2.34.plus": "412e302e9a7f184c861838dede0fbb9aa2e7be066673d5cbd4d7ab35010693b6",
+    "61.low.central42_v2.35.minus": "f4df7bc3891f642813699eb5705dae42f025015a43c2dbced3bd440022bd04be",
+    "61.low.central42_v2.35.plus": "127c156620106f6b91903191a2f410d2aa7a95885193b15f1e531fa7273a90ed",
+    "61.low.central42_v2.36.minus": "c313437a42e8671792c7a395a58d261519629f29aac9992a1c02867c76ef8799",
+    "61.low.central42_v2.36.plus": "23c42342d4cfd99910e038f963c4e112bb29e710682ca6df63ebdcadb4c83c6e",
+    "61.low.central42_v2.37.minus": "da3ce526fd887367e66591b69aee5ee2588616ec9a25e29438b87068472b72ce",
+    "61.low.central42_v2.37.plus": "6bade91832237004864af7a474f34d869044217c20580a8966ac82e226530a7d",
+    "61.low.central42_v2.38.minus": "88ef31f10f715ba9224a2255f492e94ac0b8af146b6ec536e63a005000839a15",
+    "61.low.central42_v2.38.plus": "bd98ec153f26b9b825c2ed7bd5d57224af6f4991e8a9e103253e4114d465bdd1",
+    "61.low.left42_final.08.minus": "0f7921548676101d7760d4e6995f40a7e9b75657adcb5725a1afa2c97747f79d",
+    "61.low.left42_final.08.plus": "c6ff02be04f448393f18f54e9f208f8e7af122c0f31f59f482911efa5c22f750",
+    "61.low.left42_final.09.minus": "a05015c396dd06716143d3f18f57a38dbc34d78cd301e3c312b401c0d2d7941c",
+    "61.low.left42_final.09.plus": "6062c41d80c782d79bcf6a450773b706eaa0b79aa390fbcf632f92415004c0dc",
+    "61.low.left42_final.10.minus": "ce5eeb7abacbb5e8fedb785408b4c95cc6a575e338f87df14a348b07a1434851",
+    "61.low.left42_final.10.plus": "20c8f31f6572aca21b7ee24be20707c5538f568fd087490ccc1dbeb491db42bf",
+    "61.low.left42_final.11.minus": "a39d1a5a010a7eb8e62467f1c5b6a00039f0d2e6c21ab03aed47596aaf280883",
+    "61.low.left42_final.11.plus": "9adbdfa2d4a14a9c663a85f64e091fa76a7deca2ace839baba4ae13b7ce84eac",
+    "61.low.left42_final.12.minus": "710f629bf5f1b56699ee346e13485f0c4808ce665df5005ea0508963dbb5dcc5",
+    "61.low.left42_final.12.plus": "ed25b1acc0ccb03c425274a7589920ca56750894fd59f65bd46aac70e483b5a7",
+    "61.low.left42_final.13.minus": "ddcb41a579dcc4cc82134329e3dfcbebf6ecd0506576539690ca0fad57ff1ade",
+    "61.low.left42_final.13.plus": "d7a487c851da6de7056b9c5fe335ec518e8ab1ba738970c33572729b5b323be6",
+    "61.low.left42_final.14.minus": "e78fa55314a1e19a32c913b5149ee1d1c2f6f62a3ad380521d039a69c8582589",
+    "61.low.left42_final.14.plus": "bebdcfcf624ec4ea832577ef1abce6ab6986c140a5365f21d6ca564dea957cf5",
+    "61.low.left42_final.15.minus": "37531cfef21af43a8995bc1565bc02e313eea78d84c138950161c499fbc16c13",
+    "61.low.left42_final.15.plus": "56fe1dbc5ed5598efb7047a0934f7ddd2cf5991eb37fc5916b01c9ee1482ad1b",
+    "61.low.left42_final.16.minus": "5f2154320530baf4d44754cf1e5381e335a7dfcd2d1e40ed9d023aa3d0692432",
+    "61.low.left42_final.16.plus": "bc764c78a92bb5c42318e3f67ed3124842ce4c2fb300053248154af61a3eb709",
+    "61.low.left42_final.17.minus": "128940d9ae804c2300e0f088d4f0875eb9fc31207cd3df1556aa06ab8d726add",
+    "61.low.left42_final.17.plus": "e34dcd066aa756d80ba5a7f6431feb4d5857d90f575dc8a3299d7e4b4c223e1a",
+    "61.low.left42_final.18.minus": "6a05683db713a1afe5f532d6ed9f2da5f82362ea1971120413772feffa26deb8",
+    "61.low.left42_final.18.plus": "152f228df1a6245d08e87045b772bd6e8b6f699c84e46a4ab081ba8f860d8076",
+    "61.low.left42_final.19.minus": "0efc093b26c1c09c81958f3c996b7cc8987098ce89b63e1dd48975bb074236be",
+    "61.low.left42_final.19.plus": "8b7ed05fa8686c727dd06c5edcbca8206ea9e12ef009772e1e8486505493c94a",
+    "61.low.left42_final.20.minus": "a2ececf9a16838a7022bc505566b904e8b8cf9b237cd1edbce8314cd3b336ea9",
+    "61.low.left42_final.20.plus": "68eec4a08667703fc12fc82e919ded1c4a6f2793b7822ac37c5d84d2f36d6fe7",
+    "61.low.left42_final.21.minus": "677a4254364fa389c3e2c60746a73e2d166413fc0bc29632dce5c217b72c3440",
+    "61.low.left42_final.21.plus": "a7094c0c5e59ba82b31b3e177b0f6b291dd44090cf0a3a6ca7443493f25518ea",
+    "61.low.left42_final.22.minus": "ca9741f3a7c547d2c06b4a37ceda745dc117b79d6851e43c31c0e5500c44c947",
+    "61.low.left42_final.22.plus": "69edc8a43c72d7f40751a526265f2b6942c52baa603dc864e89021d8510fe635",
+    "61.low.left42_final.23.minus": "0543053848594848d40fd7cc889fc7e5102e2999729cd687d808006eb2e54cc3",
+    "61.low.left42_final.23.plus": "2b818bd75ecc7999924738a48124dc4531c8afb259e447ea3aa3dc0daad06bea",
+    "61.low.left42_final.24.minus": "75f915a751303b72e445818f7bc15fc1e3602b719132ef28a974decfacd9639c",
+    "61.low.left42_final.24.plus": "d036710bb698291a1dda1d22e5c0aa1f6b760606a9a491a8626b3857b7a633f1",
+    "61.low.left42_final.25.minus": "b28335c45b389a8eafd1ff1e13ce7db31cd1cb5185aff43f3008e7445871948f",
+    "61.low.left42_final.25.plus": "8d548fcea592d6cd9fcfd4f48719c4a8551a82a4fe1634b06b74a34eec5a10dd",
+    "61.low.left42_final.26.minus": "dfba32e51d299ee0b1b39ba29c5280384519ce4282139e88592156c1bdfcebde",
+    "61.low.left42_final.26.plus": "4cd09fab8d617c34480878fdf5b39a2df92023988c5dcbb276139ad1943f486c",
+    "61.low.left42_final.27.minus": "8d332c88ab363b09339454a54663c9bf3feffd4ee1551daf7997bdfb59dabc65",
+    "61.low.left42_final.27.plus": "4c5c8483f7b8c6895af3d6bf5e1055b9147a4a02432efc403f751abf61b19ed7",
+    "61.low.left42_final.28.minus": "2403da3e589cfb8132dd3f14841fe3d1eeef74600210b8e1b3cffdc98bc7e8f3",
+    "61.low.left42_final.28.plus": "25bfba8107373ccf86c11189df567c0ae833cc9d6b5544d7b4d793d4294ab0c2",
+    "61.low.left42_final.29.minus": "2d8cddec08a26c934df6644ad0c9b9e0d55c25a215acccad32afc744bc05369e",
+    "61.low.left42_final.29.plus": "44a653ae7059feca42a96ce68a08743a45d110c11f218458b0e6f52decd6b5c2",
+    "61.low.left42_final.30.minus": "dbed0019e6b1c159e9e1a9ed1cb493d0b9e8eaae6e1dd601283e00ba182fcaae",
+    "61.low.left42_final.30.plus": "76cfb42116919621db896b95689263abf585ea0957400c95053a568ed48a02ea",
+    "61.low.left42_final.31.minus": "4ad94cbff754499fca7997aa7afe1a4aea47c22510abbccb940dce614ed4daae",
+    "61.low.left42_final.31.plus": "d78a455f49070f237fc519de65430f44303e54196ef0608fb4a86db759aa22b2",
+    "61.low.left42_final.32.minus": "8ec1806845e738d7d2ffd97951420372ce7fde9edb82b50ed6e997821787971c",
+    "61.low.left42_final.32.plus": "89571f3a544b48b2d415d0657b1885c52cc11079a53ffb9d27c560e14721e1e4",
+    "61.low.left42_final.33.minus": "1865f7d82fb5eb562a18e5d9a79dfa886cdcc15df583167fdd7fda6699dbcea3",
+    "61.low.left42_final.33.plus": "aa8cb03d579c30bc7ca33c1dac9650ec2ab270e659728b07bd7b05fe6b5683bb",
+    "61.low.left42_final.34.minus": "61498d1a2b7a0a7ed881b48cf9e342ba060605f161336923f360b59b08e78bb1",
+    "61.low.left42_final.34.plus": "779f96a3cc19befccf491a384414d7781e60ab2ee64b1dd3dc1642be6cea2ce8",
+    "61.low.left42_final.35.minus": "f77a6e250610e60248fb59d8afeb8d36ebfb798d9f3315f98b6b43b88edd2ec6",
+    "61.low.left42_final.35.plus": "59547ff39bd66e15258f6770bb338a9b5e3c0fcf84f8d5386c203d83f793679d",
+    "61.low.left42_final.36.minus": "77ed95392a9a7247cd1d2d1922b2a9a4e4021f13ef1915c923d464adbbfd693a",
+    "61.low.left42_final.36.plus": "232404a1b5c45d27c52bac6e08880029f320324fd20ed4cddcb5630b64b32195",
+    "61.low.left42_final.37.minus": "9196b8e88203e0efb7aff90efd095e57989ce6843ee14436b8807b92ddbd4fcd",
+    "61.low.left42_final.37.plus": "7280587e5fe0379c281dee3134a852edf41dff6eed6f0af464e36c1ffdc7af22",
+    "61.low.left42_final.38.minus": "2401f1ee0ca710fab3e5b894a76cffd87ad78334e873334f74989762b7021831",
+    "61.low.left42_final.38.plus": "be9e698d090edb887eace20f14223d60b00fa8d240a84d672e37afcc8a17cd65",
+    "61.low.left42_final.39.minus": "9ffd21e10eb9c1ae060b8826b5cbdb9b7bea9d9d588df125796e9379c461834e",
+    "61.low.left42_final.39.plus": "408753f0e21d88f63eb9725d781c95fcb773dda2eb5061aeaa345192ac9285ec",
+    "61.low.left42_final.40.minus": "e26e63455db069b436ddcb410a298d6719358c62c3db743ea8fb8f1b13cfd472",
+    "61.low.left42_final.40.plus": "a98050f50ce161888f1366453500a50c77145c5139327c18a17c4533e654b5a1",
+    "61.low.left42_final.41.minus": "0f84c6e4c1d4c443a5b88d10b62e74fc71dbe0ac592b6068bfd555ce1e27521e",
+    "61.low.left42_final.41.plus": "eff5fa0341e97a90be3103b5370ee4031458ec3c345a79c8f0637d468ef85213",
+    "61.low.left42_final.42.minus": "453353e8edeb6bf9a45405e8eaa7863ee8a0c5d93863a8d58685c3e77a3a5ac6",
+    "61.low.left42_final.42.plus": "e8c37286c8e01321c6db5445559627ea6b8b7538b7849f94d521319d1164dd79",
+    "61.low.left42_final.43.minus": "902f71326e5fce1dd6e6e19796860eab593d60b4a92342c74acb92a347db83e5",
+    "61.low.left42_final.43.plus": "9b001b29d43a6021e3499ee0e1ab0138c01a486ef5d70b038257217944011747",
+    "61.low.left42_final.44.minus": "f8a45e0a26379f00c3c2e37ff95a64d5fd880499cebdc8290cc19adf8a370acd",
+    "61.low.left42_final.44.plus": "0202020832e2428be8318dd558b2d6403994e550cbe64413dfb11f16fa53d6fc",
+    "61.native.43.anchor_accept01": "6ed63ea78443f2e4dd32f1863b24b2e5eda0ace47167708d7e814a182a88acdc",
+    "61.native.43.anchor_support01": "6559dca00a2f3e9516a8270c67437ba7eacbf6186530b6acb1811194ba313a29",
+    "61.native.43.central_fixed01": "54b2f7f2f22943783612829f6fb1362cb683e3f61ab41dd1abb140439376cf5c",
+    "61.native.43.initial_support01": "82e49121ac1e7a26fb241dfef56daf5181803eb1dcbf40bccbb41c4e1ec70d1a",
+    "61.native.43.left_fixed01": "b5208cd64f53d158d75d1e38e2171ad5fed9ba603ea6a39bab1736d7c8c5b4d0",
+    "61.native.43.scalar01": "914f0b88996368fea1bb8b857abe43993e08ab61bd5a43dfdaced57b18df6ff0",
+    "61.native.44.acquisition.central42_accept02": "25a9daa16cd54917643633f9037ef77cd1a5a02edd2e1ddf525d638f44135d2a",
+    "61.native.44.acquisition.central42_confinement_accept01": "920aa9a3c565f8e2ec565d93b56122896f228e718472351d26356f651f98195b",
+    "61.native.44.acquisition.central42_interface01": "1362e5cc30e5af568b4be9d5821cfc4ca8ffedd299fa1d3efdd9bacb83b69be3",
+    "61.native.44.acquisition.central42_profile_interface01": "55f69886c35e45c9b3a6ead9110afe5cb5d0dc93967038c111feee7b74ffec17",
+    "61.native.44.acquisition.central42_profiles_accept01": "0875918b0ec075a70db27f9ea936c81c2e4793378c26467c7b6d00793b4d4715",
+    "61.native.44.acquisition.initial42_accept02": "5aa735ee309892cebaafa7333e47c741faa6c8e938f4f16780c22370cf2c1331",
+    "61.native.44.acquisition.local42_initial_support01": "266d7d5a546924fbfd6ed886dd026b2a2177aa3a10836823ef7381213690ccea",
+    "61.native.44.acquisition.upper42_accept01": "482958a9ac785914627b2cbed569765c5c0d50e04ec233eac30f0f25ca1a7c26",
+    "61.native.44.entry.accept4044_01": "168a8cab2829e496bf390f90e23903137a129506e4317a714a025c8d5a987c5b",
+    "61.native.44.entry.accept41_01": "c7ddd864e2288c6be76901d6b4d00a5deae4869aafefaa065121c25a94c377b8",
+    "61.native.44.entry.accept4248_01": "482b2a7f88d53437163649da38644d87252d1d79ea9c20c2abb0a8fc1c169522",
+    "61.native.44.entry.harmonic_interpolation01": "6f0b0a6aacea7b0ef3fa15b67e413f6d88432eb6213b22f032491bc4df47721d",
+    "61.native.44.entry.support4044_01": "c24424ee6299b62bb95b3242f625b6e6055513c79e20d8e7bf0ab846f027b1dc",
+    "61.native.44.entry.support41_01": "fd01e9c01f2f4aeb31af7d698e556f7af328f32c5ce496385d8740daf021f4ec",
+    "61.native.44.entry.support4248_01": "dd0138144531f1202da7034e22035ab5d597cb18b1c3a9528d1ea35aea4f67fd",
+    "61.native.44.local.central42_low_fresh_replay01": "c54f45b7fe14cd26527cedc3b5be52278d32e48217443e02a28bcdec1efa7485",
+    "61.native.44.local.central42_v2_mid_phase_accept02": "16c7f2003a54d46c509e3574832344b441096403d590683e01a40110b7350823",
+    "61.native.44.local.central42_v2_tiny_accept01": "094154ee156c0dfa88c831bcf9c6accf8b3c24cedd69b4d2f50e5d90890f547c",
+    "61.native.44.local.left42_low_accept01": "560e696ef5ad7194027ba4330d64d6895485210e617c010a8e38fd842605dd34",
+    "61.native.44.local.left42_mid_exact01": "325599eb1121624dfa3f5ff48e8aaa4c4a3b0a3d5fae3b3b89ce949835248d07",
+    "61.native.44.local.left42_source_bind01": "0b09776b7529baeb40f17c1c5d47bedccea85a42366adb67ebf3f0af019706ea",
+    "61.native.44.local.left42_tiny_actual_accept01": "b54e8fc85683059bb9646baa13103bc5bc2a7db202c0c93f637903e88d594116",
+    "61.native.44.package_audit.left42_accept02": "ea33617a31e913ea1d09ca1035dacacc854949ccf7d6e1b8efacbc18d3e79a90",
+    "61.native.44.package_audit.left42_confinement_accept01": "f6892442c54c3c2aa1a852e23d65e046311a8ad5dbe0ef93810b3dc59e6f39bc",
+    "61.native.44.package_audit.left42_profiles_accept01": "73b9bb597a482035ae722b76857aac83418cabf228dc4787b5f189be013a02cc"
+  },
+  "finite_projection_indices": [
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "full_pass": false,
+  "independent49plus_is_separate": true,
+  "required_analytic_and_same_law_contracts": {
+    "accepted_analytic_contracts44": {
+      "kind": "accepted_analytic_contracts",
+      "numerical_manifest_is_not_analytic_truth": true,
+      "numerical_manifest_source_pin": "58a770705c6e0bc500813ed37299753a16f6245ebea6ade238ad98078d7b4e26",
+      "source_document_pins": {
+        "work/below49_20261006/entry/finite_bridge.tex": "15e570689dd06bf2cd536ee714814afd2817451ff973b5e56df0bf368a341af1",
+        "work/below49_20261006/joint_resource.tex": "afda69759618eba2a0671e66bac0afc27046e9dd596e8bff5c9e24c29f3fcc44",
+        "work/below49_20261006/local/local42_improvements.tex": "1a634793af259cccd31cfb86cae8127be0af8bed15559b59d6baaf3f5f8215f6",
+        "work/below49_20261006/local/local42_signed_gaussian_v2.tex": "894495dd297f25ea9e68741dfefdbf7ba0fcaa217047db301f3bbdea6cdc4143",
+        "work/below49_20261006/local/paired_extension/paired_extension.tex": "c8b64e1fc67c895f6d7184795352d8adbcc1f1b1f88318a5df7a6138eae36fd1",
+        "work/below49_20261006/local/paired_extension/paired_extension_with_signed_k.tex": "11e5764f37d544aa9ac89044dc30839503f006be493b8a7fa3d4f2268b47deda",
+        "work/below49_20261006/signed_cubic_repair.tex": "ad8360b6af1abe479b84a1070b4ac91a277c514051d78d7a71b5a3455e9e2696",
+        "work/below50_push_20260930/release/baseline/certificates/work/below50_20260929/entry/signed_variance_resource47_proof.tex": "0e0c0f65ddc9800ec9ecc6d8c00bf4084177352b21ecc3a2e3b62b8476e52b6a",
+        "work/below50_push_20260930/release/paper/sections/foundation.tex": "81588781d819c97eb82521e3fe9d27393c24af4d7aa47832a5642889935d1507",
+        "work/below50_push_20260930/release/paper/sections/global_route.tex": "6c1715274ef031db7558070ea9f3540cd72df2e2a6a87282828cf04c75b6dfa2",
+        "work/below50_push_20260930/release/paper/sections/support.tex": "c2a4852fe1bb2f75babb7cf239f75072929e9ba187712a6528eb4319a3c0f5b3",
+        "work/below50_push_20260930/release/paper_entry/resource_entry.tex": "7912da195c21455eeb3fcb1a023c1fa597c7989e925a9599af83fe82bc3dd60a",
+        "work/below50_push_20260930/release/paper_local/local_comparison.tex": "0294c8578b10c3e43b366c1a48350bf1fb69703ec7c6b1917dd9604daab2b69d"
+      }
+    },
+    "shared12.coarse45_48": {
+      "actual_indices": [
+        45,
+        46,
+        47,
+        48
+      ],
+      "bound": "7/10",
+      "expression": "n*(C_n-C_E)",
+      "kind": "strict_scaled_excess_ceiling",
+      "route": [
+        "fresh_anchor45",
+        "fresh_propagation46",
+        "corrected_phase_resource_route"
+      ]
+    },
+    "shared12.finite_base40_45": {
+      "actual_indices": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "bound": "3/2",
+      "expression": "n*(C_n-C_E)",
+      "kind": "strict_scaled_excess_ceiling",
+      "no_tail_input": true,
+      "source_sha256": "54977ac28ce649382ba1854ca230f677bf3157cacfb6bce10561f9f8021f1a2f"
+    },
+    "shared12.independent49plus": {
+      "actual_n_max": null,
+      "actual_n_min": 49,
+      "finite1_48_is_not_a_dependency": true,
+      "interface": "BEMap.TailAssembly.TailMethodProviders.contracts",
+      "kind": "typed_all_index_tail"
+    },
+    "shared12.uniform_local47": {
+      "actual_n_min": 47,
+      "assumptions": "BEMap.UniformTail.UniformLocalAssumptions",
+      "interface": "BEMap.UniformTail.UniformLocalProvider.reject",
+      "kind": "typed_uniform_contact_exclusion",
+      "positive_noise_and_zero_noise_branches": true
+    }
+  },
+  "schema": "public-finite-collectors/1",
+  "shared12_source": "complete fresh original tail14+41 suite",
+  "status": "FRESH_NUMERICAL_COLLECTORS_COMPLETED_ANALYTIC_CONTRACTS_EXPLICIT",
+  "whole_tail_typed_inputs_sha256": "52661ae4fd338432075b99240cf468b140cc993b6e5e496a69d4b3458bb27ff9"
+}

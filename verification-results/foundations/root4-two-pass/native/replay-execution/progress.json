@@ -1,0 +1,8 @@
+{
+  "elapsed_seconds": 4784.494361949002,
+  "event": "native_supervisor_finished",
+  "proof_accepted": false,
+  "reason": null,
+  "stage": "trusted_native",
+  "status": "completed"
+}

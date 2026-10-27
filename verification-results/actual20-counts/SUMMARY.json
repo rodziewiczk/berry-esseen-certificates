@@ -1,0 +1,8 @@
+{
+  "bridge_result": "work\\a20\\bridge\\RESULT.json",
+  "completed_jobs": 49,
+  "inputs_map": "work\\a20\\INPUTS-49.json",
+  "schema": "be.actual20-all49-count-verification-summary/1",
+  "total_jobs": 49,
+  "wall_seconds": 991.141
+}

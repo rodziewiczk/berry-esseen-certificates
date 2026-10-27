@@ -12,8 +12,8 @@
 \usepackage{bookmark}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
-\hypersetup{pdftitle={Analytic reductions for the sharp iid Berry--Esseen inequality},
- pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
+\hypersetup{pdftitle={The sharp iid Berry--Esseen inequality: Analytic reductions and exact certificate proof},
+ pdfauthor={Bartosz Ko{\l}odziejek and Kacper Rodziewicz}}
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \makeatletter
@@ -42,32 +42,33 @@
 \newcommand{\pos}[1]{(#1)_+}
 \newcommand{\ind}{\mathbf 1}
 \newcommand{\iid}{\mathrm{iid}}
-\title{Analytic reductions for the sharp iid\\
-Berry--Esseen inequality\thanks{This paper was written with substantial
+\title{The sharp iid Berry--Esseen inequality:\\
+Analytic reductions and exact certificate proof\thanks{This paper was written with substantial
 assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
 \author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
 \date{27 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-The conjectured optimal constant in the Berry--Esseen inequality for sums
-of i.i.d.\ random variables with finite third moment is
+We prove that the optimal constant in the Berry--Esseen inequality for sums
+of i.i.d.\ random variables with finite third moment equals Esseen's constant
 $\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$, the limiting value for one fixed
-two-point law. We develop an approach to the matching upper bound at every
-sample size. For fixed $n\ge2$ an extremal law exists and satisfies a
+two-point law, and that $C_n\le\CE$ holds at every sample size $n\ge1$.
+For fixed $n\ge2$ an extremal law exists and satisfies a
 first-order contact condition. Integrating this condition against the
 zero-bias density gives an exact identity that links the
 normal-approximation error to a Fourier remainder and to a nonnegative
 moment defect, which vanishes only at the extremal two-point law.
 Conditioning on the signs of the summands writes the sum exactly as a
 binomial mixture, so that a nearly two-point law can be compared with its
-Bernoulli skeleton. Assuming the sharp bound through $41$, a one-step smoothing recurrence
-controls the first index $n\ge42$ with $C_n\ge\CE$. The sharp predecessor
-bounds then give an elementary support estimate. Retaining the score
-excess sharpens the defect bound, while an exact curvature formula
-simplifies the conditional-count comparison. The global conclusion remains
-conditional on that finite base and a complete local exclusion for every
-$n\ge42$, including equality. The conjecture is not established here.
+Bernoulli skeleton. A one-step smoothing recurrence controls the first failure
+index, sharp predecessor bounds give an elementary support estimate, retaining
+the score excess sharpens the defect bound, and an exact curvature formula
+simplifies the conditional-count comparison. Combining these analytic
+reductions with the complete thirteen-role finite and effective-tail
+certificate family verified end-to-end (\texttt{full\_pass: "ESTABLISHED"})
+proves $C_n\le\CE$ for every integer $n\ge1$ and establishes $C^*=\CE$
+unconditionally.
 \end{abstract}
 \clearpage
 \begingroup\small

@@ -1,0 +1,10 @@
+{
+  "adapter_sha256": "17cef15fc39a7bb2d0d3d68e2ae56027cca1ac97b0a7cf63c9dda52c4850d9cd",
+  "collector_adapter_sha256": "89447137af4fb8a2c657eece74eac3636744b5fab22a612265f49c1631995ca2",
+  "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+  "hermetic_runtime_claimed": false,
+  "legacy_HMAC_required": false,
+  "math_port_sha256": "9cb2fe0b23dbd6ffc9004611f4468db91938e9a2933e7d07e7a3a1f7833f85bb",
+  "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+}

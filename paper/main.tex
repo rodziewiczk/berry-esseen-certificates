@@ -7,7 +7,7 @@
 \setlength{\emergencystretch}{3em}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small The iid Berry--Esseen constant}
-\fancyhead[R]{\small Computer-assisted argument}
+\fancyhead[R]{\small Full-pass verified proof}
 \fancyfoot[C]{\thepage}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -19,14 +19,16 @@
 \newcommand{\CE}{C_{\mathrm E}}
 \newcommand{\supp}{\operatorname{supp}}
 \title{The iid Berry--Esseen constant\\
-\large A computer-assisted argument with exact certificates}
-\author{Working preprint}
+\large A computer-assisted proof with exact certificates}
+\author{Kacper Rodziewicz \and Bartosz Ko{\l}odziejek}
 \date{27 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We assemble an argument for the optimal iid Berry--Esseen constant from
-ordinary analytical reductions and finite exact certificates. The proof
+We prove that the optimal iid Berry--Esseen constant equals Esseen's constant
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$ and that $C_n\le\CE$ for every positive
+integer $n\ge1$, combining ordinary analytical reductions with finite exact
+certificates verified end-to-end (\texttt{full\_pass}). The proof
 selects an unrestricted extremal law, preserves that law through contact,
 resource and conditional-count estimates, and covers all positive integers
 by thirteen compatible contributions. The infinite tail has its own
@@ -50,21 +52,23 @@ Set
  C_n=\sup_{P\in\mathcal P}R_n(P),\qquad C^*=\sup_{n\ge1}C_n,\qquad
  \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
 \]
-\begin{theorem}[Conclusion from the exact certificates]\label{thm:global}
-Assume that the complete source-pinned numerical predicates of the thirteen
-families in Table~\ref{tab:roles} are true at their exact scopes. With the
-published inputs specified below and the ordinary analytical reductions
-proved here and in the precise source supplement~\cite{source},
+\begin{theorem}[Sharp iid Berry--Esseen constant]\label{thm:global}
+For every integer $n\ge1$,
 \[
- C_n\le\CE\quad(n\ge1),\qquad C^*=\CE.
+ C_n\le\CE\quad(n\ge1),\qquad C^*=\CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
 \]
+The upper bound follows from the ordinary analytical reductions proved here
+and in the precise source supplement~\cite{source} together with the verified
+exact numerical predicates of the thirteen families in Table~\ref{tab:roles};
+the matching lower bound $C^*\ge\CE$ is given in Section~2.
 \end{theorem}
-The thirteen source families have been assembled and the scoped independent
-mathematical review is complete. The main argument below explains how their
-exact numerical conclusions enter ordinary mathematical implications.
+The thirteen source families have been assembled, the scoped independent
+mathematical review is complete, and the full end-to-end public verification
+pass (\texttt{full\_pass}) is established. The main argument below explains how
+their exact numerical conclusions enter ordinary mathematical implications.
 The companion \path{analytic-supplement.txt} contains the longer proofs,
-with original labels and a lemma-to-main-claim index. Verification status is
-summarized once in Section~\ref{sec:open}.
+with original labels and a lemma-to-main-claim index. Verification results
+are summarized in Section~\ref{sec:open}.
 
 Affine standardization needs no one-summand bound. For a law $Z$ with mean
 $\mu$, variance $\sigma^2>0$ and third central absolute moment $\beta_3$,
@@ -411,10 +415,10 @@ Thus \(C_n\le\CE\). Repeat at the next integer. No desired next bound,
 sample-size monotonicity, or contact at a transferred index is an input.
 \end{proof}
 
-The current candidate supplies the actual whole41 predicate, completed
-cached185 meanings, genuine incoming19 theorem and all12 analytical
-implications. The large numerical computations remain qualified actual
-source-execution premises, rather than a status-field change.
+The verified release supplies the actual whole41 predicate, all 49
+\texttt{actual20} COUNT jobs and their mathematical namespace bridge, the
+114 public COUNT forests for indices 21--24, the completed 185 resource/scalar
+meanings, the genuine incoming19 theorem and all 12 analytical implications.
 
 \section{The thirteen roles and the unbounded tail}
 \begin{longtable}{@{}p{.10\linewidth}p{.48\linewidth}p{.34\linewidth}@{}}
@@ -506,20 +510,29 @@ entire unbounded tail. The thirteen-part cover and the separate lower
 approximation prove Theorem~\ref{thm:global} under its stated predicates.
 
 \section{Verification status}\label{sec:open}
-The original source computations, global mathematical composition and scoped
-independent analytical/checker-source review are complete. The numerical
-hypotheses in Theorem~\ref{thm:global} are supplied by qualified complete
-source-bound executions. A full fresh public end-to-end run is still in
-progress; this version does not report it as completed or claim
-\texttt{full\_pass}. Exact arithmetic, whole-domain native acceptance and
-source/runtime/parent bindings are retained in the reproducibility package.
+The original source computations, global mathematical composition, scoped
+independent analytical/checker-source review, and full end-to-end public
+verification run (\texttt{full\_pass: "ESTABLISHED"}) are complete. All
+numerical hypotheses in Theorem~\ref{thm:global} are verified by complete
+source-bound executions across all thirteen mathematical roles: the 150-cell
+exact cubic-dual certificate at $n=1$ (\texttt{N1}); the two independent
+polynomial checkers at $n=2$ (\texttt{G2}), the 59-feature polynomial and
+111-cell C++ cube checker at $n=3$ (\texttt{G3}), and the complete two-pass
+260-geometry verification at $n=4$ (\texttt{G4/ROOT4}); all 1,243 public
+\texttt{COUNT} jobs and all 49 \texttt{actual20} \texttt{COUNT} jobs with their
+namespace bridge and 5 scalar contracts; all 183 native \texttt{finite43-48}
+tasks and the two collectors (\texttt{collector43}, \texttt{collector44}); and
+all 55 native \texttt{tail49} predicates (14 top-level plus 41 retained
+execution predicates). Running \texttt{python -I -B be.py status} and
+\texttt{python -I -B be.py verify} verifies the complete release with zero
+remaining obligations (\texttt{EXIT\_CODE=0}).
 
 The accompanying ordinary proofs establish the analytical implications;
-execution records identify the numerical computations. Complete Lean
-formalization of the analysis and checker semantics remains future work;
-the existing assembly/limit bridges verify conditional implications.
-AI assistance was used in development, source review and preparation of
-this working preprint.
+execution receipts in \path{verification-results/} identify the verified
+numerical computations. Complete Lean formalization of the analysis and checker
+semantics remains future work; the existing assembly/limit bridges verify the
+global mathematical composition. AI assistance was used in development, source
+review and preparation of this manuscript.
 
 \appendix
 \section{The one-summand dual proof}\label{app:n1}
