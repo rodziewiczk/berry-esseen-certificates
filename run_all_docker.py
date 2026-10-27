@@ -67,6 +67,22 @@ def run_parallel_steps(step_specs: list[tuple[str, list[str]]], max_workers: int
     return results
 
 
+def resource_cmd(tid: str, tmp_root: Path, seconds: int, desired_jobs: int) -> list[str]:
+    tasks_path = ROOT / "verification" / "resources" / "TASKS.json"
+    max_jobs = 1
+    if tasks_path.is_file():
+        meta = json.loads(tasks_path.read_text(encoding="utf-8")).get("tasks", {}).get(tid, {})
+        max_jobs = int(meta.get("max_jobs", 1))
+    actual_jobs = max(1, min(desired_jobs, max_jobs))
+    return [
+        PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
+        "--task-id", tid,
+        "--output", str(tmp_root / f"res-{tid}"),
+        "--seconds", str(seconds),
+        "--jobs", str(actual_jobs),
+    ]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -181,63 +197,27 @@ def main() -> int:
             ),
             (
                 "Live exact verification: resource package indexed40",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "indexed40",
-                    "--output", str(tmp_root / "res-indexed40"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("indexed40", tmp_root, 600, max(1, jobs // 4)),
             ),
             (
                 "Live exact verification: resource package support35",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "support35",
-                    "--output", str(tmp_root / "res-support35"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("support35", tmp_root, 600, max(1, jobs // 4)),
             ),
             (
                 "Live exact verification: resource package support16",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "support16",
-                    "--output", str(tmp_root / "res-support16"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("support16", tmp_root, 600, max(1, jobs // 4)),
             ),
             (
                 "Live exact verification: resource package support32_34",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "support32_34",
-                    "--output", str(tmp_root / "res-support32_34"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("support32_34", tmp_root, 600, max(1, jobs // 4)),
             ),
             (
                 "Live exact verification: resource package low26_30_support",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "low26_30_support",
-                    "--output", str(tmp_root / "res-low26_30_support"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("low26_30_support", tmp_root, 600, max(1, jobs // 4)),
             ),
             (
                 "Live exact verification: resource package acquisition2_recovery",
-                [
-                    PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                    "--task-id", "acquisition2_recovery",
-                    "--output", str(tmp_root / "res-acquisition2"),
-                    "--seconds", "600",
-                    "--jobs", str(max(1, jobs // 4)),
-                ],
+                resource_cmd("acquisition2_recovery", tmp_root, 600, max(1, jobs // 4)),
             ),
         ]
 
@@ -264,13 +244,7 @@ def main() -> int:
             res_specs = [
                 (
                     f"Resource package {tid}",
-                    [
-                        PY, "-I", "-B", "verification/resources/generic_resource_batch.py", "run",
-                        "--task-id", tid,
-                        "--output", str(tmp_root / f"res-{tid}"),
-                        "--seconds", "43200",
-                        "--jobs", str(max(1, jobs // 2)),
-                    ],
+                    resource_cmd(tid, tmp_root, 43200, max(1, jobs // 2)),
                 )
                 for tid in extra_res
             ]
