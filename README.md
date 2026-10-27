@@ -5,7 +5,7 @@
 [Full Manuscript (~160 pp. PDF)](manuscript/arxiv-v1/main.pdf) · [Hexagon/arXiv Source Package (.zip)](manuscript/arxiv-v1/source-arxiv-v1.zip) ·
 [Concise 13-Role Paper (PDF)](paper/main.pdf) · [TeX source](paper/main.tex) ·
 [Full-Pass Proof Audit](mathematics/FULL-PASS-PROOF-AUDIT.md) ·
-[Certificate downloads](../../releases/tag/v0.1.0)
+[Certificate downloads](https://github.com/kolodziejek/berry-esseen-certificates/releases/tag/v0.1.0)
 
 For centered, variance-one iid real random variables with finite
 `rho = E|X|³`, we prove unconditionally that for every integer $n \ge 1$,
